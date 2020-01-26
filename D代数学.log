@@ -1,4 +1,4 @@
-This is pTeX, Version p2.1.5.beta12, based on TeX, Version 3.14159 (SJIS) (Web2c 7.0) (format=platex 5.8.11)  3 AUG 2006 09:49
+This is pTeX, Version p2.1.5.beta12, based on TeX, Version 3.14159 (SJIS) (Web2c 7.0) (format=platex 5.8.11)  9 SEP 2008 16:38
 **D代数学
 (D代数学.tex
 pLaTeX2e <1997/07/02>+2 (based on LaTeX2e <1997/06/01> patch level 0)
@@ -276,28 +276,31 @@ Package: xy 1999/02/16 Xy-pic version 3.7
  Xy-pic option: Arrow and Path feature v.3.5 path, \ar, loaded)
 (c:/usr/local/share/texmf/tex/generic/xypic/xygraph.tex
  Xy-pic option: Graph feature v.3.7 loaded) loaded)) (D代数学.aux (sec0.aux)
-(sec1x1x1.aux) (sec1x1x2.aux) (sec1x2x1.aux) (sec1x2x2.aux) (sec1x2x3.aux)
-(sec1x2x4.aux) (sec1x2x5.aux) (sec1x2x6.aux) (sec1x2xq.aux) (sec2x1x1.aux)
-(sec3x1x1.aux) (sec4x1x1.aux) (sec5x1x1.aux) (sec6x1x1.aux) (sec6x2x1.aux)
+(sec0x1.aux) (sec1x1x1.aux) (sec1x1x2.aux) (sec1x1x3.aux) (sec1x1x4.aux)
+(sec1x1x5.aux) (sec1x1x6.aux) (sec1x2x1.aux) (sec1x2x2.aux) (sec1x2x3.aux)
+(sec1x2x4.aux) (sec1x2x5.aux) (sec1x2x6.aux) (sec1x2xq.aux) (sec1x3.aux)
+(sec1x3x2.aux) (sec1x3x3.aux) (sec1x3x4.aux) (sec1x3x5.aux) (sec1x3x6.aux)
+(sec2x1x1.aux) (sec3x1x1.aux) (sec4x1x1.aux) (sec5x1x1.aux) (sec6x1x1.aux)
+(sec6x1x2.aux) (sec6x1x3.aux) (sec6x1x4.aux) (sec6x1x5.aux) (sec6x2x1.aux)
 (sec6x3x1.aux) (sec6x4x1.aux) (sec6x4x2.aux))
 \openout1 = `D代数学.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
 \openout2 = `sec0.aux'.
 
  (sec0.tex
@@ -333,23 +336,44 @@ LaTeX Warning: No \author given.
 
 ]
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 51.
+(Font)              scaled to size 23.90964pt on input line 53.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 51.
+(Font)              scaled to size 23.90964pt on input line 53.
  (D代数学.toc
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 9.60999pt on input line 1.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 31.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 35.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 31.
+(Font)              scaled to size 9.60999pt on input line 35.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 31.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 35.
  [3])
 \tf@toc=\write4
 \openout4 = `D代数学.toc'.
 
  [4]
+\openout2 = `sec0x1.aux'.
+
+ (sec0x1.tex
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 13.83836pt on input line 5.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 13.83836pt on input line 5.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 27.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 4.805pt on input line 27.
+LaTeX Font Info:    Try loading font information for U+euf on input line 46.
+
+(c:/usr/local/share/texmf/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 1995/01/05 v2.2e AMS font definitions
+) [1
+
+
+
+] [2] [3] [4] [5])
+[6]
 \openout2 = `sec1x1x1.aux'.
 
  (sec1x1x1.tex
@@ -358,164 +382,376 @@ LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 19.9311pt on input line 1.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 19.9311pt on input line 1.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 2.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 2.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 3.
-) [1
+[7
 
 
 
-]
+] [8] [9]
+Overfull \hbox (0.93732pt too wide) in paragraph at lines 257--277
+[]\JY1/gt/m/n/10 問\OT1/cmr/m/n/10 11\JY1/gt/m/n/10 ．   $[] [] [][] \OT1/cmr/m
+/n/10 = []$ 
+ []
+
+[10]) [11]
 \openout2 = `sec1x1x2.aux'.
 
- (sec1x1x2.tex) [2
+ (sec1x1x2.tex [12
 
 
-]
+] [13]) [14]
+\openout2 = `sec1x1x3.aux'.
+
+ (sec1x1x3.tex [15
+
+
+] [16] [17]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 260.
+
+
+(c:/usr/local/share/texmf/tex/latex/base/omscmr.fd
+File: omscmr.fd 1997/06/16 v2.5e Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 260.
+
+Overfull \hbox (6.34608pt too wide) in paragraph at lines 258--264
+[]\JY1/gt/m/n/10 証明　$\OML/cmm/m/it/10 P[] \OT1/cmr/m/n/10 = (1\OML/cmm/m/it/
+10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; []  ; n\OT1/cmr/m/n/10 )$ \JY1/mc/m/n/
+10 とおくと $\OML/cmm/m/it/10 P \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 ^^[\OT1/cmr/
+m/n/10 (\OML/cmm/m/it/10 P[]\OT1/cmr/m/n/10 )$\JY1/mc/m/n/10 ． \OMS/cmsy/m/n/1
+0 x\OT1/cmr/m/n/10 1.1 \JY1/gt/m/n/10 問\OT1/cmr/m/n/10 14\JY1/gt/m/n/10 ．  \J
+Y1/mc/m/n/10 の条件をみたす $\OML/cmm/m/it/10 ^^[$ \JY1/mc/m/n/10 の分解を $\OM
+L/cmm/m/it/10 ^^[ \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 ^^[[]^^[[] [] ^^[[]^^[[]$
+ []
+
+
+Overfull \hbox (49.68848pt too wide) in paragraph at lines 285--285
+[] 
+ []
+
+) [18]
+\openout2 = `sec1x1x4.aux'.
+
+ (sec1x1x4.tex [19
+
+
+] [20] [21] [22]) [23]
+\openout2 = `sec1x1x5.aux'.
+
+ (sec1x1x5.tex
+Overfull \hbox (12.77377pt too wide) in paragraph at lines 3--9
+[]\JY1/mc/m/n/10 集合族 $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 G[]\OT1/cmr/m/n/10 )
+[]$ \JY1/mc/m/n/10 の各元 $\OML/cmm/m/it/10 G[]$ \JY1/mc/m/n/10 が群であるとき 
+， 直積集合 $\OML/cmm/m/it/10 G \OT1/cmr/m/n/10 = [][] \OML/cmm/m/it/10 G[]$ \J
+Y1/mc/m/n/10 の元の間に ， $\OT1/cmr/m/n/10 ([]  \OML/cmm/m/it/10 ; x[]; [] \OT
+1/cmr/m/n/10 )([]  \OML/cmm/m/it/10 ; y[]; [] \OT1/cmr/m/n/10 ) =
+ []
+
+
+Overfull \hbox (37.6663pt too wide) in paragraph at lines 14--20
+[]\JY1/gt/m/n/10 証明　$\OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 
+= \OML/cmm/m/it/10 e[]; []  ; x[] \OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 = \OML/cmm/
+m/it/10 e[]; y[] \OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 = \OML/cmm/m/it/10 e[]; []  
+; y[] \OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 = \OML/cmm/m/it/10 e[]$ \JY1/mc/m/n/10 
+とすると $\OML/cmm/m/it/10 x[]y[]; []  ; x[]y[]; x[]y[]; []  ; x[]y[]$
+ []
+
+
+Overfull \hbox (0.19461pt too wide) in paragraph at lines 33--35
+[]$\OML/cmm/m/it/10 G$ \JY1/mc/m/n/10 が群となることは明らか 。 単位元は $\OML/
+cmm/m/it/10 e \OT1/cmr/m/n/10 = ([]  \OML/cmm/m/it/10 ; e[]; [] \OT1/cmr/m/n/10
+ )\OML/cmm/m/it/10 ; x \OT1/cmr/m/n/10 = ([]  \OML/cmm/m/it/10 ; x[]; [] \OT1/c
+mr/m/n/10 )$ \JY1/mc/m/n/10 の逆元は $\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 = ([
+]  \OML/cmm/m/it/10 ; x[]; [] $\JY1/mc/m/n/10 ． 
+ []
+
+[24
+
+
+] [25] [26] [27]) [28]
+\openout2 = `sec1x1x6.aux'.
+
+ (sec1x1x6.tex [29
+
+
+] [30] [31] [32] [33]) [34]
 \openout2 = `sec1x2x1.aux'.
 
- (sec1x2x1.tex
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 42.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 42.
- [3
+
+(sec1x2x1.tex [35
 
 
-]
+] [36]
 
-LaTeX Warning: Reference `eq1' on page 4 undefined on input line 69.
+LaTeX Warning: Reference `eq1x2x1x1' on page 37 undefined on input line 139.
 
-) [4]
+[37] [38]) [39]
 \openout2 = `sec1x2x2.aux'.
 
- (sec1x2x2.tex
-LaTeX Font Info:    Try loading font information for U+euf on input line 43.
- (c:/usr/local/share/texmf/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 1995/01/05 v2.2e AMS font definitions
-)
-[5
+ (sec1x2x2.tex [40
 
 
-]) [6]
+] [41] [42]
+Overfull \hbox (51.16713pt too wide) in paragraph at lines 224--235
+[]\JY1/gt/m/n/10 例\OT1/cmr/m/n/10 5\JY1/gt/m/n/10 ．  \JY1/mc/m/n/10 任意の可
+換体 ， $\U/msb/m/n/10 Z\OML/cmm/m/it/10 ; K\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 X
+\OT1/cmr/m/n/10 ]$ \JY1/mc/m/n/10 は単項 \OT1/cmr/m/n/10 idea1 \JY1/mc/m/n/10 
+環である ． （$\OML/cmm/m/it/10 K$ \JY1/mc/m/n/10 は任意の可換体とする ） ． $\
+U/msb/m/n/10 Z\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 X\OT1/cmr/m/n/10 ]$ \JY1/mc/m/n
+/10 や ， $\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 X\OT1/cmr/m/n/10
+ 1\OML/cmm/m/it/10 ; X\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; []  ; X[]\OT1/cmr/m/n
+/10 ] (\OML/cmm/m/it/10 n \U/msa/m/n/10 =
+ []
+
+[43]
+Overfull \hbox (1.43626pt too wide) in paragraph at lines 309--312
+[]\JY1/gt/m/n/10 例\OT1/cmr/m/n/10 6\JY1/gt/m/n/10 ．  $\OML/cmm/m/it/10 K$ \JY
+1/mc/m/n/10 を可換体とするとき ， $\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 [\OML/cmm/
+m/it/10 X[]; []  ; ; X[]\OT1/cmr/m/n/10 ]$ \JY1/mc/m/n/10 の商体を $\OML/cmm/m/
+it/10 K\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X[]; []  ; X[]\OT1/cmr/m/n/10 )$ \JY1/
+mc/m/n/10 で表わす ． また ， $\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 [[\OML/cmm/m/i
+t/10 X[]i; []  ; X[]\OT1/cmr/m/n/10 ]]$
+ []
+
+
+Overfull \hbox (3.60056pt too wide) in paragraph at lines 314--319
+[]\JY1/mc/m/n/10 環 $\OML/cmm/m/it/10 R$ \JY1/mc/m/n/10 の部分環 $\OML/cmm/m/it
+/10 S$ \JY1/mc/m/n/10 と $\OML/cmm/m/it/10 n$ \JY1/mc/m/n/10 個の元 $\OML/cmm/m
+/it/10 x[]; []  ; x[]$ \JY1/mc/m/n/10 で生成される部分環は ， 多項式環 $\OML/cm
+m/m/it/10 S\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 X[]; []  ; X[]\OT1/cmr/m/n/10 ]$ \
+JY1/mc/m/n/10 の元 $\OML/cmm/m/it/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X[]; []
+  ; X[]\OT1/cmr/m/n/10 )$
+ []
+
+) [44]
 \openout2 = `sec1x2x3.aux'.
 
- (sec1x2x3.tex) [7
+ (sec1x2x3.tex
+Missing character: There is no ｸ in font cmr10!
+ [45
 
 
-]
+] [46] [47] [48]
+Overfull \hbox (261.30449pt too wide) in paragraph at lines 301--301
+[] 
+ []
+
+) [49]
 \openout2 = `sec1x2x4.aux'.
 
- (sec1x2x4.tex) [8
+ (sec1x2x4.tex [50
 
 
-]
+]) [51]
 \openout2 = `sec1x2x5.aux'.
 
- (sec1x2x5.tex) [9
+ (sec1x2x5.tex [52
 
 
-]
+] [53]) [54]
 \openout2 = `sec1x2x6.aux'.
 
- (sec1x2x6.tex) [10
+ (sec1x2x6.tex
+[55
 
 
-]
+] [56]
+Overfull \hbox (6.51146pt too wide) in paragraph at lines 158--164
+\JY1/mc/m/n/10 （$\OML/cmm/m/it/10 u[]$ \JY1/mc/m/n/10 は可逆元 ， $\OML/cmm/m/
+it/10 p[]; []  ; p[]$ \JY1/mc/m/n/10 は \OT1/cmr/m/n/10 (1) \JY1/mc/m/n/10 と同
+様 ， $\OML/cmm/m/it/10 e[] \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 N \OMS/cmsy/m/n/10
+ \ f\OT1/cmr/m/n/10 0\OMS/cmsy/m/n/10 g\OML/cmm/m/it/10 ; i \OT1/cmr/m/n/10 = 1
+\OML/cmm/m/it/10 ; []  ; n; j \OT1/cmr/m/n/10 = 1\OML/cmm/m/it/10 ; []  ; k\OT1
+/cmr/m/n/10 )$ \JY1/mc/m/n/10 とする ． $[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 e[
+]; []  ; e[]\OT1/cmr/m/n/10 ) =
+ []
+
+[57] [58] [59] [60] [61]) [62]
 \openout2 = `sec1x2xq.aux'.
 
- (sec1x2xq.tex) [11
+ (sec1x2xq.tex [63
+
+
+] [64] [65] [66] [67]) [68]
+\openout2 = `sec1x3.aux'.
+
+
+(sec1x3.tex
+Missing character: There is no ｡ in font cmr10!
+ [69
 
 
 ]
+
+LaTeX Warning: Reference `sec1x2x1' on page 70 undefined on input line 103.
+
+[70]) [71]
+\openout2 = `sec1x3x2.aux'.
+
+ (sec1x3x2.tex [72
+
+
+]) [73]
+\openout2 = `sec1x3x3.aux'.
+
+ (sec1x3x3.tex [74
+
+
+]) [75]
+\openout2 = `sec1x3x4.aux'.
+
+ (sec1x3x4.tex
+[76
+
+
+] [77]
+Missing character: There is no ｡ in font cmr10!
+ [78]
+Missing character: There is no ｡ in font cmr10!
+ [79]
+Missing character: There is no ､ in font cmr10!
+) [80]
+\openout2 = `sec1x3x5.aux'.
+
+ (sec1x3x5.tex [81
+
+
+] [82]) [83]
+\openout2 = `sec1x3x6.aux'.
+
+ (sec1x3x6.tex [84
+
+
+]
+[85] [86] [87] [88]) [89]
 \openout2 = `sec2x1x1.aux'.
 
- (sec2x1x1.tex [12
+ (sec2x1x1.tex [90
 
 
 
 ]
 第2章
-) [13]
+) [91]
 \openout2 = `sec3x1x1.aux'.
 
- (sec3x1x1.tex [14
+ (sec3x1x1.tex [92
 
 
 
 ]
 第3章
-) [15]
+) [93]
 \openout2 = `sec4x1x1.aux'.
 
- (sec4x1x1.tex [16
+ (sec4x1x1.tex [94
 
 
 
 ]
 第4章
-) [17]
+) [95]
 \openout2 = `sec5x1x1.aux'.
 
- (sec5x1x1.tex [18
+ (sec5x1x1.tex [96
 
 
 
 ]
 第5章
-) [19]
+) [97]
 \openout2 = `sec6x1x1.aux'.
 
- (sec6x1x1.tex [20
+ (sec6x1x1.tex [98
 
 
 
 ]
 第6章
-) [21]
+[99]
+Missing character: There is no ､ in font cmr10!
+ [100]) [101]
+\openout2 = `sec6x1x2.aux'.
+
+ (sec6x1x2.tex
+Missing character: There is no ､ in font cmr10!
+Missing character: There is no ､ in font cmr10!
+Missing character: There is no ､ in font cmr10!
+Missing character: There is no ､ in font cmr10!
+Missing character: There is no ､ in font cmr10!
+Missing character: There is no ､ in font cmr10!
+ [102
+
+
+] [103]) [104]
+\openout2 = `sec6x1x3.aux'.
+
+ (sec6x1x3.tex
+Missing character: There is no ､ in font cmr10!
+Missing character: There is no ﾝ in font cmr10!
+Missing character: There is no ﾝ in font cmr10!
+ [105
+
+
+] [106]
+[107]) [108]
+\openout2 = `sec6x1x4.aux'.
+
+ (sec6x1x4.tex [109
+
+
+] [110]) [111]
+\openout2 = `sec6x1x5.aux'.
+
+ (sec6x1x5.tex [112
+
+
+]) [113]
 \openout2 = `sec6x2x1.aux'.
 
- (sec6x2x1.tex) [22
+
+(sec6x2x1.tex) [114
 
 
 ]
 \openout2 = `sec6x3x1.aux'.
 
- (sec6x3x1.tex) [23
+ (sec6x3x1.tex) [115
 
 
 ]
 \openout2 = `sec6x4x1.aux'.
 
- (sec6x4x1.tex) [24
+ (sec6x4x1.tex) [116
 
 
 ]
 \openout2 = `sec6x4x2.aux'.
 
+ (sec6x4x2.tex)
+[117
 
-(sec6x4x2.tex) [25
 
-
-] (D代数学.aux (sec0.aux) (sec1x1x1.aux) (sec1x1x2.aux)
-(sec1x2x1.aux) (sec1x2x2.aux) (sec1x2x3.aux) (sec1x2x4.aux) (sec1x2x5.aux)
-(sec1x2x6.aux) (sec1x2xq.aux) (sec2x1x1.aux) (sec3x1x1.aux) (sec4x1x1.aux)
-(sec5x1x1.aux) (sec6x1x1.aux) (sec6x2x1.aux) (sec6x3x1.aux) (sec6x4x1.aux)
-(sec6x4x2.aux))
+] (D代数学.aux (sec0.aux) (sec0x1.aux) (sec1x1x1.aux) (sec1x1x2.aux)
+(sec1x1x3.aux) (sec1x1x4.aux) (sec1x1x5.aux) (sec1x1x6.aux) (sec1x2x1.aux)
+(sec1x2x2.aux) (sec1x2x3.aux) (sec1x2x4.aux) (sec1x2x5.aux) (sec1x2x6.aux)
+(sec1x2xq.aux) (sec1x3.aux) (sec1x3x2.aux) (sec1x3x3.aux) (sec1x3x4.aux)
+(sec1x3x5.aux) (sec1x3x6.aux) (sec2x1x1.aux) (sec3x1x1.aux) (sec4x1x1.aux)
+(sec5x1x1.aux) (sec6x1x1.aux) (sec6x1x2.aux) (sec6x1x3.aux) (sec6x1x4.aux)
+(sec6x1x5.aux) (sec6x2x1.aux) (sec6x3x1.aux) (sec6x4x1.aux) (sec6x4x2.aux))
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3980 strings out of 10649
- 44777 string characters out of 69356
- 140799 words of memory out of 250001
- 6942 multiletter control sequences out of 10000+0
- 23597 words of font info for 111 fonts, out of 100000 for 500
+ 4071 strings out of 10649
+ 45799 string characters out of 69356
+ 150877 words of memory out of 250001
+ 6981 multiletter control sequences out of 10000+0
+ 25108 words of font info for 118 fonts, out of 100000 for 500
  14 hyphenation exceptions out of 1000
- 30i,12n,24p,226b,272s stack positions out of 300i,100n,500p,3000b,4000s
+ 29i,20n,24p,319b,296s stack positions out of 300i,100n,500p,3000b,4000s
 
-Output written on D代数学.dvi (29 pages, 36520 bytes).
+Output written on D代数学.dvi (121 pages, 494384 bytes).
