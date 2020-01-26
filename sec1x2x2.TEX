@@ -1,0 +1,122 @@
+\subsection{部分環・部分体・ideal}
+
+環$R$の部分集合$R'$が，$R$で定められた演算によって環となるとき，
+$R'$を$R$の\textbf{部分環}という．$R'$がさらに整域（体）になるならば，
+これを\textbf{部分整域（部分体）}という．
+
+\注意{}
+$R'$の零元と$R$の零元とは一致する（§1.1.2 問1）が，$R'$の単位元と
+$R$の単位元とは一致するとは限らない．すなわち$R' \not\ni 1$だが
+別の元$1'$が$R'$の単位元となることがある．
+
+\問{1}
+
+整域$R$の部分環の単位元は$R$の単位元と一致する．
+
+\証明
+
+部分環$R'$の単位元$1'$と$R'$の任意の元$x$について，
+$x1'=x$．$R$の単位元について$x1=x$．すなわち$x1'=x1$となり，
+とくに$x \ne 0$についても，$x1'=x1$であるが，
+$R$は整域であるから$1'=1$.
+\■
+
+\問{2}
+環$R$の空でない部分集合$S$が部分環であるためには，
+\[
+ S-S \subset S \quad SS \subset S
+\]
+が成立つことが必要十分条件である．
+
+\証明
+
+必要なることは明らかである．逆に，$R$の任意の2元$a,b$に対して，
+$a-b \in S$ならば$S$は加法群$R$の部分群であり，また$ab\in S$ならば，
+$S$は半群$R$の部分半群である．分配律は$R$で成立しているから，その部分集合$S$でも
+成立する．したがって，$S$は$R$の部分環である．
+\■
+
+\注意{}
+環の部分集合$A,B$に対して，$A+B,A-B,-A,AB,A^{-1}$などは，
+群の場合と同様に，定義される．たとえば$A-B = \{ x-y ; x\in A ,y \in B\}$.
+
+環$R$の部分集合$\mathfrak{a}$について，次のように定義する．
+\begin{align*}
+	\mathfrak{a}\text{が左ideal} &\Longleftrightarrow \mathfrak{a} + \mathfrak{a} \subset \mathfrak{a},
+                                                  R \mathfrak{a} \subset \mathfrak{a}\\
+	\mathfrak{a}\text{が右ideal} &\Longleftrightarrow \mathfrak{a} + \mathfrak{a} \subset \mathfrak{a},
+                                                   \mathfrak{a}R \subset \mathfrak{a}\\
+	\mathfrak{a}\text{が両側ideal} &\Longleftrightarrow \mathfrak{a} + \mathfrak{a} \subset \mathfrak{a},
+                                                   \mathfrak{a}R \subset \mathfrak{a},
+                                                   R\mathfrak{a} \subset \mathfrak{a},
+\end{align*}
+これらを総称して単にidealという．
+
+\問{3}
+ideal $\mathfrak{a}$と$R$が一致しないことと$1$を含まないことは同値である．
+
+\証明
+$\mathfrak{a}$が左idealで$\mathfrak{a} \ni 1$ならば$R$の任意の元
+$x$に対して$x=x \cdot 1 \in R \mathfrak{a} \subset \mathfrak{a}$.
+ゆえに，$\mathfrak{a} = R$．右idealについても同様．
+\■
+
+\問{4}
+$S_\lambda \: (\lambda \in Lambda)$がすべて環$R$の部分環
+（左ideal，右ideal，両側ideal，部分体）ならば，
+$\bigcap_{\lambda \in \Lambda} S_\lambda$もまた
+$R$の部分環（左ideal，右ideal，両側ideal，部分体）である．
+
+\証明
+$S = \bigcap S_\lambda \ni x ,y \Rightarrow x,y \in \forall S_\lambda
+\Rightarrow x-y \in S_\lambda \wedge xy \in S_\lambda
+\Rightarrow x-y \in S \wedge xy \in S$
+\■
+
+とくに，$R$の部分集合$M$に対して，$M$を含む部分環
+（左ideal，右ideal，両側ideal，部分体）全体の共通部分を
+$M$で生成された部分環（左ideal，右ideal，両側ideal，部分体）
+という．
+
+\例{1}
+環$R$において，$R$，$\{0\}$は両側idealである．
+これらをそれぞれ単位ideal，零イデアルと呼ぶ．
+
+\例{2}
+$R \ni x$に対して，$Rx = \{ ax ; a \in R\}$は$\{x\}$で生成される
+左ideal，$xR = \{xa ; a \in R\}$は$\{x\}$で生成される右ideal，
+$\displaystyle \left\{ \sum_{i=1}^m a_ix b_i ; a_i , b_i \in R ,m \in \N\right\}$は
+$\{x \}$で生成される両側idealである．実際，$x$を含む
+左（右，両側）idealは，それぞれこれらの集合を含まなければならず，
+またこれらの集合は容易にわかるように，それぞれ左（右，両側）idealとなるから
+である．
+
+\例{4}
+
+$\mathfrak{a}_1, \cdots , \mathfrak{a}_n$が環$R$の左（右，両側）
+idealのとき，
+$\mathfrak{a}_1 \cdots  \mathfrak{a}_n 
+ = \{ x_1 \cdots x_n ; x_i \in \mathfrak{a}_i, i=1, 2, \cdots , n\}$
+で生成される左（右，両側）idealは，この集合の元の有限和全体の
+集合
+\[
+	\left\{	\sum_{j=1}^m x_{1j} \cdot x_{nj} \: \bigg| \: x_{ij} \in \mathfrak{a}_i,
+          i=1, \cdots n , \: m \in \N
+  \right\}
+\]
+である．これも，同様の考え方で容易に示される．
+これを，ideal $\mathfrak{a}_1  \cdots , \mathfrak{a}_n$の\textbf{積}という．
+これも$\mathfrak{a}_1 \cdots \mathfrak{a}_n$で表す．
+
+\例{}
+$R = \Z$，$\mathfrak{a} = (2)$，$\mathfrak{b} = (3)$のとき
+\begin{align*}
+  2,4,6,8,10, \cdots &\in \mathfrak{a} \\
+  3,6,9,12,15, \cdots &\in \mathfrak{b} \\
+  8 \times 9 + 10 \times 15 + 12 \times 3 &\in \mathfrak{a}\mathfrak{b}
+\end{align*}
+であるから，
+
+とくに
+$\mathfrak{a}_1 = \cdots = \mathfrak{a}_n=\mathfrak{a}$の場合には，
+$\mathfrak{a}^n$と書く．

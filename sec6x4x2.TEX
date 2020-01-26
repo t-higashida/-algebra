@@ -1,0 +1,32 @@
+\subsection{素idealと準素ideal}
+
+\問{1}
+環$R$の全体と一致しないideal $\mathfrak{p}$について，
+次に3条件は互いに同値である．
+
+\begin{list}{}{}
+\item	(1) $R$の元$a,b$について$ab \in \mathfrak{p}$ならば，$a \in \mathfrak{p}$または$b \in \mathfrak{p}$.
+\item (2) $R$のideal $\mathfrak{a},\mathfrak{b}$について$\mathfrak{ab} \subset \mathfrak{p}$ならば
+					$\mathfrak{a} \subset \mathfrak{p}$ または $\mathfrak{b} \subset \mathfrak{p}$．
+\item (3) $R$のideal $\mathfrak{a,b}$について$\mathfrak{p} \subsetneq \mathfrak{a},\mathfrak{p} \subsetneq \mathfrak{b}$
+					ならば，$\mathfrak{ab} \not\subset \mathfrak{p}$. ---
+\end{list}
+
+\証明
+
+(1) $\Rightarrow$ (2):
+$\mathfrak{a}	\not\subset \mathfrak{p}$のとき$\exists x \in \mathfrak{a}$が存在して$x	\not\in	\mathfrak{p}$．
+$\mathfrak{a}\mathfrak{b}	\subset	\mathfrak{p}$から，
+$\forall	y	\in	\mathfrak{b}$に対して$xy	\in	\mathfrak{a}\mathfrak{b}	\subset	\mathfrak{p}$.
+(1)により$x	\in	\mathfrak{p}$または$y	\in	\mathfrak{p}$であるが，$x	\not\in	\mathfrak{p}$より$y	\in	\mathfrak{p}$，
+しがたって$\mathfrak{b}	\subset	\mathfrak{p}$.
+
+(2) $\Rightarrow$ (1):
+$ab	\in	\mathfrak{p}$とする．$a,b$の生成するidela を$(a),(b)$とすると
+$(a)(b)	=\{	uv	\:	|	\:	u	\in	(a)	,	v	\in	(b)	\}$であるが，
+$\exists u',v' \in R$が存在して$uv=u'v'ab$であるから$u'v' \in R, ab	\in	\mathfrak{p}$であるから
+$uv=u'v'ab	\in	\mathfrak{p}$，すなわち$(a)(b)	\subset	\mathfrak{p}$.
+(2)より$(a)	\in	\mathfrak{p}$または$(b)	\subset	\mathfrak{p}$,すなわち$a	\in	\mathfrak{p}$または
+$b	\in	\mathfrak{p}$.
+
+（保留）
