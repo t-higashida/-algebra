@@ -1,0 +1,414 @@
+\subsection{作用域をもつ群}
+
+
+集合$\Omega$の各元が，群$G$の自己準同型を定めるとき，$\Omega$を$G$の作用域という．
+$ \Omega $の元$\alpha$と$G$の元$x$に対して，
+$G$の元$\alpha(x)$を，$x^\alpha$または$\alpha x$と書く．
+前者は，$G$の演算を乗法的に書くとき，後者は加法的に書くときに用いられる．
+
+たとえば，$ \alpha$が$G$の自己準同型であることは，
+\begin{align*}
+								&	\quad	(xy)^\alpha = x^\alpha y^\alpha	\quad \text{(乗法的)}	\\
+\text{または}		&	\quad	\alpha(x+y) = \alpha x + \alpha \quad \text{(加法的)}
+\end{align*}
+と表わされる．
+
+$ \Omega $を群$G$の作用域とする．$H$が$G$の部分群ですべての$ \alpha \in \Omega$に対して
+$H^\alpha \subset H$であるとき，$H$を認容部分群，あるいは作用域が$ \Omega $9であることを明示する
+ため$ \Omega$認容部分群または$\Omega$部分群という．さらに$H$が$G$の正規部分群のときは$J$を認容正規部分群とよぶ．
+
+
+\例{1}
+任意の群は自己準同型の集合を作用域としてもつ．
+
+
+\例{2}
+群$G$の元$a$は内部自己同型$x \to a x a^{-1} $をひきおこす．これによって$G$自身を$G$の作用域と考えることができる．
+この作用域に関する認容部分群は$G$の正規部分群にほかならない．
+
+\例{3}
+加群$G$の任意の元$x,y$と任意の有理整数$m$に対して$ m ( x + y ) =  mx+my$が成り立つから，
+$\Z$の各元は$G$の準同型を定義し，これによって$\Z$は$G$の作用域となる．
+$G$の任意の部分群が認容部分群である．
+
+\例{4}
+
+\S 3で学ぶ$R$加群は，作用域をもつ加群の重要な例である．
+
+\問{1}
+$ H_\lambda ( \lambda \in \varLambda )$がすべて群$G$の$\Omega$部分群ならば
+$ \bigcap_{\lambda \in \varLambda} H_\lambda $も$G$の$\Omega$部分群である．
+
+\証明
+
+$x \in \left( \bigcap_{\lambda \in \varLambda} H_\lambda \right)^{\alpha}
+\Rightarrow x \in \bigcap_{\lambda \in \varLambda} H_\lambda^\alpha \Rightarrow x \in \bigcap_{\lambda \in \varLambda} H_\lambda$
+すなわち$ \left( \bigcap_{\lambda \in \varLambda} H_\lambda \right)^\alpha \subset_{\lambda \in \varLambda} H_\lambda$。
+
+\■
+
+$H$が$G$の9部分群ならば，$H$は$\Omega | H$を作用域とする群となる．
+とくに$ N $が$G$の$\Omega$正規部分群ならば，$ (x \mod N )^\alpha = x^\alpha \mod N$と定義することによって
+$G / N$がまた$ \Omega$をを作用域にもつ群となる．
+
+\問{2}
+$ ( x \mod 2 N )^\alpha$が矛盾なく定義されて，$ G / N $が$ \Omega $を作用域にもつ群となることを示せ．
+
+\証明
+$( x \mod N )^\alpha$が矛盾無く定義される事は、$ x \mod N = y \mod N$による．
+$\Omega$が$G / N$の作用域となることは，
+$(( x \mod N) ( y \mod N))^\alpha = ( xy \mod N)^\alpha = (xy)^\alpha \mod N = x^\alpha y^\alpha \mod N)
+= ( x^\alpha \mod N )( y^\alpha \mod N)$による．
+
+$G,G'$は$\Omega$を作用域とする群とする．$G$から$G'$の中への準同型写像$f$が$\Omega$の元を作用させる演算をも保存するとき，
+すなわち，
+\[
+	f( x^\alpha ) = f(x)^\alpha \quad ( x \in G , \alpha \in \Omega)
+\]
+を満足するとき，$f$を作用準同型という．作用準同型単射を作用同型という．
+
+
+\問{3}
+$N$が$G$の認容正規部分群ならば，標準的全射$G \to G/ N$は作用準同型である．
+
+\証明
+$f(x^\alpha) = x^\alpha \mod N = ( x \mod N)^\alpha = f(x)^\alpha$．
+
+\■
+
+\問{4}
+(1) 作用準同型写像$f: G \to G'$について次の各々が成り立つ．ただし$e,e'$はそれぞれ
+$G,G'$の単位元とする．
+
+\begin{list}{}{}
+	\item	(ⅰ) $f(e) = f(e')$
+	\item (ⅱ) $f(x^{-1}) = ( f(x)^{-1})$
+	\item (ⅲ) $ \text{Im} f = f(G)$は$G'$の認容部分群である．
+	\item (ⅳ) $ \Ker f$は$G$の認容正規部分群である．
+\end{list}
+
+\証明
+(ⅰ) 明らか．(ⅱ) 明らか．（ⅲ）$f(G)^\alpha = f(G^\alpha) \subset f(G)$．
+(ⅳ）$ x^\alpha \in ( \Ker f)^\alpha \Rightarrow x \in \Ker f \Rightarrow f(x) = e \Rightarrow f(x)^\alpha = f(x^\alpha) = e^\alpha = e \Rightarrow x^\alpha \in \Ker f$．
+すなわち$ ( \Ker f)^\alpha \subset \Ker f$．
+
+
+(2) 作用準同型の結合は作用準同型である．作用同型写像の結合は作用同型である．作用同型全射の逆写像も作用同型全射である．
+
+\証明
+$f ( g (x^\alpha)) = f g ( x)^\alpha ) = f(g(x))^\alpha. f^{-1}$
+
+\■
+
+$ G_\lambda ( \lambda \in \varLambda ) $がすべて$ \Omega$を作用域にもつ群のとき，
+$ ( \cdots , x_\lambda , \cdots )^\alpha = ( \cdots , x_\lambda^\alpha , \cdots )$
+によって$ \prod G_\lambda$も$\Omega$を作用域にもち，制限直積はその認容部分群となる．
+
+\問{5}
+p21,22の問2(1),3,4,5,定理7,問6,7は，群，部分群，同型，準同型を，それぞれ作用域
+$ \Omega $9をもつ群,認容部分群,作用同型,作用準同型におきかえても成り立つ．
+
+
+\subsubsection{問題}
+
+1.
+
+空でない集合$S$において，その任意の2元$x,y$に対して積$xy$が$S$の元として定められており，
+結合法則が成り立つとき，$S$を\textbf{結合系}または\textbf{半群}という．
+半群$S$の元$e$が，任意の$x \in S$に対して，$xe = ex = x$をみたすとき，$e$を$S$の\textbf{単位元}という．
+
+(1)
+半群$S$に一つの元$e$をつけ加えてできる集合を$\tilde{S}$とし，
+$S$の元$x,y$に対して$xy$は$S$での結合で定め，$S$の元Xに対して$xe=ex=x$と定め，また$ee=e$と定めると，
+$ \tilde{S}$ぶは半群$S$を含みかつ$e$を単位元としてもつ半群となる．
+
+(2)集合$M$から$M$への写像全体の集合$ \text{Map} (M,M)$は，写像の結合によって単位元をもつ半群となる．
+
+(3)任意の半群$S$に対して，適当な集合$M$が存在して，$S$は$\text{Map}(M,M)$の部分半群とみなせる．
+
+\証明
+
+(1) $e$は明らかに単位元である。$\tilde{S}	\ni x , y ,z$に対して結合法則の成り立つことを確かめる．
+$x,y,z \in S$のときは，$S$が半群であるから成り立つ．$x,y \in S, z = e$のときは，$(xy)e= xy = x(ye)$．他の場合も同様．
+
+
+(2) $f,g \in \text{Map}(M,M) \Rightarrow f \circ g \in \text{Map}(M,M)$．写像の結合に関しては結合法則が成り立ち，
+恒等写像$1_M$が単位元である．
+
+(3) (1) のように$\tilde{S}$を定義し，$M = \tilde{S}$とおく．任意の$x \in S$に対して$f_x (m) = xm \quad (m \in M)$とおくと，
+写像$S \ni x \to f_x \in \text{map}(M,M)$は（中への）同型写像となるから，$S$は$\text{Map}(M,M)$の部分半群とみなせる．
+
+2.
+
+群$G$の元xについて$ x^2 = x$ならば$x$は単位元である．
+
+\証明
+
+両辺に$x^{-1}$を乗ずれば$x=e$．
+
+
+3.群$G$の部分群が単位群と$G$のみならば，$G$は素数位数の巡回群である．
+
+\証明
+$G = \{ e \}$のときは，$G$は位数$1$の巡回群である．$G \ne \{ e \}$のとき，$x ( \ne e) \in G$に対して，
+$x$の生成する巡回群は単位群ではないから，仮定により，$G$に等しい．$x$の氏菟菟が$\infty$ならば
+$G$は$\Z$の加法群と同型になり，固有の部分群を持つことになり，仮定に反する．$x$の位数$n$が素数でなければ，
+$n = lm , l > 1 , m > 1$と書けて，$x^l$は位数$m$の部分群を生成することになって仮定に反する．
+
+\■
+
+4.
+
+群$G$の任意の元$x$に対して，$x^2=e$が成り立つならば，$G$は可換群である．
+
+\証明
+$xy = (xy)(yx)^2 = x(yy)x(yx) = yx$．
+
+\■
+
+
+5.元$x,y$の位数をそれぞれ$m,n$とする．
+$m$と$n$が互に素で，$xy=yx$が成り立つならば，
+元$xy$の位数は$mn$である．
+
+
+\証明
+
+$xy$の位数を$l$とする．$xy = xy \Rightarrow (xy)^{mn} = x^{mn} y^{mn} = e$．
+$l$は$mn$の倍数．
+
+同様に，$l$は$n$の倍数，$m$と$n$は互いに素だから，$l$は$mn$の倍数、すなわち$l=mn$．
+
+\■
+
+6.
+
+可換群$0$において，位数最大の元が存在するとき，その元の位数を$n$とすれば，
+$G$の任意の元$x$に対して$x^n=e$が成り立つ．
+
+
+\証明
+
+位数最大の元を$a$として，$x$の位数$l$が$n$の約数でないとして矛盾を導く．
+
+$n = p_1^{\alpha_1} \cdots p_r^{\alpha_r} q_1^{\beta_1} \cdots q_r^{\beta_s} \cdots,
+ l = p_1^{\gamma_1} \cdots p_r^{\gamma_r} q_1^{\delta_1} \cdots q_r^{\delta_r} \cdots$
+と素因数に分解する．ここで，$\alpha_i \geqq r_i \geqq 0 \quad ( 1 \leqq i \leqq r)$，
+$0 \leqq \beta_j < \delta_j \quad ( 1 \leqq j \leqq s)$とする．
+仮定から，$s \geqq 1$，$q_1^{\beta_1} \cdots q_s^{\beta_s} = n' , p_1^{\gamma_1} \cdots p_r^{\gamma_r} = l',
+a^{n'} = a'$，$x^{l'} == x'$とおくと，$\alpha'$の位数は$p_1^{\alpha_r}, \cdots , p_r^{\alpha_r} , x'$の位数は$q_1^{\delta_1} \cdots q_s^{\delta_s}$で
+これらは互いに素であるから，$\alpha'x'$の位数は$p_1^{\alpha_1} \cdots p_r^{\alpha_r}$となり、$n$より大きくなるから矛盾
+
+\■
+
+
+7.
+
+$A,B$を$G$の有限部分群とすれば，$AB$の元の個数は$ [A:e][ B:e] / [A \cap B:e]$.
+また，$AB$が群になるならば，$[AB:B]=[A:A \cap B]$．
+
+\証明
+
+$ [ A : A \cap B ] = [ A : e ]/ [ A \cap B : e ] = n $とおき，
+$A = \bigcap_{i=1}^n a_i ( A \cap B)$とすると，$AB$の任意の元は，
+$ b \in B$と$a_i$とによって, $a_ib$とただ一通りに掛けることが容易に確かめられる．
+したがって$AB$の元の個数は$[A : e ] [B :e ] / [A \cap B :e]$．また
+$AB$が群になれば，$B$は$AB$の部分群となり，$AB$の元の個数は$[AB:e] = [AB :B ] [B:e]$ゆえに，
+$ [AB :e] / [B : e] = [A :e ]/ [A \cap B :e ] = [A : A \cap B]$．
+
+\■
+
+8.
+$A$を$G$の部分群，$B$を$A$の部分群とする．$G/A$の代表系を$ \{ a_\lambda \}_{\lambda \in L}$，
+$ A / B$の代表系を$ \{ b_\mu \}_{ \mu \in M}$とすれば，
+$\{ a_\lambda b_\mu \}_{\lambda \in \varLambda, \mu \in M}$は$G / B$の代表系である．
+とくに$B$が$G$で指数有限ならば，
+$ [ G : B ] = [ G : A ][A :B]$．
+
+\証明
+
+$G = \bigcap_{\lambda \in \varLambda} \alpha_\lambda A , A = \bigcup_{\mu \in M} b_\mu B$とすれば，
+$G = \bigcup_{\lambda \in \varLambda, \mu \in M} a_\lambda b_\mu B$．$\alpha_\lambda b_\mu B= \alpha_{\lambda'} b_{\mu'} B$なら、
+$\alpha_\lambda A \cap \alpha_{\lambda'} A \ne \varnothing$．ゆえに$\lambda = \lambda'$．したがって$\mu = mu'$．
+
+\■
+
+
+9.有限群$G$の部分群$A,B$について$[G:A]$と$[G:B]$が互に素ならば，$G=A8$.
+
+\証明
+$ [G:A] = m , [G:B]=n$とおく．$[G:e] = m [A : e] = n [B : e]$．$m$と$n$は互いに素だから，
+$[A:e] nl$．$[B:e] = ml$と書ける．$[A \cap B : e ] = k$とおくと
+$k$は，$nl,ml$の公約数だから，$l$の約数，問題７より$AB$の元の個数は$nl \cdot ml / k$に等しいから，
+$nml$以上である．一方$[B:e] = mnl$．ゆえに$AB=G$．
+
+\■
+
+10.
+群$G$の有限正規部分群$N_1l, \cdots , N_n$のどの二つも位数が互に素ならば，$N_1, \cdots , N_n$は
+直積である．
+
+\証明
+
+$n$に関する帰納法による．$n=2$のとき，$N_1 , N_2$の位数をそれぞれ$n_1 , n_2$とすると，
+$N_1 \cap N_2$の位数は$n_1 , n_2$の約数であり，$n_1$と$n_2$は互いに素だから，$N_1 \cap N_2 = \{ e \}$すなわち，
+$N_1 N_2$/は直積である．次に$n-1$までいえたとする．$N_1 \cdots N_{n-1}$は直積だから，
+その位数は各$N_i$の位数の咳きであり，仮定から$N_n$の位数と互いに素である．
+また，$N_1 \cdots N_{n-1}$は正規部分群となるから，結局$n=2$の場合に帰着し，$N_1 \cdots N_{n-1} N_n$は直積である．
+
+\■
+
+11.群$G$の部分群$A,B,C$において，$C \supset A$ならばならば，$AB \cap C= A (B \cap C)$・
+
+\証明
+
+$AB \cap C \ni ab=c$とする（$a \in A , b \in B ,c \in C)$．$a^{-1} \in A \subset C \Rightarrow b = a^{-1}c \in B \cap C
+\Rightarrow ab \in A ( B \cap C)$．逆に$A(B \cap C) \subset AB \cap AC = AB \cap C$．
+
+\■
+
+12.対称群$ \mathfrak{S}_n$は互換$( \: 1 \: 2 \:)$と巡回置換$( 1 \: 2 \: \cdots \: n \:)$とで生成される．
+
+\証明
+
+$( \: 1 \: 2 \: \cdots \: n)^r ( \: 1 \: 2)(\: 1 \: 2 \cdots \: )^{-r} = ( \: r+1 \: r + 2 \: ) , \quad 1 \leqq r \leqq n-2$，
+$( \: 1 \: r ) ( \: r \: r+1 \:)( \: 1 + r \:) = ( \: 1 \: r+1 \:) , 2 \leqq r \leqq n-1$と$\mathfrak{S}_n$が
+$( \: 1 \: 2 \:) , ( \: 1 \: 3\:) , \cdots , (\: 1 \: n \: )$で生成されることから容易にわかる．
+
+\■
+
+
+13.次の各群について，自己準同型，自己同型，内部自己同型をすべて求めよ．
+\begin{list}{}{}
+	\item	(1) $ \Z$の加法群．
+	\item (2) $ \Q$の加法群
+	\item (3) $ \mathfrak{S}_2$．
+  \item (4) $ \mathfrak{S}_3$．
+\end{list}
+
+\証明
+
+
+(1) 自己準同型$f(x) = ax$．自己同型$f(x) = ax $．$a = \pm 1$のもの．内部自己同型は恒等写像のみ．
+
+(2) $\varphi$を$\Q$の自己同型とする．任意の$\frac{b}{a} \in \Q \: ( a,b \in \Z , a \ne 0)$に対して，
+$ \varphi \left( \frac{b}{a} \right) = \frac{b}{a} \varphi (1)$となるから，
+$\ varphi ( 1) \ne 0$なら，$\varphi$は自己同型となる．逆に任意の$c \in \Q$ヲ捕り、
+$ \varphi ( \frac{b}{a} ) = \frac{b}{a}c$とすると，$\varphi$は$\Q$の自己準同型になる．
+自己準同型であって自己同型でないものは$\Q$のすべての元を$0$に対応させる写像である．
+内部自己同型は恒等写像のみ．
+
+
+(3) $\mathfrak{S}_2 = \{ e , (\: 1 \: 2 \: ) \: \}$．自己準同型は恒等写像と$\varphi ( ( \: 1 \: 2 \: )) = e$ｔなる写像，
+自己同型も内部自己同型も恒等写像のみ．
+
+
+(4)
+
+$\mathfrak{S}_3$の位数2の元は$( \: 1 \: 2 ) , ( \: 1 \: 3 \: ) , ( \: 2 \: 3 \:)$であり，
+$\mathfrak{S}_3$はこの中の任意の二つで生成される．従って自己同型は$\mathfrak{S}_3$の部分集合
+$ \{ (\: 1 \: 2 \:), ( \: 1 \: 3 \: ) , ( 2 \: 3 \: ) \*$の全単射により定まる．
+すなわち，自己同型群は$\mathfrak{S}_3$と同型である．$\mathfrak{S}_3$の正規部分具は
+$\mathfrak{S}_3 , \{ \: e  , ( \: 1 \: 2 \: 3 \:)  , ( \: 1 \: 3 \: 2) \: \} , \{ e \}$であるから，
+自己準同型は以上のほかに，$\varphi(( \: 1 \: 2 \ )) = \varphi (( \: 1 \: 3 \: )) = \varphi(( \: 2 \: 3 \: )) = e,
+( \: 1 \: 2 \:) , ( \: 1 \: 3 \: ) , ( \: 2 \: 4 \:)$，の4通りがある．内部自己同型群は，
+自己同型群に同じである．
+
+\■
+
+14.
+群$G$がまた順序集合で，公理
+\[
+	x > y \Rightarrow xz > yz , zx > zy
+\]
+をみたすとき，$G$を\textbf{順序群}といい，$ x > e $をみたす元$x$を\textbf{正元}という．
+
+\begin{list}{}{}
+	\item	(1) 順序群$G$の正の元全体の集合$P$は次の条件をみたす．
+					\begin{list}{}{}
+						\item (a) $P$は単位元$e$を含まない部分半群である．
+						\item (b) $G$の任意の元$a$に対して，$aPa^{-1} \subset P$．
+					\end{list}
+	\item (2) 逆に，群$G$の部分集合$P$が(a),(b)をみたせば，$P$を正の元の全体とするような$G$の順序群の構造が一意的に定まる．
+	\item (3) 順序群$G$が全順序集合であるためには
+\[
+	G = P \cup P^{-1} \cup \{ e \}
+\]
+の成り立つことが必要十分である．
+\end{list}
+
+\証明
+
+(1) (a) $x,y \in ` \Rightarrow x > e , y > e \Rightarrow xy > y$，$y > e \Rightarrow xy > e \Rightarrow xy \in P$．
+
+(b) $x \in P \Rightarrow axa^{-1} > aea^{-1} = e \Rightarrow axa^{-1} \in P$．
+
+(2) $xy^{-1} \in P$のとき$x > y$と定義する．$P \not\ni e $であるから，このとき$x \ne y$となる．
+$x > y , y > z \Rightarrow xy^{-1} , yz^{-1} \in P$．(a)より$( xy^{-1})(yz^{-1}) = xz^{-1} \in P \Rightarrow x > z$．
+すなわち，$G$は順序群である．一意性は明らかである．
+
+(3) $x > y \Leftrightarrow xy^{-1} \in P$，$ x < y \Leftrightarrow xy^{-1} \in P^{-1}$より明らか．
+
+\■
+
+5
+
+作用域をもった群と作用準同型から成る右の可換な図式において，
+
+（可換図式保留）
+
+\begin{list}{}{}
+	\item	(1) 第1行が完全で，$f', \alpha , \gamma$が単射ならば，$\beta$も単射である．
+	\item (2) 第2行が完全で，$g, \alpha, \gamma$が全射ならば，$\beta$も全射である．
+\end{list}
+
+\証明
+
+群$A,B, \cdots , $の単位元を$e_A, e_B \cdots$と書くことにする．
+
+(1) $B \ni b , \beta (b) = e_B'$とすると，右半分の可換性と$\gamma$が単射であることから，
+\[
+	\gamma g(b) = g' \beta (b) = g' ( e_{B'}) = e_c' \Rightarrow g(b) = e_c.
+\]
+第1行が完全だから，$f(a) = b$となる$a	\in A$がある．左半分の可換性と$\alpha , f'$が単射である
+ことから，
+\[
+	f' \alpha ( a) = \beta f(a) = \beta (b) = e_{B'} \Rightarrow \alpha (a ) = e_{A'} \Rightarrow a = e_A \Rightarrow b = e_b.
+\]
+
+(2)
+任意の$b' \in B'$に対し，右半分の可換性と$ \gamma , g$が全射であることから，$b \in B$があって
+$ g'(b') = \gamma \circ g(b) =g'(\beta (b))$．ゆえに，$g'(b') g'(\beta(b))^{-1} = e_{c'} \Rightarrow 
+g'(b'(\beta b^{-1})) = e_{C'}$．
+第2行が完全で$\alpha$が全射だから，$f' \circ \alpha(a) = b'(\beta (b^{-1}) $となる$a \in A$がある．
+左半分の可換性から，$ \beta ( f (a) b ) = b'$．
+
+\■
+
+16.
+作用域をもった群と作用準同型から成る右の可換な図式において，第1行，第2行ともに完全で，
+$ \alpha , \beta , \delta , \varepsilon$が同型写像ならば，
+$ \gamma $も同型写像である．(fivelemma)．（前間を用いよ．）
+
+\証明
+
+仮定から，可換な図式
+
+（図保留）
+
+を得て，第1行，第2行ともに完全，$\beta' , \delta'$は同型写像となるから，
+前問が使えて，$\gamma$は同型写像である．
+
+\■
+
+17.
+作用域をもった群と作用準同型から成る右の可換な図式において，各列は完全で，
+第2行が完全とすれば，第1行が完全であることと第3行が完全であることとは同値である．
+
+\証明
+
+
+第1行が完全であるとする．任意の$a'' \in A''$に対して，$k$が全射だから，
+$k(a) = a''$となる$a \in A$がある．第2行が完全だから，$g \circ f (a)  = e_c$．
+下半分が可換性から，$g'' \circ f'' (a'') = e_{c''}$．第3列が完全であり，
+$g'$が全射だから，$g(b_1) = g(b)$となる　$b _1 \in \text{Im} h'$があり，

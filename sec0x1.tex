@@ -1,0 +1,368 @@
+\chapter*{集合・写像・代数系}
+
+この序章では，既知の概念の復習を兼ね，本書を通じて用いる記法その他について簡単に説明しておく，
+
+\section*{集合について}
+
+$ x\in M$．$x$は集合$M$の元である．
+
+$ M =\{ \: a,b,c \: \} $．$M$は，元$a,b,c$より成る集合．
+
+$ M=\varnothing$．$M$は空集合である．(元をもたない．)
+
+$ M= \{ x ; \cdots \}$．$M$ は条件 $ \cdots $をみたす$x$全体の集合．
+
+$ \N = \{ 1,2,3, \cdots \}$．自然数全体の集合．
+
+$ \Z = \{ \cdots , , -2,-1,0,1,2, \cdots \}$．整数全体の集合．
+
+$ \displaystyle \Q = \left\{ \frac{b}{a} ; a \in \N , b \in \Z \right\}$．有理数全体の集合．
+
+$ \R$．実数全体の集合．
+
+$ \C = \{ a + b \sqrt{-1} ; a,b \in \R \}$．複素数全体の集合．
+
+$ M \supset N, \quad ( N \subset M)$．$N$は$M$の部分集合．
+
+$ M = N \stackrel{\text{def}}{\Leftrightarrow} M \supset N \text{かつ} M \subset N$．$M,N$は同じ集合．
+
+$ M \supsetneq N \stackrel{\text{def}}{\Leftrightarrow} M \supset N \text{かつ} M \ne N$．$N$は$M$の\textbf{真部分集合}．
+
+$ M \cup N = \{ x ; x \in M \text{または} x \in N \}$．$M,N$の\textbf{和集合}（または\textbf{結び}）．
+
+$ M \cap N = \{ x ; x \in M \text{かつ} x \in N \}$．$M,N$の\textbf{共通部分}（\textbf{積集合}または\textbf{交わり}）．
+
+
+$M+N$．$M$と$N$の直和．$L=M+N$は，$ M \cap N = \varnothing , L= M \cup N$を表わす．
+
+$ M-N= \{ x ;  x \in M \text{かつ} x \not\in N \}$．$M$に対する$N$の\textbf{補集合}．
+
+$A^C = M-A$．$A$の\textbf{補集合}．\textbf{全集合} $M$を定めた揚合，$ A \subset M$に対して用いる．
+
+$ M \times N = \{ (x,y); x \in M, y N \}$．$M$と$N$の直積．ただし，$(x,y)=(x',y')$$ \Leftrightarrow x = x' , y = y'$と定める．
+
+$ N^M$．集合$M$から集合$N$への写像（次ページ参照）全体の集合．
+
+$ \mathfrak{P}(M)$．$M$の巾集合．（$M$の部分集合全体の集合．）
+
+$ (M_\lambda )_{\lambda \in \varLambda}$．$\varLambda$を\textbf{添数集合}とする\textbf{集合族}（$\varLambda = \N$のときは，$(M_i)_{i=1,2, \cdots , }$とも書く）．
+
+$ (\bigcup_{\lambda \in \varLambda}) = \{x ; \exists \lambda \in \varLambda . x \in M_\lambda \}$、$(M_\lambda)_{\lambda \in \varLambda}$の\textbf{和集合}．
+
+$ (\bigcap_{\lambda \in \varLambda}) = \{x ; \forall \lambda \in \varLambda . x \in M_\lambda \}$、$(M_\lambda)_{\lambda \in \varLambda}$の\textbf{共通部分}．
+
+
+\定理{1}
+
+\begin{list}{}{}
+	\item	(1) $ \displaystyle (\bigcup_{\lambda \in \varLambda} M_\lambda ) \cap N = \bigcup_{\lambda \in \varLambda} (M_\lambda \cap N)$，
+$ \displaystyle	( \bigcap_{\lambda \in \varLambda} M_\lambda) \cup N = \bigcap_{\lambda \in \varLambda} ( M_\lambda \cup N)$。 （分配律）．
+	\item (2) $ \displaystyle ( \bigcup_{\lambda \in \varLambda } M_\lambda )^C = \bigcap_{\lambda \in \varLambda } M_\lambda^C$．
+$ (\bigcap_{\lambda \in \varLambda} )^C = \bigcup_{\lambda \in \varLambda} M_\lambda^C$。( de Morgan の法則）．
+\end{list}
+\■
+
+
+$ \prod_{\lambda \in \varLambda} M_\lambda = \{ \: ( \cdots , x_\lambda , \cdots )_{\lambda \in \varLambda} ; x_\lambda \in M_\lambda) \}.$
+$ ( M_\lambda )_{\lambda \in \varLambda }$ の\textbf{直積}．
+（$\varLambda$から$ \bigcup_{\lambda \in \varLambda} M_\lambda$への写像$x$で、$ \forall \lambda \in \varLambda, x ( \lambda ) = x_\lambda \in M_\lambda$
+となるもの全体の集合）$x_\lambda$を$x$の\textbf{$\lambda$成分}といい，
+各$ M_\lambda$をこの直積の\textbf{因子}という．
+
+　
+
+\textbf{選出公理}
+　集合族　$ (M_\lambda)_{\lambda \in \varLambda}$において，$ \forall \lambda \in \varLambda$，$M_\lambda \ne \varnothing$が成り立つならば，
+$ \prod_{\lambda \in \varLambda} M_\lambda \ne \varnothing$である．
+\■
+
+〔注意〕本書では，選出公理を必要に応じて自由に使うものとする．(多くの場合，後出の Zorn の補題の形で用いる．）
+
+$ \displaystyle \sum_{\lambda \in \varLambda}^{} M_\lambda$．$ ( M_\lambda )_{\lambda \in \varLambda}$の\textbf{直和}．
+$ M = \sum_{\lambda \in \varLambda}^{} M_\lambda$のとき，$M$は\textbf{直和成分} $M_\lambda (\lambda \in \varLambda)$に
+\textbf{直和分割}されたという．それは，$M = \sum_{\lambda \in \varLambda} M_\lambda$であって，
+各$ M_\lambda \ne \varnothing$、かつ任意の$ \lambda , \mu \in \varLambda$に対して
+$ M_\lambda \cap M_\mu = \varnothing$である（どの二つも交わらない）ことを意味する．
+
+$ \{ M_\lambda ; \lambda \in \varLambda \}$を，この直和分割の\textbf{商集合}という．
+また，$ \prod_{\lambda \in \varLambda} M_\lambda$の一つの元$( \cdots , x_\lambda , \cdots )_{\lambda \in \varLambda }$を，
+この直和分割の一つの\textbf{代表系}という．
+
+$M = \sum_{\lambda =\in \varLambda}^{} M_\lambda$のとき，$M \ni x,y$に対し，$x,y$が同じ成分に属することを $x \sim y$で表せば，
+\begin{list}{}{}
+	\item	$x \sim x$（\textbf{反射律}），
+	\item $x \sim y \Rightarrow y \sim x$（\textbf{対称律}），
+	\item $ x \sim y , y \sim z \Rightarrow x \sim z$（\textbf{推移律}）
+\end{list}
+が成り立つ．一般に，$M$の2元の間の関係$\sim$について上の3律（これを合わせて\textbf{同値律}という）が成り立つならば，
+その関係 $ \sim $を$M$における\textbf{同値関係}という．
+上に得られた同値関係を直和分割 $ \sum_{\lambda \in \varLambda}^{} M_\lambda$から\textbf{導かれた}同値関係という．
+
+
+$M$の任意の同値関係$ \sim $があれば，それを導く$M$の直和分割がただ一つある．
+その直和分割の商集合を$ M / \sim$で表わし，その各元を\textbf{同値類}という．
+
+
+\section*{写像について}
+
+集合$M$の任意の元$x$に対して集合$N$の元$f(x)$が一意的に定まるとき$f$は
+$M$から$N$（の中）への写像（または函数）といい，$f: M \to N$または $M \stackrel{f}{\to} N$で
+表わす.
+
+$f(x)$を$f$による$x$の\textbf{像}という．
+
+$D(f) = M$．$f$の\textbf{定義域} （ domain of definition ）．
+
+$ f(A) = \{ f(x) ; x \in A \: \}$．$M$の部分集合$A$の\textbf{像}．
+
+$ \text{Im} f= f(M)$．$f$の\textbf{像}（image）または \textbf{値域}．
+
+$ f^{-1}(y) = \{ x \in M ; f(x) = y \: \}$．$N$の元$y$の\textbf{原像}．
+
+$f^{-1}(B)= \{ x \in M ; f(x) \in B \}$．$N$の部分集合$B$の原像．
+
+$f$は\textbf{全射}（surjection）である（$f$は$N$の上への（onto）写像である） $\Leftrightarrow \text{Im} f =N$．
+
+$f$は\textbf{単射}（injection）である（$f$は 1対1の （one to one）写像である）$\Leftrightarrow [ x_1 \ne x_2 \Rightarrow f(x_1) \ne f(x_2) ]$．
+
+$f$は\textbf{全単射}（bijection）である $ \Leftrightarrow f$は全射かつ単射である．
+
+値$y_0$の\textbf{定数写像}とは，$f:M \to N, \forall x \in M, f(x) = y_0$をいう．
+
+\textbf{標準的単射}．$ f : M \to N, M \subset N, \forall x \in M, f(x) = x$．
+
+$M$の\textbf{恒等写像}．$ 1_M : M \to M, \forall x \in M, f(x)=x$．
+
+\textbf{射影}．$ p_\mu: \prod_{\lambda \in \varLambda} M_\lambda \to M_\mu \: ( \mu \in \varLambda)$．
+$ x = (x_\lambda )_{\lambda \in \varLambda }$に対し $p_\mu (x) = x_\mu$．
+
+\textbf{標準的全射}．$ c : M \to M / \sim $．ただし，$ \sim $は$M$の一つの同値関係，$ c(x) = [ x \text{を含む同値類} ] $．
+
+$ f : M \to N$ が全単射のときは，$f$の\textbf{逆写像}$f^{-1} : N \to M$が定義される．
+$M$から$N$への全単射があるとき，$M$と$N$とは\textbf{対等}である，または\textbf{濃度}が等しいという．
+$M$の濃度を$p(M)$で表わす．$N$の真部分集合 $\{ 1,2, \cdots ,n \} \: (n \in \N)$の濃度を自然数
+$n$で表わすことがある．また$P( \varnothing ) =0$とする．
+
+濃度が自然数または$0$で表わされる集合を\textbf{有限集合}，そうでない集合を\textbf{無限集合}という．
+$\N$と対等な集合を\textbf{可算集合}という．
+
+\定理{2} $f : M \to N, M \supset A, A_\lambda ( \lambda \in \varLambda)$，$ N \supset B, B_\kappa ( \kappa \in K )$ならば，
+\begin{list}{}{}
+	\item	(1) $f^{-1} (f(A)) \supset A$．
+	\item (2) $f(f^{-1} (B)) = B \cap \text{Im} f$．
+	\item (3) $f( \bigcup_{\lambda \in \varLambda} A_\lambda ) = \bigcup_{\lambda \in \varLambda} f(A_{\lambda} )$．
+	\item (4) $f( \bigcap_{\lambda \in \varLambda} A_\lambda ) \subset \bigcap_{\lambda \in \varLambda} f(A_\lambda )$．
+	\item (5) $ f^{-1} ( \bigcup_{\kappa \in K} B_k) = \bigcup_{\kappa \in K } f^{-1} (B)$．
+	\item (6) $ f^{-1} ( \bigcap_{\kappa \in K} B_\kappa ) = \bigcap_{\kappa \in K} f^{-1} (B_\kappa )$．
+\end{list}
+
+とくに$f$が単射ならば	(1),(4)の包含関係は$=$におきかえられる．
+$f$が全射ならば，(2)の右辺は単に$B$となる．――
+
+
+二つの写像$f:M \to N,f' : M' \to N$において，
+\begin{align*}
+	& f=f' \Leftrightarrow [ M = M' \text{かつ} \forall x \in M, f(x) = f'(x) ]. \\
+  & f=f'|M \Leftrightarrow [ M \subset M' \text{かつ} \forall x \in M, f(x) = f'(x) ].
+\end{align*}
+
+$ f=f' | M $のとき，$f$を$f'$の制限，$f'$を$f$の拡張という．
+
+二つの写像$f:L \to M,g: M \to N$に対して，その結合写像$ g \circ f : L \to N , ( g \circ f) (x) = g(f(x))$
+が定義される．さらに$h:N \to P$があれば，あきらかに\textbf{結合法則}
+$ h \circ ( g \circ f) = (h \circ g ) \circ f$が成り立つ．（結合を表わす $ \circ $を省略することもある．）
+
+\定理{3}　
+$ M \stackrel{f}{\to} N \stackrel{g}{\to} M \stackrel{f}{\to}$で，$gf=1_M , fg = 1_M$ならば，
+$f,g$はともに全単射で，$g=f^{-1} , f=g^{-1}$である．
+
+いくつかの集合とその間の写像があるとき，それらの関係を右図のように図示したものを
+（\textbf{写像}）\textbf{図式}（diagram）という．図式の中の任意の二つの写像を結ぶいくつかの写像の結合がみな等しいならば，
+その図式は可換であるという．右の図式で，$jf = f_1, kg_1 j =g, hk = lh_1, f_3 f_2 = j_2, h_1 g_1 = k_1 j_1$の五つの等式が成り立てぱ，
+この図式は可換である．
+
+\定理{4}
+写像$ f: M \to N$に対して，$M$の元の間に同値関係 $\sim $が，$ x \sim y \Leftrightarrow f(x) = f(y)$によって定義される．
+
+$ D = M / \sim$とし，右の図式に示す各写像を次のように定義する．
+
+$f^d (x) = f^{-1} ( f(x) ) , f^s (x)=f(x) , f^b ( f^{-1} (y) ) = y , f^{j} (f^{-1} (y))=y , f^t (y)=y$．
+
+これによって矛盾なく写像が定義され，この図式が可換になる．かつ，$f^d , f^s$は全射，$f^i, f^j$は単射，$f^b$は全単射である．
+\■
+
+$ f = f^i f^b f^d$を,$f$の標準的分解という．
+
+
+\section*{順序集合について}
+
+集合$M$の元の間に関係$ \leqq$が定義されていて，3条件
+\begin{list}{}{}
+	\item	(1) $ x  \leqq x $ (反射律),
+	\item (2) $ x \leqq y,y \leqq x \Rightarrow x=y$，
+	\item (3) $ x \leqq y,y \leqq z \Rightarrow x \leqq z$ (推移律)
+\end{list}
+がみたされるとき，$ \leqq $を$M$における\textbf{順序}または\textbf{半順序}といい，
+$M$をこの順序に関する\textbf{（半）順序集合}という．$ x \leqq y$かつ$ x \ne y$を$ x < y$と書く．
+また，$ x \leqq y , x < y$をそれぞれ$ y \geqq x , y > x$とも書く．
+
+半順序集合$M$の任意の2元$x,y$に対して，$x \leqq y$か$ y \leqq x$かの少なくとも一方が成り立つとき,
+$ \leqq $を\textbf{全順序}，$M$を$\leqq $に関する\textbf{全順序集合}という．
+
+半順序集合の部分集合の元の間の半順序を，原集合における半順序により定義すると，
+この部分集合も半順序集合となる．これを,\textbf{部分(半)順序集合}という．
+
+\例{}
+実数全体の集合$\R$は，ふつうの大小関係について全順序集合である．
+$\Q,\Z,\N$はその部分順序集合である．また，$M$を任意の一つの集合とするとき，$\mathfrak{P} (M) \ni A,B$
+に対して，$ A \leqq B \Leftrightarrow A\subset B$と定めれば，これにより $\mathfrak{P}(M)$は半順序集合となるが，
+一般には全順序集合とはならない．
+
+半順序集合Mから半順序集合Nの中への写像$f$が，$ x_1 \leqq x_2 \Rightarrow x_2 \Rightarrow f(x_1) \leqq f(x_2)$を
+をみたすとき，$f$は\textbf{順序関係を保存する}という．$M$から$N$への順序関係を保存する全単射があるとき，$M$と$N$は順序同型であるという．
+
+\例{}
+$N$と正の偶数全体の集合，$\N$と正の奇数全体の集合とは順序同型である．$\N$と$\Z$，$\Z$と$\R$はいずれも順序同型でない．
+$\R$の部分順序集合として，二つの開区間$(a,b),(c,d)$は順序同型で，これらはまた$\R$とも順序同型である．
+開区間と閉区間とは順序同型でない．
+
+半順序集合$M$の元$x_0$が，‘$ \forall`x \in M , x \leqq x_0$’をみたすとき，
+$ x_0$を$M$の最大元といい，$ \max_{x \in M} x$または$ \max M$で表わす．
+また，$x_0$が ‘$x \geqq x_0 \Rightarrow  x = x_0$’をみたすとき，
+$ x_0$を$M$の極大元という．
+
+同様にして\textbf{最小元} $\min M$および\textbf{極小元}も定義される．
+これらの元は必ずしも存在するとは限らない．
+
+$M$が全順序集合のとき，その最小元,最大元がもし存在すれば，それらをそれぞれ\textbf{最初}の元，
+\textbf{最後}の元ともいう．また，2元$a,b$において，$a<b$であり，
+かつ$ a < x < b$となる元の$x$が存在しないならば，$a$を$b$の\textbf{直前}の元,$b$を$a$の\textbf{直後}の元
+
+半順序集合$M$とその部分集合$A$が与えられたとき，$M$の元$x_0$が，
+‘$ \forall a \in A, a \leqq x_0$’をみたすならば，$x_0$を$A$の\textbf{上界}という．
+$A$の上界全体の集合がもし最小限をもてば，それをAの\textbf{上限（supremum）}といい，
+$ \sup A$で表わす．
+$A$の下界および\textbf{下限（infinimum）}$\inf A$も同様に定義される．
+
+\例{}$\R$の部分集合$A$が上界をもつならば必ず上限をもつ．
+また$A$が下界をもてぱ必ず下限をもつ．$\Q$ではこのようなことは成立しない．
+$\mathfrak{P}(M)$を前に述べたような半順序集合と考えるとき，
+任意の部分集合$	\mathfrak{a}$は上限も下限ももつ．
+\[
+	\sup \mathfrak{a} = \bigcup_{\lambda \in \varLambda} A_\lambda,
+	\quad	
+	\inf \mathfrak{a} = \bigcap_{\lambda \in \varLambda} A_\lambda
+\]
+半順序集合$M$の任意の部分集合が極大元をもつとき，$M$は\textbf{極大条件}をみたすという．
+また$M$の元の列 $\{ a_1 , a_2, \cdots \}$で$a_1 < a_2 < \cdots $であるものは
+長さ有限の列しかないならば，$M$は\textbf{昇鎖律}をみたすという．\textbf{極小条件・降鎖律}も同様に定義される．
+
+\定理{5}極大条件と昇鎖律とは同値である．また，極小条件と降鎖律とは同値である．――
+
+半順序集合$M$の空でない任意の部分集合$A$が，部分半順序集合として最小元をもつとき
+（すなわち，$A$の中に下限をもつとき）,$M$を\textbf{整列（順序）集合}という．
+また，半順序集合$M$の任意の部分全順序集合が上限をもつとき，$M$を\textbf{帰納的順序集合}
+という．
+
+
+\例{1}
+$\R$内の閉区間は，全順序集合かつ帰納的順序集合であるが，整列集合ではない．
+$\Q$内の閉区間は，全順序集合であるが帰納的順序集合でない．$M$を二つ以上の元をもつ集合とすると，
+$\mathfrak{P}(M)$は帰納的順序集合であるが，全順序集合ではない．
+
+\例{2}
+$ \N$は整列集合である．$\N$はさらに，最初の元$1$と異なる任意の元nが直前の元$n-1$をもつという性質をもつ．
+これから，数学的帰納法の原理として知られる次の命題が導かれる．｀$\N$の部分集合$M$が，
+(1) $ M \ni 1$，(2) $M \ni n-1 \: \Rightarrow M \ni n$
+の二つの性質をもてば，$M=\N$である’
+
+\定理{6}選出公理は，次の二つの命題のいずれとも同値である．
+\begin{list}{}{}
+	\item	(1) \textbf{Zornの補題} 帰納的順序集合においては，任意の元$x$に対して,極大元$y$で$ y \geqq x$であるものが存在する．
+	\item (2) \textbf{整列可能定理} 任意の集合$M$が与えられたとき，$M$に適当に半順序を定義して,$M$を整列集合にすることができる．
+\end{list}
+
+\例題{2}
+Zornの補題を用いて，つぎの命題を示せ．
+
+半順序集合$M$の任意の部分全順序集合が上界をもつならば，$M$の任意の元$x$に対して，
+$x \leqq m$をみたす$M$の極大元$m$が存在する．
+
+\証明
+$N=\{ y \in M \: ; \: y \geqq x \: \}$とし，$N$の部分全順序集合全体の集合を$\tilde{N}$とする．
+$\tilde{N}$の異なる二つの元$L,L'$について，$ L \subset L'$，かつ$L$の任意の元$a$と$L'$に属して
+$L$に属さない任意の元$b$に対して$a<b$が成り立つとき，$L < L'$と定義すれば，
+これによって$ \tilde{N}$は半順序集合となる．かつ$\tilde{N}$の任意の部分全順序集合
+$ \{ \: L_\lambda \: ; \: \lambda \in \varLambda \: \}$に対して
+$ \bigcup_{\lambda \in \varLambda} L_\lambda $はその上限となるから，
+$ \tilde{N}$は帰納的順序集合である．ゆえにZornの補題により，$ \tilde{N}$
+は極大元$L^*$をもつ．仮定によって$L^*$は$M$の中に上界$m$をもつ．あきらかに
+$ m \geqq x$．もし，$m < z$となる$M$の元$z$が存在したとするならば，$z  \in N$，
+したがって $ L^* \cup \{ z \}$はまた$\tilde{N}$の元となり，$L^*$の極大性に反する．
+ゆえに$m$は$M$の極大元である．
+
+\■
+
+\section*{代数系について}
+
+$M$を集合とするとき，直積$ M \times M$から$M$への写像を，$M$における算法または演算という．
+
+\例{}
+$M=N$のとき，$ \N \times \N \ni (x,y)$に$x,y$の和$x+y \in \N$を対応させるのは，
+$\N$における一つの算法（加法）である．$(x,y)$に$x,y$の積$xy \in \N$を対応させるのは，
+今一つの算法（乗法），$x^y \in \N$を対応させるのも，さらに今一つの算法である．
+$\N$における通常の意味の減法や除法は，われわれの意味の$\N$における算法にはならない．
+$x,y \in \N$でも$x-y$や$ \displaystyle\frac{x}{y}$は必ずしも $ \in \N$とならないからである．
+$ \Z$においては，加法，減法，乗法はそれぞれ算法となるが，除法はならない．$\Q,\R,\C$でも同様である．
+($0$で割ることはできないから．）
+
+\例{}$A$を一つの集合，$M$をその巾集合$ \mathfrak{P}(A)$とするとき，$ M \ni B,C$（すなわち $A \supset B,C$）
+に対して，$ B \cup C$または$ B \cap C$を対応させるのは，それぞれ$M$における算法である．
+
+$ \varphi : M \times M \to M$のとき，$M \times M \ni (x,y)$の$ \varphi$による像は，$ \varphi(x,y)$と表わすの
+がふつうであるが，$ \varphi$を算法と考えるとき$ \varphi (x,y)$の代りに$ x \varphi y$と書くこともある．
+（$\varphi$が‘加法’を表わすならば，$ x \varphi y = x + y$,‘乗法’を表わすならば，$ x \varphi y = x \times y$または
+$ x \cdot y$，または$xy$などと書く．）
+
+$\varphi$が$M$における算法で，$M$の任意の2元$x,y$に対し$x \varphi y = y \varphi x$となるならば，
+$ \varphi $は\textbf{交換法則}をみたす，あるいは\textbf{可換}であるという．また$M$の任意の3元$x,y,z$に対し
+$(x \varphi y) \varphi z = x \varphi ( y \varphi z )$となるならば，$ \varphi$は\textbf{結合法則}をみたす，
+あるいは\textbf{結合的}であるという．
+
+$ \varphi , \psi$が$M$における二つの算法で，$M$の任意の3元$x,y,z$に対し
+$ x \varphi ( y \psi z) = ( x \varphi y ) \psi ( x \varphi z)$
+となるならば，$\varphi$は$\psi$に対して\textbf{左側分配法則}をみたす，
+あるいは\textbf{左側分配的}であるという．$ ( y \psi z ) \varphi x = ( y \varphi x ) \psi ( z \varphi x ) $が
+\textbf{右側分配法則}である．左側かつ右側分配的であることを，単に\textbf{分配的}であるという．
+
+\例{}
+$\N$または$\Z$における加法，乗法は，いずれも交換法則および結合法則をみたし，
+乗法は加法に対し，分配的である．しかし，加法は乗法に対して分配的ではない．
+また$\N$において$(x,y)$に$x^y$を対応させる算法は，可換でも結合的でもない．
+$\mathfrak{P}(A)$における算法$ \cup , \cap$はいずれも可換，結合的で，
+$ \cup$はは$ \cap $に対し，$ \cap$は$\cup$に対し，それぞれ分配的である．
+
+$ \varphi$が$M$における算法であるとき，$M$にある元$e$があって，$M$の任意の元
+$x$に対し$ x \varphi e = e \varphi x = x$が成り立つならば，
+$e$は算法$ \varphi $に関する$M$の\textbf{単位元}という．
+
+\例{}
+$1$は$\N$（または$\Z,\Q,\R,\C$）の乗法に関する単位元である．$0$は$\Z,\Q,\R,\C$の
+加法に関する単位元である．($\N$は加法に関する単位元をもたない．）
+$A$は$\mathfrak{P}(A)$における$ \cap$に関する単位元であり，
+$ \varnothing$は$ \mathfrak{P}(A)$における $ \cup $に関する単位元である．
+
+$ \varphi $が$M$における算法で，$M$が$ \varphi $に関する単位元$e$をもつとき，
+$ x \in M$に対し，$ y \in M$が存在し，$ x  \varphi y = y \varphi x=e$となるならば，
+$y$は$x$の$\varphi$に関する\textbf{逆元}という．
+
+\例{}
+$ \Z \ni x $の加法に関する逆元は$-x$である．
+$ \Z \ni x \ne \pm 1$ならば，$x$は$\Z$において乗法に関する逆元をもたない．
+しかし，$ x  \in \Q$ならば$ x \ne 0$でさえあれば，$x$は$\Q$において乗法に関する逆元$1/x$をもっている．
+
+集合$M$においていくつかの算法が与えられ，それらの算法がいくつかの規則（たとえば交換法則，結合法則，分配法則，単位元や逆元の存在等）
+にしたがうものとするとき，集合と，その元の間の ―― 与えられた規則にしたがう ―― 算法とを一括した概念が，
+代数系のそれである．次章以下に扱う群，環，体など，みな代数系の例である．
+今日の代数学の一般的主題は，代数系の構造を明らかにすることであるということができる．
+
