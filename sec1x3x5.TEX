@@ -1,0 +1,154 @@
+\subsection{直積と直和}
+
+$ M_\lambda \: ( \lambda \in \varLambda )$がすべて左$R$加群であるとき，
+それらの加群としての直積$ M = \prod_{\lambda \in \varLambda} M_\lambda$および直和
+$ M' = \oplus_{\lambda \in \varLambda} M_\lambda$は，
+\[
+	\alpha ( \cdots , x_\lambda , \cdots ) = ( \cdots , \alpha x_\lambda , \cdots ) \quad
+( \alpha \in R  , x_\lambda \in M_\lambda)
+\]
+と定義することによって左$R$加群となる．こうして得られた左$R$加群$M,M'$を
+$ (M_\lambda )_{\lambda \in \varLambda}$の左$R$加群としての\text{直積，直和}という．
+$M$または$M'$から$M_\lambda$への射影$P_\lambda (( \cdots , x_\lambda , \cdots ) \to x_\lambda)$は上への1次写像である．
+また，うめこみによって，$M_\lambda \subset M' \subset M$と考えられる．
+
+〔注意〕$R$加群の直積，直和は，作用域をもつ群としての直積，制限直積にほかならない．
+
+$M$の$R$部分加群$M_\lambda ( \lambda \in \varLambda)$に対して，中への同型写像
+$ \varphi : \oplus_{\lambda \in \varLambda} M_\lambda \to M$で$ \forall \lambda , \varphi | M_\lambda = 1_{M_\lambda}$
+の成り立つものがあれば，$ \text{Im } \varphi = \sum_{\lambda \in \varLambda} M_\lambda \cong \oplus_{\lambda \in \varLambda} M_\lambda$．
+このとき，$ \text{IM } \varphi $を$ \oplus_{\lambda \\in \varLambda} M_\lambda$と書き表す．
+P.22定理7を見直せば，容易に次の定理が得られる．
+
+
+\定理{21}
+左$R$加群Mの有限個の$R$部分加群$M_1  , M_2 , \cdots , M_n$に対して，
+$ M' = M_1 + \cdots + M_n$が，$M_1 \oplus \cdots \oplus M_n$となるためには，次の各条件が必要かつ十分である．
+\begin{list}{}{}
+	\item	(1) $M'$の任意の元は$ x_1 + \cdots + x_n \quad ( x_i \in M_i) $の形に一意的に表わされる．
+	\item (2) $ x_1 + \cdots + x_n = 0 \quad ( x_i \in M_i ) \Rightarrow x_1 = \cdots = x_n = 0$.
+	\item (3) $ M_1 + \cdots + M_i ) \cap M_{i+1} = \{ 0 \} \quad ( i=1 , 2 , \cdots , n-1)$
+\end{list}
+
+\問{1}
+定理21を証明せよ．
+
+\証明
+$M' = M_1 \oplus \cdots \oplus M_n \Rightarrow $ (3) $\Rightarrow$ (2) $\Rightarrow$ (1) は定理7で得られている．
+(1) $\Rightarrow M' = M_1 \oplus \cdots \oplus M_n$を示すために，$ \varphi : M_1 \oplus \cdots \oplus M_n \to M' \: (( x_1 , \cdots , x_n) \to x_1 + \cdots + x_n)$が
+$R$加群としての同型写像であることに注意すればよい．
+
+
+\問{2} P.21～22 問3～7を左$R$加群について述べ，かつ証明せよ．
+
+左$R$加群$L$から各左$R$加群$M_\lambda \: ( \lambda \in \varLambda)$への一次写像$f_\lambda$が与えられているならば，
+$L$から$\prod M_\lambda$への1次写像$f$が一意的に存在して，どの$ \lambda$に対しても右の図式
+（図保留）
+が可換になる．ただし，$j_\lambda$は埋め込みの写像を表わす．
+（図保留）
+
+\例{1}
+p.49例3の $R^n$は，$R \oplus + \cdots \oplus R$（$n$個個の直和）にほかならない．
+$ n = r + s$ならば$ R^n = R^r \oplus R^s$と考えられ，$R^n / R^r \cong R-s$．これらの同型は，それぞれ
+\begin{align*}
+	(x_1 , \cdots , x_n ) \cdots (( x_1 , \cdots , x_r), ( x_{r+1} , \cdots , x_n)) \\
+  ( x_1 , \cdots , x_n ) \mod R^r \leftrightarrow ( x_{r+1} , \cdots , x_n)
+\end{align*}
+によって与えられる．
+
+$ M = \prod_{\lambda\in \varLambda} M' = \oplus_{\lambda \in \varLambda} M_\lambda$．
+$N_\lambda$は$M_\lambda$の左$R$部分加群とする．$N = \{ \: ( \cdots , x_\lambda , \cdots ) , \forall \lambda \in \varLambda \: x_\lambda \in N_\lambda \}, N' = N \cap M'$とおけば，
+\begin{list}{}{}
+	\item	(1) $N_\lambda = N \cap M_\lambda$．
+	\item (2) $N' , N$は$M$の左$R$部分加群である．
+	\item (3) $ M/ N \cong \prod M_\lambda / N_\lambda$．$M' / N' \cong \oplus M_\lambda / N_\lambda$．$M = M_1 \oplus M_2$ならば，$M / M_1 \cong M_2$．
+\end{list}
+$M$の$R$部分加群$N$が$M$の直和因子であるためには，$M$から$N$の上への1次写像$f$で，$ f | N = 1_N$となるものが存在することが必要十分である．
+
+\証明
+
+略．
+
+
+\問{3}
+左$R$加群$M_1, \cdots , M_2$の直和$M_1 \oplus M_2$に対してうめこみの写像を$ j_i : M_i \to M_1 \oplus M_2 \: ( i=1,2)$.
+射影を$p_i : M_1 \oplus M_2 \to M_i \: ( i=1 , 2 )$とすれば，
+\begin{list}{}{}
+	\item	(1) $ p_i \circ j_i = 1_{M_i} \: ( i=1,2) $
+	\item (2) $j_1 \circ p_1 + j_2 \circ p_2 = 1_{M_1 \oplus M_2}$
+	\item (3) \begin{align*}
+								0 \to M_1 \stackrel{j_1}{\to} M_1 \oplus M_2 \stackrel{p_2}{\to } M_2 \to 0 \\
+								0 \to M_2 \stackrel{j_2}{\to} M_1 \oplus M_2 \stackrel{p_1}{\to } M_1 \to 0 \\
+						\end{align*}
+		は完全系列である.
+\end{list}
+逆に，左$R$加群と1次写像から成る図式
+
+（図保留）
+
+において，
+\begin{list}{}{}
+	\item	(1) $ p_j' \circ j_i = 1_{M_i} \quad ( i=1,2) $
+	\item (2) $ j_1' \circ p_1' + j_2' \circ p_2' = 1_M $
+\end{list}
+が成り立つなららば，同型写像$ f: M_1 \oplus M_2 \to M$で，
+$ i =1 ,2 $に対して，右の図式が可換となるものが存在する．
+（すなわち，$M_1 \oplus M_2$は，(1'),(2')をみたす$M$によって
+特徴付けられる．
+
+\証明
+(1),(2),(3)が成り立つことは容易．次に，(1')(2')が成り立つならば，
+$p_1' \circ j_2' = p_1' \circ ( j_1' \circ p_1' + j_2' \circ p_2') \circ j_2' = (p_1' \circ j_1) \circ p_1' \circ j_2' + p_1' \circ ( j_2' + p_2') \circ j_2'= p_1' \circ j_2' + P_1' \circ j_2'$
+ゆえに，$ p_1 ' \circ j_2' = 0$．同様に，$p_2' \circ j_1' = 0$．そこで，
+$f=j_1' \circ p_1 + j_2' \circ p_2$．$M_1 \oplus M_2 \to M$とおけば，$p_1' \circ f= p_i$，$f \circ j_i = j_i'
+\: ( i=1,2)$となる．$ (x,y) = 0$ならば$ x = p_1 (x,y) = p_1' \circ f(x,y) = 0$．同様に，$y=0$．ゆえに$f$は単射である．
+また，$M \ni z$に対して，$f (( j_1 \circ p_1' + j_2 \circ p_2') (z)) = ( j_1' \circ p_1 + j_2' p_2) \circ ( j_1 p_1' + j_2 \circ p_2')(z) 
+= ( j_1' \circ p_1' + j_2' \circ p_2')(z) = z$であるから，$f$は全射である．
+
+\問{4}
+左$R$加群の完全系列
+\[
+	0 \to M_1 \stackrel{j_1'}{\to} M \stackrel{p_2'}{\to} M_2 \to 0	\quad \text{(*)}
+\]
+において，
+\begin{list}{}{}
+	\item	(1) $p_1' : M \to M_1$が存在して$ p_1' \circ j_1' = 1_{M_1}$が成り立つならば，$j_2' : M_2 \to M$が存在して，問3 (1'),(2')の条件が成り立つ．(1'),(2')の条件が成り立つ．(従って$ M \cong M_1 \oplus M_2$となる．）
+	\item (2) $ j_2' : M_2 \to M$が存在し、$p_2' \circ j_1'= 1_{M_2}$が成り立つならば，$p_1 : M \to M1$が存在して，問3(1'),(2')の条件が成り立つ．(従って$M \cong M_1 \oplus M_2$となる．）
+\end{list}
+
+
+\証明
+
+(1) $f = 1_M - j_1' \circ p_1' : M \to M$とすれば，$f \circ j_1' = j_1' - j_1' \circ ( p_1' \circ j_1') = 0$．すなわち
+$ f$は$ \text{Im } j_1'  \Ker p_2'$上で$0$になる．従って定理17により，$j_2' : M_2 \to M$が存在して，
+$f= j_2' \circ p_2'$となる．すなわち，(2')が成り立つ．次に$( p_2' \circ j_2' ) \circ p_2' = p_2' \circ ( 1_M - j_1' \circ p_2'$，
+$M_2$の任意の元$z$は$z = p_2'$と表わされるから，$(p_2' \circ j_2') (z) = p_2' \circ j_2' \circ p_2'(y) = p_2' () = z$
+ゆえに，$p_2' \circ j_2' = 1_{M_2}$．すなわち，(1')も成り立つ．
+
+(2) $f=1_M - j_2' \circ p_2' : M \to M $とすれば$p_2' \circ f=$．すなわち，$ \text{Im } f \subset \Ker p_0' = \text{Im } j_1'$，
+$j_1'$は単射であるから，$M$の各元$y$に対して$ (y) = j_1' (x)$となる$x$が一意的に定まる．
+$p_1'(y) = x$と定義すればよい．
+
+
+\■
+
+問4の(1)または(2)の条件が成り立つとき，完全系列(*)は\textbf{分解する}という．
+
+\例{2}
+左$R$加群Mの$R$部分加群$N_i, \cdots , N_n$について
+\begin{align*}
+	f : M \to \prod_{i=1}^n M / N_i \quad ( x \mapsto ( \cdots , x \mod N_i , \cdots )).	\\
+	g	: \prod_{i=1}^n M / N_i \to \prod_{i < j} M / ( N_i + N_j) \quad (( \cdots , x \mod N_i , \cdots ) \mapsto ( \cdots , ( x_i - x_j) \mod ( N_i + N_j) , \cdots , ))
+\end{align*}
+は1次写像で，$9 \circ f =O$．$N_1 , \cdots , N_n$に関する中国の剰余定理は，‘ $ g ( \xi_1 , \cdots , \xi_n ) = 0 \Rightarrow \exists x \in M,, fx(x) = ( \xi, \cdots , x_n)$＇と表わされる．
+すなわち
+\[
+	M \stackrel{f}{\to} \prod_{i=1}^n M / N_i \stackrel{g}{\to} \prod_{i<j} M / ( N_i + N_j) \text{が完全}
+\]
+といい表わされる．$ \Ker f = \bigcap_{i=1}^n N_i$であるから，これはまた，
+\[
+	0	\to M \bigg/ \bigcap_{i=1}^n N_i \stackrel{\overline{f}}{\to} \prod_{i=1}^n M / N_i \stackrel{g}{\to} \prod_{i<j} M ( N_i + N_j) \text{が完全}
+\]
+ともいい表わされる．ただし，$ \overline{f}$は$f$から
+定められた写像（P.54定理17参照）を表わす．
+

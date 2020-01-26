@@ -1,0 +1,390 @@
+\subsection{次数間と次数加群}
+
+$ \varGamma$を一つの加群とする．
+環$R$が部分加群$R_\gamma \: ( \gamma \in \varGamma)$の直和
+\[
+	R = \oplus_{\gamma \in varGamma} R_\gamma
+\]
+となり，任意の$ \alpha , \beta \in \varGamma$に対して
+\[
+	R\alpha R_\beta \subset R_{\alpha + \beta}
+\]
+が成り立つとき，$R$を次数環という．
+
+
+上の$R$に対して，左$R$加群$M$が部分加群$ M_r ( \gamma \in \varGamma )$の直和
+\[
+	M = \oplus_{\gamma \in \varGamma} M_r
+\]
+となり，任意の$ \alpha , \beta \in \varGamma$に対して
+\[
+	R_\alpha M_\beta \subset M_{\alpha + \beta}
+\]
+が成り立つとき，MをR上の次数左加群という.
+
+
+$R_\gamma , M_\gamma$を次数$\gamma$の同次齢その元を次数$ \gamma$の同次な元という．
+$R ,M$の各元$x$は，一意的に$ x = \sum_\gamma x_\gamma , x_\gamma$または$M_\gamma$と分解される．
+各$ x_\gamma$を$x$の同次成分という．$0$はすべての次数をもつ同次な元である．
+
+\例{1} 任意の環$R$は，$\varGamma = \{ 0 \} , R = R_0$として次数環となる．
+
+
+\例{2}
+可換環$ k$上の多項式環$R = k [ X ] $は，$\Z \ni d$に対して
+\[
+	\begin{cases}
+		d < 0 \quad \text{ならば，} \quad R_d = 0 \\
+		d = 0 \quad \text{ならば，} \quad R_d = k \\
+		d > 0 \quad \text{ならば，} \quad R_d = k X^d
+	\end{cases}
+\]
+と定義すれば，$\Z$を添数の加群として次数環となる．
+
+\例{3}
+可換環$k$上の$n$変数の多項式環$R= \{ k [X_1 , \cdots , X_n]$は$ \Z^n \ni d = (d_1, \cdots , d_n)$に対して，
+\[
+	\begin{cases}
+		\min ( d_1, d_2, \cdots , d_n ) < 0 \quad \text{ならば} r_d = 0 \\
+    \min ( d_1, d_2, \cdots , d_n) \geqq 0 \quad \text{ならば} R_d = k X_1^{d_1} X_2^{d_2} \cdots X_n^{d_n}
+	\end{cases}
+\]
+と定義すれば，$\Z^n$を添数加群として次数環となる．
+
+\例{4}上の$R=k[X_1 , \cdots , X_n]$は，$ \Z \ni d$に対して
+\[
+	\begin{cases}
+		d < 0 \quad \text{ならば} \quad R_d = 0, \\
+		d = 0 \quad \text{ならば} \quad R_d = k, \\
+		d > 0 \quad \text{ならば} \quad \sum_{d_1 + \cdots + d_n=d}^{} k X_1^{d_1} \cdots X_n^{d_n}
+	\end{cases}
+\]
+と定義すれば，$\Z^n$を添数加群として次数環となる．
+
+\問{1} 次数環$R$において，単位元$1$は次数$0$の同次な元である．
+\証明
+$1 = e_\alpha e_\gamma \in R_{\alpha + \gamma}$で，$ \gamma$が異なれば，$ \alpha + \gamma$も異なるから，これは$e_\alpha $の同次元への分解である．
+$e_\alpha$は同次元であるから，$e_\alpha = e_\alpha e_0$．ゆえに，$1 = \sum?\alpha e_\alpha = \sum_\alpha = \sum_\alpha e_\alpha e_0 = 1 e_0 = e_0$．
+
+\■
+
+\問{2} 次数環$R$において，$R_0$は部分環である．
+
+\証明
+
+$ R_0$は$R$の部分加群えあり，$R_0 R_0 \subset R_0$が成り立つから．
+
+\■
+
+\問{3} 次数環$R$上の次数左加群$M$において，各同次成分$M_r$は左$R_0$部分加群である．
+
+\証明
+
+$ R_0 M_r \subset M_r$による．
+
+\■
+
+
+次数環$R$上の次数左$R$加群$M$の部分加群（$R$部分加群でなくてもよい）
+$ N$の任意の元の同次成分がまた$N$に含まれるとき，$ N$を同次な部分加群という．
+
+あきらかにこの条件は
+\[
+	N = \sum_{\gamma \in \varGamma} ( N \cap M_r )
+\]
+と同値である．
+
+\例題{}
+$M$を同上とし，その$R$部分加群$N$が同次であるためには$N$が同次な元で生成されることが必要十分である．
+
+\証明
+
+$N$がどうじならば，$N$は$\bigcap_{r\gamma \in \varGamma} ( N \cap M_\gamma )$で生成される．
+ゆえに，$N$は同次な元で生成される．逆に，$N$が同次な元の集合
+$ \{ x_i \: i \in I \: \}$で生成されるとする．$N$の任意の元は，
+$a_i x_i \: ( a_i \in R )$の元の有限和で表わされる．各$a_i$の同次成分を$a_{i\gamma}$とすれば，
+$x$は$ a_{i \gamma} x_i$の形の元の有限の和で表わされる．$N$は$R$の部分加群であるから，
+各$a_{i \gamma} x_i$は$N$に属する．また，$a_{i \gamma} x_i$は$M$の同次な元である．
+ゆえに，これらの$a_{i \gamma} x_i$のうち次数の同じものを加え合わせたものが
+$x$の同次成分であり，それがすべて$N$に属するから，$N$は同次な部分加群である．
+
+\■
+
+\問{4}
+次数環$R$の左 ideal （右 ideal ，両側  ideal 部分環）
+$\mathfrak{a}$が同次あるためには，$ \mathfrak{a}$が左 ideal　（右 ideal，両側 ideal , 部分環）として，
+同次名元で生成されることが必要十分である．
+
+
+\証明
+条件が必要なことは，例題と同様に証明される．逆は，左 ideal , 右 ideal はそれぞれ $R$の 左$R$部分加群，
+右 $R$部分加群であるから，これらの場合は例題ですでに証明された．両側 ideal の場合は $ \mathfrak{a} $の
+元$x$が$x_{i_1} , x_{i_2} , \cdots , x_{i_k} \: ( k \in N) $の形の元の和で表わされることに注意すれば，例題と
+同様に証明される．
+
+\■
+
+
+\問{5}
+
+$N$を次数環$R$上の次数左加群$M$の同次な$R$部分加群とすれば，$N$および$M / N$は自然に次数左$R$加群となる．
+
+\証明
+
+$ N \cap M_\gamma = N_\gamma$とおけば，$N = \oplus_{\gamma} N_\gamma , \: R_\alpha N_\beta \subset M_{\alpha + \beta } \cap N 
+= N_{\alpha + \beta} , M / N = \oplus M_\gamma / N_\gamma$であるから，それぞれ，$N_\gamma , M_\gamma / N_\gamma$を
+次数$\gamma$の同次成分として次数左$R$加群となる．
+
+\問{6}
+
+$ \mathfrak{a}$を次数環$ R$の同次な両側 ideal とすれば，$ R / \mathfrak{a}$は自然な方法で次数環となる．
+
+\証明
+
+$ \mathfrak{a} \cap R_\gamma = \mathfrak{a}_\gamma$とすると，
+$ \mathfrak{a} = \oplus_{\gamma \in \varGamma} \mathfrak{a} , R_\gamma \mathfrak{a}_\beta \subset R_{\alpha + \beta} \cap \mathfrak{a} = \mathfrak{a}_{\alpha + \beta},
+K / \mathfrak{a} = \oplus_{\gamma \in \varGamma} R_r / \mathfrak{a}_\gamma$であるから，それぞれ，
+$ \mathfrak{a}_\gamma , R_\gamma / \mathfrak{a}_\gamma $を次数$\gamma$の同次成分として次数環となる．
+
+\■
+
+
+\例{5}
+
+$\Z$を添数加群とし，$ \gamma < 0$に大しては，$ R_\gamma = 0$であるような次数環$R = \oplus_{ \gamma = 0 }^\infty R_\gamma$において
+$ \oplus_{\gamma = n}^\infty R_\gamma$は同次な両側 ideal である．
+
+\例{6}
+
+例2の方法で，$R = \Z [X ] $を次数環と考えると，$2$と$X^3$で生成される ideal $ \mathfrak{a}$は例題により，
+同次名 ideal である．$ \mathfrak{a} = 2 \Z \oplus 2 \Z X \oplus 2 \Z X^2 \oplus \sum_{n=3}^{\infty} \Z X^n$であうから
+\begin{align*}
+	R /mathfrak{a}
+ &\cong \Z / 2 \Z \oplus \Z X / 2 \Z X \oplus \Z X^2 / 2 \Z X^2 \\
+ &= F_2 \oplus F_2 t \oplus F_2 t^2 \\
+ &= \{ 0 ,1 , t , t^2 , 1+t , 1+t^2 + 1+t+t^2 \: \}
+\end{align*}
+ただし，$ t ~ X \mod \mathfrak{a}$．
+
+\例{7}
+
+例4の方法で$ R = k [X,Y]$を次数環と考えると，$X + Y$で生成される ideal $ \mathfrak{a} $は同次名
+ideal　である．しかし，例3 の方法で$R$を次数環と考えれば，$ \mathfrak{a}$は同次な ideal　ではない．
+
+
+\■
+
+次数環 $R$上の次数加群 $M,M'$に対して，$R$上の1次写像$ \varphi : M \to M'$がすべての$ \gamma \in \varGamma$に対して，
+\[
+	\varphi ( M_\gamma ) \subset M'_{\gamma + \mu}
+\]
+をみたすとき，$ \varphi $を次数$\nu$の\textbf{数1次写像}といい，
+$ \nu = \deg \varphi$と書く．また同じ添数加群$ \varGamma$を持つ二つの次数環$R , R'$の間の準同型写像
+$ \varphi : R \to R'$が
+\[
+	\varphi (R_r) \subset R_\gamma'
+\]
+をみたすとき，$ \varphi $を\textbf{次数準同型写像}という．
+
+
+\例{8}
+次数左$R$加群$M$の同次な$R$部分加群Nに対して標準的な1次写像$ \varphi / M \to M / N$は
+次数$0$の次数1次写像で，$ \varphi$によって，$N$を含む$M$の同次な$R$部分加群と，
+$M / N $の同次な$R$部分加群とが1対1に対応する．また次数環$R$の同次な両側 ideal $ \mathfrak{a}$
+に対して，標準的準同型 $ \varphi R \to R / \mathfrak{a}$は同次な左（右，両側） ideal とか，1体1に対応する．
+
+$M$と$M'$（$R$と$R'$）が左$R$加群（環）として，同型で，一方の任意次数$r$の任意の元は対応する
+他方の元はかならず，同じ次数を持つとき，次数左$R$加群（次数環）として同型であるという．
+
+\問{7}
+次数左$R$加群の間の次数1次写像$ \varphi : M \to M'$に対して，
+\begin{list}{}{}
+	\item	(1) $\text{Im } \varphi $は$M'$の同次な$R$部分加群となる．
+	\item (2) $ \Ker \varphi $は$M$の同次な$R$部分加群となる．
+	\item (3) $ \varphi $が次数$0$で左$R$加群としての同型全射ならば，$ \varphi $によって$M$と$M'$は次数左$R$加群として同型になる．
+	\item (4) $ \deg [varphi = 0$ならば，次数左$R$A加群として，
+\[
+	M / \Ker \varphi \cong \text{Im} \varphi
+\]
+\end{list}
+
+\証明
+
+(1) $ \text{Im } \varphi $が$R$部分加群であることはすでに知っている．$M$は$ \bigcup_\gamma M_\gamma$で生成されるから，
+$ \text{Im } \varphi $は$ \bigcup_\gamma \varphi (M_\gamma$で生成される．
+$ \varphi ( M_\gamma) \subset M_{\gamma + \nu}' $であるから，$ \varphi (M_\gamma )$は同次の元のみから成る．
+従って$ \text{IM } \varphi$は同次な部分加群である．
+
+(2) $ \Ker \varphi \ni x = \sum_\gamma x_\gamma  \Rightarrow 0 = \sum_\gamma \varphi (x_\gamma)$
+，$ \varphi (x_\gamma ) \in M'_{gamma + \nu}$で$ \gamma \ne \gamma' \Rightarrow \gamma + \nu \ne \gamma' + \nu$であるから，
+$M'$が$M?\gamma'$の直和であることから$ \varphi (x_\gamma) = 0$．すなわち，$ x_\gamma \in \Ker \varphi$
+ゆえに$ \Ker \varphi $は同次な部分加群である．
+
+(3) $ x \in M_\gamma \Rightarrow \varphi (x) \in M_\gamma '$．逆に$ \varphi (x) \in M_\gamma '$とし，
+$ x = \sum x_\alpha$を$x$の同次成分への分解とすれば，$ \varphi (x) = \sum \varphi(x_\alpha )$は$ \varphi (x)$の
+同次成分への分解となる．ゆえに，$ \varphi (x) = \varphi (X_\gamma )$．$ \varphi $は同型写像であるから，
+$ x = x_\gamma  \in M_\gamma$ゆえに，$M$と$M'$は次数左$R$加群としても同型である．
+
+(4) $ \overline{M} = M / \Ker \varphi $，$N' = \text{Im } \varphi $とおくと，
+$ \varphi$で定めえられる写像$ \overline{\varphi } : \overline{M} \to N'$は左$saR$加群として同型で，
+さらに，$ \overline{M} \ni \overline{x} = x \mod \Ker \varphi $が$ \in \overline{M}_\gamma \Leftrightarrow x = M_\gamma \Rightarrow \varphi (x) \in N'_\gamma$
+により，$ \overline{\varphi}$は次数1次写像であるから，(3)によって次数左$R$加群としての同型写像にもなる．
+
+
+\問{8}
+次数環の次数準同型 $ \varphi : R \to R'$に対して，
+\begin{list}{}{}
+	\item	(1) $ \text{Im } \varphi $は$R$の同次名部分環である．
+	\item (2) $ \ker \varphi $は$ R$の同次名両側 ideal となる．
+	\item (3) $ \varphi $が環として同型全射ならば，$\varphi $によって$R$と$R'$は次数環として同型になる．
+	\item (4) 次数環として$R / \Ker \varphi \cong R'$.
+\end{list}
+
+\証明
+
+問7と同様
+
+\■
+
+
+\subsubsection{問題}
+
+1.
+
+有限群$G$から環$R$上の多元環$A$の可逆元全体の作る軍への準同型$ \varphi $に対して，
+$G$の群多元環$R{G}$から$A$への多元環としても準同型$\varPhi$が存在して，右の図式が可換となる．
+
+
+図保留
+
+
+\証明
+
+$G ~ \{ x_1 , \cdots , x_m \: \}$とする．$R [G] \ni f = \sum_{i=1}^{n} \alpha_i x_i \: ( \alpha_i \in R)$に
+対して$ \varPhi (f) = \sum \alpha_i \varphi (x_i) \in A$により，
+$ \varPhi$を定義すれば図式は可換になる．$ R[G] \ni f, g , G \ni \alpha$に対して，
+$ \varPhi ( f + g) = \varPhi (f) + \varPhi (g), \varPhi g( \alpha f) = \alpha \varPhi (f)$は明らかであり，
+$ \varphi$が準同型であることから，$ \varPhi (f) \varPhi (g)$となる．
+
+\■
+
+2. 左$R$加群$M$の任意の$R$部分加群に対して中国の剰余定理が成り立つならば，
+任意の3つの$R$部分加群$M_0 , M_1 , M_2$に対して，
+\[
+	\text{(D2)} \quad M_0 \cap ( M_1 + M_2 ) = ( M_0 \cap M_1 ) + ( M_0 \cap M_2)
+\]
+が成り立つ．
+
+\証明
+
+$M_0 \cap (M_1 + M_2) \supset ( M_0 \cap M_1 ) + ( M_0 \cap M_2)$は一般に成り立つから，
+逆向きの包含関係を証明する．$ M_0 \cap (M_1 + M_2) \ni x $に対し，中国の剰余定理の$n=3$の場合により，
+\[
+	z \equiv 0 \: ( \mod M_0 ) , \quad z \equiv 0 \: ( \mod M_1) \quad z \equiv 0 \: ( \mod M_2)
+\]
+となる$z$が存在する．$x = z + (x - z ) \in ( M_0 \cap M_1 ) + ( M_0 \cap M_2)$
+\■
+
+
+3.
+
+$R$を可換環とし，$M$を$R$加群とする．$R$の元$ \alpha $に対して，
+\[
+	M_\alpha = \{ \: x \in M , \alpha x = 0 \: \}
+\]
+とおくと，$ M_\alpha $は$M$の$R$部分加群である．
+
+\証明
+
+略
+
+
+4.前門において$R$を単項 ideal　整域として，$R$の元$ \alpha , \beta $のG.C.M を$\delta$，L.C.M を$\alpha$とする．
+\begin{list}{}{}
+	\item	(1) $ M_\alpha + M_\beta = M_\lambda \quad M_\alpha \cap M_\beta = M_\delta$
+	\item (2) $ \text{Hom } ( R / R_\alpha , R/R_\beta ) \cong R/ R_\delta$．
+\end{list}
+
+\証明
+
+$ \alpha = \alpha' \delta , \beta = \beta' \delta$とすると，
+$ \alpha ' \xi + \beta' \eta = 1$となる$ \xi , \eta \in R$がある．また，
+$ \lambda \sim \alpha' \beta ' \delta$である．
+
+(1) $M_\alpha , M_\beta \subset M_|lambda$より，$M_\alpha + M_\beta \subset M_\lambda$，逆に
+$ M_\alpha \cap M_\beta \ni x$を任意にとると$ \delta x = ( \alpha \xi \beta \eta) x = \xi ( \alpha x) + \eta ( \beta x ) = 0$であるから，
+$M_\alpha \cap M_\beta \subset M_\delta$．
+
+(2)
+
+$ \text{Hom } ( R / R_\alpha , R / R_\beta ) \cong \{ f \in \text{Hom } ( R, R / R \beta) \: \; \: f(\alpha ) = 0 \: \}$．
+ここで，$f$に$f(1)$を対応させることにより，これは $ \cong \{ x \in R / R_\beta  \: \; \: \alpha x = 0 \} \cong \{ \lambda \in R;
+\beta | \alpha \lambda \: \} , \beta = \beta ' \delta$とおけば，これはさらに，$ \cong R \beta' / R \beta \cong R / R \delta$．
+
+
+5.
+
+左$R$加群の系列
+\[
+	 0 \to M' \stackrel{j}{\to} M \stackrel{p}{\to} M'' \to 0
+\]
+において，次の3条件は互いに同値である．
+\begin{list}{}{}
+	\item	(1) この系列は分解する完全系列である．
+	\item (2) 任意の左$R$加群$N$に対して，
+\[
+	0 \to \text{Hom } (M'' , N ) \stackrel{ \circ p}{\to} \text{Hom } (M.N) \stackrel{ \circ j}{\to } \text{Hom }(M' , N) \to 0
+\]
+が完全である．
+	\item (2') 任意の左$R$加群$N$に対して，(2)の系列が分解する．
+	\item (3) 任意の左$R$加群$N$に対して
+\[
+	0 \to \text{Hom } (N, M') \stackrel{j \circ}{\to} \text{Hom } (N,M) \stackrel{p \circ } {\to } \text{Hom } (N,M'') \to 0
+\]
+が完全である．
+	\item (3') 任意の左$R$加群$N$に対して，(3)の系列が分解する．
+\end{list}
+
+\証明
+
+(1) $ \Rightarrow $ (2')．仮定から，$i : M'' \to M$，$g / M \to M'$が存在して，$ p \circ j = 1_{M''}, \circ j = 1_{M'},
+i \circ p + j \circ g = 1_M$となる．従って$ ( \circ i ) \circ ( \circ p ) = 1_{\text{Hom} (M',N)}, ( \circ j ) \circ ( \circ g) = 1_{\text{Hom} (M' , N) },
+ ( \circ p ) \circ  ( \circ i ) + ( \circ g ) \circ ( \circ j ) = 1_{\text{Hom} (M,N)}$．ゆえに(2)の系列もまた分解する．
+
+(2') $ \Rightarrow $ (2)は明らかである．
+
+
+(2) $ \Rightarrow $ (1) p56問12により，問題の系列は完全である．
+次に，$N = M'$に対して$ \circ j$が全射であることから，$ g \circ j = 1_{M'}$となる
+$ g \in \text{Hom} (M,M')$が存在する．従って p@58問4(1)によって問題の系列は分解する．
+
+(1) $ \leftrightarrow $ (3) $ \Leftrightarrow $ (3')も同様に証明される．
+
+
+
+\■
+
+6.
+
+左$R$加群$L$の$R$部分加群$M,N$が，$M = ( M \cap N ) \oplus P , N = ( M \cap N ) \oplus Q$と
+$R$部分加群の直和に分解されれば，$M+N = ( M \cap N ) \oplus P \oplus Q$．
+
+
+\証明
+
+$ ( M \cap N ) \cap P = 0$，$( M \cap N ) \cap Q = 0$．また，
+$(( M \cap N ) + P ) \cap Q = M \cap (N \cap Q) = ( M \cap N ) \cap Q = 0$．
+ゆえに定理21により，$M + N = (M \cap N ) + P + Q$の右辺は直和である．
+
+
+
+
+
+
+
+
+
+
+
+
+

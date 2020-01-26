@@ -1,2 +1,489 @@
 \subsection{整域における整除問題}
 
+本項では，$R$を整域とする．$R$の2元$a,b$に対して$a=bc$となる元$c$が存在するとき，
+（すなわち$ Ra \subset Rb$であるとき），$a$は$b$で\textbf{割りきれる}，あるいは\textbf{整除される}，
+$a$は$b$の\textbf{倍元}である，$b$は$a$の\textbf{約元}であるといい，$bia$で表わす．
+$0$は任意の元の倍元で，可逆元は任意の元の約元である．
+\[
+	x = xe = xy y^{-1} = (xy)y^{-1}
+\]
+
+\問{1}
+整域$R$の2元$a,b$について，次の三つの条件は同値である．
+\begin{list}{}{}
+	\item	(1) $bla$ かつ$a[b$．
+	\item (2) $Ra=Rb$．
+	\item (3) $a=bu$となる可逆元$u$が存在する．―― 
+\end{list}
+
+\証明
+(1) $ \Leftrightarrow$ (2)は明らか．(3) $ \Rightarrow a = bu. b= au^{-1} \Rightarrow (1)$．逆に(1)を仮定すると，
+$a=bu, b=av$なる弦$u,v$が存在する．$\Rightarrow a = a vu \Rightarrow a=0$または$uv =1$．$vu = 1$nならば，$u$は可逆元である．
+また$a=0$ならば，$b = au = 0$．従って$a=b \cdot 1$．
+\■
+
+問1の条件が満たされているとき，$a$と$b$は\textbf{同等}えあるといい，$a \sim b$で表わす．
+
+整域の$0$でない元$p$が，可逆でなく，かつ，‘$ p = ab$ならば$a$または$b$は可逆である’という性質をもつとき，
+$p$を既約元という．$0$でも可逆元でも既約元でもない元を\textbf{可約元}という．
+
+整域の元$p$が，$0$でも可逆元でもなく，かつ‘$p| ab$’ならば $ p | a$または$ p | b'$という性質をもつとき，$p$を\textbf{素元}という．
+
+\問{2}
+$0$，可逆元，既約元，可約減，素元に同等な元は，それぞれ，$0$，可逆元，既約元，可約元，素元である．
+
+\証明
+$ a \sim b$とすれば，問1により，$a =bu$となる可逆元$u$が存在する．ゆえに$ b = 0 \Rightarrow a = bu = 0$．
+$ b$が可逆 $ \Rightarrow a =bu$も可逆．[ $a$が既約 $ \Rightarrow [ b = cd \Rightarrow a = cdu \Rightarrow c \text{ または } du \text{が可逆}
+ \Rightarrow  c \text{または} d \text{が可逆}$ ] $ \Rightarrow b$が既約．以上から，$b$が可約 $ \Rightarrow a$が可約，を得る．
+
+また$b$が素元$ \Rightarrow [ a | cd \Rightarrow b | cd \Rightarrow bc \text{または} b | d \Rightarrow a | c$または $a | d ] \Rightarrow a$が素元．
+
+\問{3}
+
+素元は既約元である．
+\[
+	\text{整域の元}
+	\begin{cases}
+		\quad	0	\\	
+		\quad	\text{可逆元}	\cdots 1 \text{を含む}	\\
+		\quad	\text{既約元}	\begin{cases}
+													\text{素元}	\\
+													\text{素元でない既約元}	\\
+												\end{cases}	\\
+		\quad	\text{可約元}
+	\end{cases}
+\]
+
+問3の逆は成り立たないことが，次の間4で示される．
+
+\問{4}
+$R=\Z[\sqrt{5} ] = \{ a + b \sqrt{-5} ; a,b \in \Z \} \: ( \subset \C )$において，
+$3$は既約元である．一方，$3 \not{|} 1 + 2\sqrt{-5}$ ,$3 \not{|} 1 -2 \sqrt{5}$ , $3 | ( 1+2\sqrt{-5})(1-2\sqrt{-5})$が成り立ち，
+3は素元でない．
+
+\証明
+$3 = (a + b\sqrt{-5}(c+d\sqrt{5}) \: ( a,b,c,d \in \Z) \Rightarrow (a - b\sqrt{-5} )(c-d\sqrt{5} ) = 3 \Rightarrow (a^2 + 5b^2)(c^2+5d^2)=9 
+\Rightarrow a^2 + 5b^2 = 1$または$3$または$c^2 + 5d^2 = 1 \Rightarrow a= \pm 1 , b=0$または$c = \pm 1 , d=0 \Rightarrow a+ b\sqrt{-5}$または
+$c + d\sqrt{-5}$が可逆元，ゆえに$3$は既約元である．
+
+次にもし，$1 + 2\sqrt{-5} = 3 (a + b\sqrt{-5} \: (a,b \in \Z)$とすれば，$1 = 3a$．これは矛盾である．
+ゆえに $ 3 \not{|} 1 + 2 \sqrt{-5}$．同様に $ 3 \not{|} 1 - 2 \sqrt{-5}$，しかし，
+$( 1 + 2\sqrt{-5})(1 - 2 \sqrt{-5}) = 21= 3 \times 7$．
+
+\例{1}
+$\Z$の可逆元は$1$と$-1$，素元，既約元は$\Z$の\textbf{素数}（$ \pm 2 , \pm 3 , \pm 5 , \pm 7 , \cdots )$である．
+
+\例{2}
+$K$を体とすれば，$K[X]$の可逆元は$K$の$0$でない元である．$K[X]$の既約元は既約多項式とよばれる．
+1次式はもちろん既約である．$\Q[X] \ni X^2-2$は既約であるが，
+$ R[X] \ni X^2-2$は可約である．$ R[X] \ni X^2+1$は既約であるが，$\C[X] \ni X^2 +1 1$は可約である．
+
+
+\例題{1}
+整域$R$について，次の三つの条件は同値．
+
+\begin{list}{}{}
+	\item	(1) $R$の$0$でない任意の元xは，一つの可逆元と有限個の既約元との積で表わされ，
+\begin{align*}
+	x &=	u p_1 \cdots p_r \\
+	y	&=	v	q_1 \cdots q_s \quad	\text{$u,v$は可逆元，$p_iq_i$は既約元$r \geqq 0 , s \leqq 0$}
+\end{align*}
+を2通りのそのような分解とすれば，$r=s$で,必要ならば番号をつけかえると，
+\[
+	p_1 \sim q_1 , \quad \cdots , p_r \sim q_r
+\]
+となる．（すなわち，\textbf{既約因子への分解}が，同等を除いて一意的にできる）．
+Pi-vqi,…,Pr～qr
+となる.(すなわち,既約因子への分解が,同等を除いて一意的にできるゆ
+	\item (2) $R$の$0$でない任意の元は，一つの可逆元と有限個の既約元との積で表わされ，$R$の任意の既約元は素元である．
+	\item (3) $R$の$0$でない任意の元は，一つの可逆元と有限個の素元との積で表わされる．
+\end{list}
+
+\証明
+(1) $ \Rightarrow$ (2)．$p$を任意の既約元とし，$ p | ab$とすれば$ ab = pc$．$a,b,c$の既約因子への分解を用いて，
+$ab = pc$の既約因子への分解が2通り得られるから，(1)の条件により$a$または$b$が$p$と同等な既約因子を含む．
+したがって，$p|a$または$p|b$．ゆえに$p$は素元となる．
+
+(2) $\Rightarrow $ (3)は，明らか．
+
+(3) $\Rightarrow $ (1)．$x = up_1p_2 \cdots p_r$を可逆元$u$と素元$p_i$の積への分解とすれば，問3によって
+これは可逆元と既約元への分解となる．$x = v q_1 \cdots q_s$を可逆元$\nu$と既約元$q_i$の積への任意の分解とすれば
+\[
+	\nu^{-1} u p_1 \cdots p_r = q_1 \cdots q_s
+\]
+これから$p_1 q_1 \cdots q_s$となり，$p_1$は素元であるからたとえば$p_1 | q_1$．したがって$q_1 = p_1 u_1 q_1$は既約元で
+$p_1$は可逆元でない減であるから，$u_1$は可逆元となり，$p_1 \sim q_1$である．$R$は整域であるから，ここで
+$v^{-1}uu_1^{-1} p_2 \cdots p_r = q_2 \cdots q_s$となる．これから同様にして適当に番号をつけかえれば，
+$ p_2 \sim q_2 , p_3 \sim q_3, \cdots$となる．もし，$r \ne s$ならば最後に可逆でない元の積が可逆元に等しいという不合理な
+等式が得られる．ゆえに$r=s, p_i \sim q_i$．
+
+\■
+
+
+例題1の条件をみたす整域を,\textbf{素元分解が一意的に可能である整域}，または\textbf{Gauss環}という．
+Gauss環では，‘素元’と‘既約元’とは同意語である．Gauss環における元$x$の既約因子への分解
+（素元分解）は，
+\[
+	x = u p_1^{e_1} \cdots p_k^{e_k} \quad \text{$u$は可逆元，$p_1 , \cdots , p_k$は互いに同等でない素元，$e_i \in \N$}
+\]
+の形にも表わされる．$ p_1 , \cdots, p_k$を$x$の\textbf{素因子}という．
+
+\例{3} 問4により，$ \Z[-5]$ は Gauss環 でない．
+
+\問{5}
+Gauss環$R$において，素元$p$が$x$の素因子であるためには，$x \not{|} y$，
+$ x | py$をみたす元$y$が存在することが必要かつ十分である．
+
+\証明
+
+$p$が$x$の素因子ならば，$x = py$の$y$が問題の条件をみたす，逆に，$ x \not{|}, x | py$となる$y$があれば，
+$py = xz$で$ x \not{|} y$より$p$は$z$の素因子であり得ない。ゆえに$p$は$x$の素因子である．
+
+\■
+
+\問{6}
+
+Gauss環において，(1)の元xの任意の約元は，$ \prod_{i=1}^k (e_i + 1)$個の元
+\[
+	p_1^{\nu_1} \cdots p_k^{\nu_k} \quad ( 0 \leqq \nu_1 \leqq e_i , i=1, \cdots , k)
+\]
+のどれかに同等であり，かつこれら$ \prod_{i=1}^k ( e_i + 1)$個の元はどの二つも互に同等でい$x$の既約元
+ある．ただし，$p^0_i = 1$と規約する．
+
+\問{7}
+Gauss環において，$x_l,x_2,\cdots,x_n$の素元分解を
+\[
+	x_i = u_i p_1^{e_{i_1}} \cdots p_k^{e_{i_k}}
+\]
+（$u_i$は可逆元，$ p_1 , \cdots , p_k$は(1)と同様，$ e_{ij} \in \N \cap \{ 0 \} , i=1, \cdots , n , j=1 , \cdots , k)$
+とする．$ \max ( e_{1j}, \cdots , e_{nj} ) = \overline{e_j} , \min ( e_{1j} , \cdots , e_{nj} ) = \text{\underline{$e$}}_j $とおけぱ，
+$ d= p_1^{e_1} \cdots p_k^{e_k}$は$x _1 , \cdots , x_n$の共通の約元すなわち公約元で，かつ任意の公約元は$d$の約元である．
+また，$ 1 = p_1^{\overline{e}_1} \cdots p_k^{\overline{e}_k}$は$x_1 , \cdots , x_n$の共通の共通の倍元すなわち公倍元で，
+かつ任意の公倍元は$l$の倍元である ――
+
+\証明
+
+（保留）
+
+
+\問{7}dの$d$またはそれに同等な元を$x_1l, \cdots , ,x_n$の最大公約元（G.C,D．またはG.C.M）といい，
+$l$またはそれに同等な元を$ x_1, \cdots , x_n$の最小公倍元（L.C.M.）という．
+$d$が可逆元となるとき，$x_l, \cdots , x_n$は\textbf{互いに素}であるという．
+
+
+
+\問{8}
+Gauss環において，$x_l,\cdots ,x_n$の一つの最大公約元をdとし，
+\[
+	_i = dy_i \quad (i=1,2, \cdots , n)
+\]
+とすれば，$ y_1 , \cdots , y_n$は互いに素である．
+
+\証明
+$ y_i = u_i \prod_j p_j^{e_{ii} - e_j}, \min (e_{ij} - \text{ \underline{$e$} }_j ) = ( e_{ij} 0 \text{ \underline{e}}_j = \min_j ( e_{ij} ) - \text{ \underline{$e$} }_j = 0$
+ゆえに，$y_1 , \cdots , y_n$の最大公約元は $ \prod p_j^0 = 1$．
+
+
+\問{9}
+Gauss環において，$d,l$が，二つの元$ x_1, x_2$のそれぞれ最大公約元，最小公倍元ならば，$dl \sim x_1x_2$
+
+\証明
+
+$dl=\prod_j p_j^{\overline{e}_j + \text{\underline{$e$}}_j} = \prod_j p_j^{e_{1j} + e_{2j}} = u_1^{-1} u_2^{-2} x_1x_2$．
+
+
+\問{10}
+
+$ x_1 , \cdots , x_n$のどの二つも互に素であるとする．これらの最小公倍元の一つを$l$とすれば，$ x_1 \cdots x_n$．
+
+\証明
+
+$x_1 , \cdots , x_n$のどの二つも互いに素がならば，各素元$p_j$はこれらのうちたかだか一つの素因子である．
+したがって，$\overline{e}_j = \max ( e_{1j} , \cdots , e_{nj} ) = e_{1j} + \cdots + e_{nj}$．ゆえに
+$ \prod_j p_j^{\overline{e}_j} = \prod_j p_j^{e_{1j} + e_{nj}} = x_1 \cdots x_n$．
+
+
+\問{11}
+Gauss環$R$において，$x_l, \cdots ,x_n$のG.C.M，L.C.M.の一つずつをそれぞれ$d,l$とすれば，
+\[
+	R_l = \cap_{i=1}^n
+ R x_i , \quad Rd \supset Rx_1 + \cdots + Rx_n.
+\]
+
+\証明
+
+$ y \in Rl \Leftrightarrow l | y \Leftrightarrow \forall i , x_i | y \Leftrightarrow y \in \cap rx_i $．
+次に，$d | x_i$であるから，$x_i \in R d$．従って$ Rx_1 + \cdots + R_n \subset Rd$．
+
+[注意]
+
+$ Rd = R x_1 + \cdots + Rx_n$とは必ずしもならない．
+$ R = K[X,Y]$は後の定理16で証明するように
+Gauss環であって，その2元$X,Y$のG.C.M.は$1$と同等である．
+しかし$ RX+RY$は定数項が$0$の多項式全体の集合であるから$R1=R$とは一致しない．
+
+\定理{15}
+単項 idea1 整域は Gauss 環である ――
+
+これは，次の補題1，2，3から導かれる．
+
+\補題{1}
+単項 idea1 環 $R$の ideal 全体の集合において，昇鎖律が成り立つ，
+すなわち，
+$ \mathfrak{a}_1 \subsetneq \mathfrak{a}_2 \subsetneq \mathfrak{a}_3 \subsetneq \cdots $となるような ideal の無限列
+$ \{ \mathfrak{a}_1 , \mathfrak{a}_2 , \mathfrak{a}_3 \cdots , \}$は存在しない．
+
+\証明
+
+仮にそのような無限列が存在すれば，$ \displaystyle \mathfrak{a} = \bigcup_{i=1}^\infty \mathfrak{a}_i$はまた ideal であり，
+$ R$は単項 ideal 環であるから、$ \mathfrak{a}  - R a$となる．$ a \in \mathfrak{a}$ゆえ，
+$a \in \mathfrak{a}_i$おなる番号$i$が存在する．そうすれば，$R \mathfrak{a} \subset \mathfrak{a}_i \subsetneq \mathfrak{a}_{i+1} \subset \mathfrak{a} = R a$．
+これは矛盾である．
+
+\■
+
+
+\補題{2}
+整域$R$の ideal 全体の集合において，昇鎖律が成り立つならば，$R$の$0$でない任意の元$x$は，可逆元と有限個の既約元との積に分解される．
+
+\証明
+
+仮にそのような分解ができない元$x$があったとすれば，$x$は既約でないから，
+\[
+	x = x_1 y_1 \quad (x_1,y_1 \text{は非可逆元})
+\]
+と分解され、$x_1 $または$y_1$について補題の分解ができない．たとえば$x _1$がそうであったとすれば，
+同様に，
+\[
+	x_1 = x_2 y_2 \quad ( x_2 \text{について補題の分解不可能，}y_2\text{は非可逆元} )
+\]
+となる．これをつづければ，（厳密には数学的帰納法によって），元の列$x_1 , x_2 , \cdots , $が得られ，
+\[
+	R x \subsetneq R x_1 \subsetneq R x_2 \subsetneq \cdots
+\]
+となる．これは矛盾である．
+\■
+
+
+\補題{3}
+
+単項 ideal 整域$R$においては，既約元ははかならず素元である．
+
+\証明
+$p$を$R$の任意の既約元とする．$R$の$R$と一致しない ideal 全体の集合は機能的順序集合であるから，
+$ Rp$を含む極大元$ \mathfrak{m}$が存在する．$R$は単項 ideal 環であるから，$ \mathfrak{m} = R m$となる$m$が存在する．
+
+$m$が素元であることを示そう．‘$m | ab \Rightarrow m |a \quad \text{または} \quad m | b$＇を言えばよい．$Rm + Ra \subset a \in Rm$．
+したがって$ m | a$．第2の場合には，$ l = cm + da$と表わされるから，$ b = bcm + abd$．右辺は$m$で割り切れるかr，$ m |  b$．
+
+$p \in Rm$であるから，$ p = um$．$p$は既約で，$m$は非可逆元であるから$u$は可逆元である。ゆえに、$p \sim m$となり，$p$も素元となる．
+
+\問{12}
+
+定理15を証明せよ．
+
+\証明
+
+単項 ideal 整域は補題 1,2,3によって例題1の条件(2)をみたす．
+
+\問{13}
+単項 idea1 整域 $R$において，$X_l, \cdots ,X_n$の一つのG.C.M.を$d$とすれば，$Rd = Rx_1 + \cdots +  \cdots  + R Xn$．
+とくに，$n$個の元$x_l, \cdots ,x_n$が互に素であることと，
+$a_1 x_1 + \cdots + a_n x_n = 1$となる元$a_1 , \cdots , a_n$が存在することとは同値である．
+
+\証明
+
+$R x_1 + \cdots + R x_n \subset R d$は既に知っている．$R$が単項 ideal 整域ならば，
+$ R x_1 + \cdots + R x_n = R d'$となる$ d' \in R$が存在する．そうすれば$ \forall i , d' | x_i$であるから$ d'  d$．
+ゆえに $ d \in R d'$．従って$Rd = Rd' = R x_1 + \cdots + Rx_n$．
+とくに，$x_1 , \cdots , x_n$が互いに素 $\Leftrightarrow Rd = R \Leftrightarrow Rd \ni 1 \Leftrightarrow \exists a_i \in R , a_1 x_1 + \cdots + a_n x_n = 1$．
+
+
+\例題{2}
+
+単項 ideal 整域の元$ a_1, a_2 , \cdots , a_n$のどの二つも互に素ならば，
+$ a = \prod_{i=1}^n a_i$とおくとき，
+\[
+	R / Ra \cong \prod_{i=1}^n R / Ra_i \quad 8 ( x \mod Ra \leftrightarrow ( x \mod R a_1 , \cdots , x \mod Ra_n)).
+\]
+
+\証明
+
+環の標準的準同型 $ R \to R / R a_i ( i = 1 ,2 ,\cdots , n)$から ￥S2.5￥問3 によって環の準同型
+\[
+	\varphi : R \to \prod_{i=1}^n R / Ra_i \quad ( x \to ( x \mod R a_i , \cdots , x \mod R a_n ))
+\]
+が定義される．$ R \ni x $について
+\[
+	\varphi ( x ) = 0 \Leftrightarrow x \text{がすべての} \: a_i \text{で割り切れる} \Leftrightarrow x \: \text{が} \: a \text{で割り切れる}
+\]
+であるから，
+\[
+	\Ker \varphi = R a. 
+\]
+次に，$ \varphi $gが全射であることを示そう．すなわち，$ R \ni x_l, \cdots , x_n$を任意に与えるとき，
+適当な$R$の元$x$が存在して，
+\[
+	x - x_i \in R a_i \quad ( i=1 , \cdots , n)
+\]
+が成り立つことを示そう．$ a = a_i b_ i $とおけば，$ b_i$は$a_i$と互に素であるから，$a_i u_i + b_i + v_i = 1$となる
+$ u_i , v_i \in R$が存在する，$i$と異なる番号$j$に対しては$b_i$iは$a_j$で割りきれるから，
+$ c_i = b_i v_i$は$a_j$で割り切れる．また$ c_i - 1$は$a_i$で割りきれる．
+ゆえに，$ x = c_1 x_1 + \cdots + c_n x_n$とおけば，$x$は所要の条件をみたす．
+
+ゆえに$ \varphi $は全射となり，環の同型定理によって，求める同型が得られる．
+
+\■
+
+
+\例{4}
+$\Z$は単項 idea1 整域であるから，どの二つも互に素な整数$ a_l, \cdots ,a_n$に対して，
+\[
+	\Z / \Z a_1 \cdots a_n \cong \prod_{i=1}^n \Z / \Z a_i
+\]
+が成り立つ．\S 2.5 問2 によって
+\[
+	( \Z / \Z a_1 \cdots a_n)^* \cong \prod_{i=1}^n ( \Z / \Z a_i) ^*
+\]
+両辺の位数を比較すれば，Eulerの函数 についての公式
+\[
+	\varphi ( a_1 \cdots a_n) = \prod_{i=1}^n \varphi( a_i)
+\]
+が得られる．
+
+
+素数 $p$に対して，$p^r$より小さい $p$の倍数はが算1個であるから，
+$ \varphi ( p^r) = p^r - p^{r-1}$ゆえに自然数
+$ m = \prod_{i=1}^n p_i^{r_i} \quad ( p_1 , \cdots , p_n \text{は互いに同等でない素数})$ に対して
+\[
+	\varphi ( m ) = \prod_{i=1}^n \varphi ( p_i^{r_i} \cdots p_i^{r_i-1}) = m \prod_{i=1}^n \left( 1 - \frac{1}{p_i} \right)
+\]
+となる．
+
+\例{5}
+
+$ \Z, K[X]$（$K$は体）は単項 ideal 整域であるから，既約元と素元は一致する．
+$ \Z$においては，それは正負の素数，$K[X]$においては既約多項式にほかならない．
+
+$ \Z,K[X]$においては，さらに,二つの元のG.C.M.が，\textbf{Euclidの互除法}によって
+求められる．その求め方は次の通りである．$b_i$または$G_i(X)$が$0$でなければ次の段階へ進むのである．
+\begin{align*}
+	|a| = | b | q_1 + b_1 \quad ( 0 < b_1 <  |b|) 	&& F(X) = G(X)   Q_1(X) + G_1(X) \quad ( \deg G_1 < \deg G  ) \\
+  |b| =  b_1  q_2 + b_2 \quad ( 0 < b_2 < b_1 ) 	&& G(X) = G(X)_1 Q_2(X) + G_2(X) \quad ( \deg G_2 < \deg G_1) \\
+  b_2 =  b_2  q_3 + b_2 \quad ( 0 < b_3 < b_2 ) 	&& G(X) = G(X)_2 Q_2(X) + G_3(X) \quad ( \deg G_3 < \deg G_2) \\
+  \cdots	\\
+  b_{r-1}=  b_r  q_{r+1} 												  && G_{r-1}(X) = G_r(X) Q_{r+1} \\
+  B_r \text{は} a,b \text{の G.C.M}               && G_r(X) \text{は} F(X), G(X) \text{の G.C.M}   
+\end{align*}
+
+\問{14}
+
+Euclid の互除法によって，G.C.Mが求められることを証明せよ.
+
+￥証明
+
+まず，$| b| > b_ > b_2 > \cdots > 0 , \quad \deg G > deg G_1 > \deg G_2 > \cdots $であるから，
+この操作は有限個の段階で終わることに注意する．そのとき，最後の式から$b_r | b_{r-1}$．従ってその上の
+式から，$b_r | b_{r-2}, \cdots b_r | \:|b| , b_r | \: |a|$．ゆえに$b_r$は$a,b$の公約数である．
+
+逆に$a,b$の任意の公約数$x$をとれば第1式から，$x | b_1$，従って第2式から，$x | b_2, \cdots , x | b_r$．
+ゆえに$b_r$は G.C.M である．多項式についても同様に示される．
+
+\定理{16}
+
+$R$が Gauss 環ならば，$R[X]$も Gauss 環である．
+
+\証明
+
+$R[X]$の任意の元$F(X)$に対して，その係数の G.C.M を$a$とすれば
+\[
+	F(X) = a G(X)
+\]
+と分解される．ここに$ a \in R$．また、$G(X)$は係数のG.C.M が$1$の多項式（\textbf{原始多項式}）である．
+$a$は$R$の中で素元分解される．また，$G(X)$の$0$次の約元は可逆元しかないから，
+もし$G(X)$が非可逆元の積に分解できればその因子は，かならず$G(X)$より低次でかつ容易にわかるように必然的に
+原始的である．従って$G(X)$は有限解の分解の後，既約な原始多項式の積となる．従って，$R$の素元が，
+$R[X]$においても素元であること，$R[X]$の既約な原始多項式が素元であることの二つが示されればよい．
+（例題1の条件(3)参照）．次の圃代4.5.6によってこれを示す．
+
+\補題{4}
+$R$の素元は$R[X]$においても素元である．
+
+\証明
+
+$p$を$R$の素元とし，$F(X) = \sum_{i=0}^{m} a_i X^i , G(X) = \sum_{j=0}^{n} b_j X^j \: (a_i , b_j \in R)$はともに
+$p$で整除されない$R[X]$の元とする．$p$で割り切れない$a_i , b_j$が，存在するから，そのようなもののうち$i,j$の最大なものを
+それぞれ$a_r , b_s$とすれば，$F(X) G(X)$における$X^{r+s}$の係数は，
+$ \left(	\sum_{i < r}^{} a_i b_{r+s-i} + \right) + a_r b_s + 
+	\left(	\sum_{j < s}^{}	a_{r+s-j} b_j	\right)
+$
+で，二つの$( \cdot )$内の元は，$p$で割り切れ，
+$ a_r b_s$は$p$で割り切れないから，$F(X) G(X)$は$p$で割り切れない．ゆえに，$p$は$R[X]$の素元ともなる．
+
+\■
+
+\補題{5}
+原始的多項式の積は原子的である．
+
+\証明
+
+$F(X), G(X)$を原始的多項式とすとる．$R$の任意の素元$p$に対して，$p \not{|} F(X) , p \not{|} G(X)$であるから，
+補題4により，$p \not{|} F(X) G(X)$．ゆえに，$F(X) G(X)$の G.C.M はどんな素因子も含まない．
+ゆえに，$F(X) G(X)$は原始的である．
+\■
+
+\補題{6}
+$R$をGauss環とするとき，$R[]$の既約な原始的多項式は$R[X]$の素元である．
+
+
+\証明
+
+$\varphi (X)$を既約な原始的多項式とし，$ \varphi (X) | F(X) G(X)$とする．$R$の商体を$K$とすれば，
+$K[X]$は Gauss 環であって，$\varphi (X)$は，次の問15によりその既約元となるから，
+$K[X]$の素元となる．ゆえに例えば，$F(X) = \varphi(X) f(X) , f(X) \in K[X]$となる．
+$F(X) = a \psi (x), f(x) = \frac{c}{b} \xi (x) \: ( a, b,c \in R)$となるような原始的多項式
+$ \varphi (X) , \xi(X)$が存在する．
+
+$ab \psi(X) = c \varphi (X) \xi (X)$において，$ \varphi (X) \xi(X)$は補題5により原始的多項式であるから，
+両辺の係数の G.C.M を比較すると，$ab =c$となる．ゆえに，$ \displaystyle \frac{c}{b} = a \in R$．
+従って$ f(X) \in R[X]$において，$ \varphi(X) | F(X)$となる．ゆえに，$\varphi(X)$は
+$ R[X]$の素元である．
+
+\■
+
+
+\問{15}
+Gauss 環$R$の商体を$K$とする．$R[X]$の多項式$F(X)$が$K[X]$の元として可約ならば，$R[X]$の元としても可約である．
+
+\証明
+$F(X) = f_1(X) f_2(X) \: f_i (X) \in K[X] , \deg f_i (X) > 0$とする．$f_i (X) = \frac{a_i}{b_i} F_i(X)$，
+$a_i , b_i \in R$，$F_i (X)$は$R[X]$の原始的多項式とすれば，$ \deg F_i = \deg f_i(X)$だから$F_i(X)$は，
+$R[X]$の可逆元でなく，$b_1 b_2 F(X) - a_1 a_2 F_1(X) F_2(X)$の両辺の係数の G.C.Mを比較することにより，
+$b_1 b_ 2 | a_1 a_2$，ゆえに$F(X) = u F_1 (X) F_2(X)$，$u \in R$となり，$F(X)$は$R[X]$の元としても可約である．
+
+\■
+
+\例{6}
+$\Z [X] , \Z [ X_1 , \cdots , X_m] , K[X_1 , \cdots , X_m]$（$K$は体）は Gauss 環である．
+
+\問{16}
+
+$R$を Gauss 環とすれば，$R[X]$の素元は，$R$の素元，および，$R[X]$の既約な原始多項式である．
+
+\証明
+
+$R[X] \ni F(X)$を素元とする．$ \deg F(X) \geqq 1$ならば，$F(X)$は$K[X]$の元として非可逆でしかも
+問15により，既約でなければならない．$F(X)$は$R[X]$の元として，既約元であるから，原始的多項式でなければならない．
+（そうでなければ，係数の G.C.M を $d$として，$F(X) = d G(X)$の形の分解が存在する．）次に，$ \deg F(X) = 0$ならば，
+$F(X) = p \in R$．$p$が$R[X]$の素元ならば，$R$の中でももちろｎ素元である．
+
+逆に，$R$の素元および$R[X]$の既約t公式は必ず，$R[X]$の素元となることは，補題4.6でも与えられる．
+
+\■
+
+
+
+
+
+

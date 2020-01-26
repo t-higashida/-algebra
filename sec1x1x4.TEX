@@ -1,0 +1,319 @@
+\subsection{準同型写像と同型定理}
+
+群$G$から群$G'$への写像$f$が，$G$の任意の2元$x,y$に対して
+$f(xy)=f(x) \cdot f(y)$をみたすとき，
+$f$は\textbf{演算を保存する}あるいは\textbf{準同型（写像）}であるという．
+$G'$の単位元を$e'$とするとき，$ \{ \: x \in G \: ;  \: f(x)=e' \: \}$を
+準同型$f$の\textbf{核}（kernel）といい，$ \Ker f$で表わす．
+
+
+\問{1}
+準同型写像$f : G \to G'$について次のおのおのが成り立つ．
+ただし$e,e'$はそれぞれ$G,G'$の単位元とする．
+\begin{list}{}{}
+	\item (1) $ f(e) = e'$．	
+	\item (2) $f(x^{-1}) = (f(x))^{-1}$．
+	\item (3) $\text{Im} f = f(G)$は$G'$の部分群である．
+	\item (4) $\Ker f $は$G$の正規部分群である．――
+\end{list}
+\証明
+(1) $ f(e) f(e) = f(ee) = f(e)$．両辺に$f(e)^{-1}$を掛けて，$f(e)=e'$．
+
+(2) $ f(x) f(x^{-1}) = f(xx^{-1}) = f(e) = e'$．ゆえに$f(x^{-1} ) = f(x)^{-1}$．
+
+(3) $ f(x) f(y)^{-1} = f(x) f(y^{-1}) = f(xy^{-1})$．ゆえに$f(G)f(G)^{-1} \subset f(G)$．従って
+$ f(G)$は部分群である．
+
+(4) $f(x) = e' , \: f(y)=e'$ならば$ f(xy^{-1}) = f(x)f(y)^{-1} = e'$．従って
+$ \Ker f$は$G$の部分群である．また$G$の任意の元$a$に対して，$f(axa^{-1}) f(a) f(x) f(a^{-1}) = f(a) e' f(a)^{-1} = e'$．
+ゆえに $\Ker f$は$G$の正規部分群である．
+
+\■
+
+
+群$G$から群$G'$への準同型全射があるとき，
+$G'$は$G$に\textbf{準同型}であるという．また，準同型単射を（中ヘの）\textbf{同型（写像）}という．
+$ f : G \to G'$が同型写像ならば，$G$の各元$x$と$f(x) \in G'$とを同一視して，
+$G$が$G'$の中へ\textbf{うめこまれる（imbed される）}という．
+$G$から$G'$への上への同型写像があるとき，$G$と$G'$とは\textbf{同型}であるといい，
+$ G \cong G'$と書く．とくに$G$から$G$自身の中への準同型写像，
+同型全射をそれぞれ$G$の\textbf{自己準同型}，\textbf{自己同型}という．
+
+\問{2}
+準同型写像$f:G \to G'$が中への同型写像であるためには，
+$ \Ker f = \{ e \}$の成り立つことが必要かつ十分である．
+
+\証明
+$ \Ker f = \{ e \}$ならば，$f(x) = f(y) \Rightarrow f(x)f(y^{-1}) = f(xy') = e' \Rightarrow xy-{-1} = e \Rightarrow x = y$
+となり$f$は単射となる．逆は明らかである．
+
+\■
+
+\例{1}
+群$G$の恒等写像は，$G$のの自己同型である．また，$G$のすべての元に$G'$の単位元$e'$を対応させる写像$f$は，
+準同型写像で，$ \text{Im} f = \{ e' \} , \Ker f = G$である．
+
+
+\例{2}
+$N$を群$G$の正規部分群とするとき，標準的全射
+$ G \to G / N ( x \to x \mod N)$は
+準同型全射である．これを\textbf{標準的準同型}とよぶ．
+
+
+\例{3}
+$a$を一つの実数とする．任意の実数$x$に$ax$対応させる写像$f$は，実数の
+加法群$\R$から$\R$への準同型写像である．$a = 0$ならば$f$は
+$ \text{Im } f = \{ 0 \}, \Ker f = \R$の自己準同型である．
+$a \ne 0$ならば$f$は全単射でしたがって$\R$の自己同型である．
+
+\例{4} $0$でない複素数全体の作る乗法群を$ \C^*$とする．
+$ \C^*$の各元にその絶対値を対応させる写像$f$は，
+$ \C^{*}$から$ \C^*$への準同型写像である．
+ $ \text{Im } f$は正の実数全体の作る乗法群$ \R^+$で，
+$\Ker f$は絶対値$1$の複素数全体の集合である．
+この準同型写像により，$ \R^+$は$\C^*$に準同型である．
+
+\例{5}
+$ \C^*$の各元を2乗する写像は$ \C^*$から$ \C^*$の上への準同型写像である．
+各は $ \{ \: 1, -1 \: \}$．
+
+\例題{}
+$ f : G \to G / N$を標準的準同型とすれば，$N$を含む$G$の部分群全体と
+$G /N$の部分群全体とは，$ H \to f(H)$によって 1対1に対応する．
+
+\証明
+$ G / N$の部分群$H'$に対して，$ f^{-1} (H')$は$N$を含む$G$の部分群となる．
+実際，$f^{-1} (H') \ni x , y \Rightarrow f(x) ,f(y) \in H' \Rightarrow f(xy^{-1}) = f(x) f(y)^{-1} \in H'
+ \Rightarrow xy^{-1} \in f^{-1} (H')$．また，$f(N)= \{ e' \} \subset H'$ゆえ$ N \subset f^{-1} (H')$．
+
+そこで，$ff^{-1} (H') = H'$，$f^{-1} f(H) = H$がつねに成り立つことを示せばよい（p.4 定理3）
+
+まず，$ f f^{-1} (H') , f^{-1} f(H) \supset H$はp.3定理2による．逆に，$f^{-1}f(H) \ni x \Rightarrow f(x) \in f(H) 
+\Rightarrow \exists h \in H$，
+$ f(x) = f(h) \Rightarrow f(xh^{-1}) = e \Rightarrow xh^{-1} \in N \subset H \Rightarrow x \in hH = H$．
+ゆえに$f^{-1} \cdot f(H) \subset H$．
+
+\■
+
+\問{3}
+整数の加法群$\Z$の自己準同型$f$は，かならず$ f(x) = ax \: (a \in \Z)$の形に表わされる．
+かつ $ a \ne 0$ならば，これは中への同型写像となる．
+
+\証明
+$ f(1) =a$とおけば，正の整数$x$に対しては，$f(x) = f( \underbrace{1 + \cdots + 1}_{x\text{個}})
+= \underbrace{ f(1) + \cdots + f(1)}_{ x \text{個}} = ax$．
+負の整数$ x = -y$に対して，$f(x) = - f(y) = -a y = ax$．
+
+また $f(0) = 0  = a 0$．ゆえに任意の$x \in \Z$に対して$f(x) = ax$となる．$a \ne 0$ならば，
+$ \Ker f = \{ \: x \in \Z \: ; \: ax = 0 \: \} = \{ \: 0 \: \}$．
+
+
+
+\■
+
+
+
+
+\問{4}
+準同型写像の結合は準同型写像である．同型写像の結合は同型写像である．
+同型全射の逆写像も同型全射である．
+
+\証明
+$f :G \to G' , g: G' \to G''$がともに準同型写像ならば $ ( g \circ f) (xy) = g( f(x) f(y)) = (gf(x)) (gf(y))$．
+ゆえに$ g \circ f$も準同型写像である．他の部分は，一般に単射の結合が単射であること，全単射の逆写像が全単射であることから
+明らかである．
+
+
+\■
+
+\問{5}
+群$G$の自己同型全体の集合は，写像の結合について群をなす．――
+
+\証明
+$f,g$が$G$の自己同型ならば$g \circ f, f^{-1}$もまた$G$の自己同型となることが，問4および
+全射の結合が全射であることがらもわかる．
+
+\■
+
+問5の群を$G$の\textbf{自己同型群}という．
+
+\問{6}
+$ a$を群$G$の一つの元とするとき，$ \sigma_a (x) = a x a^{-1}$で定義される写像 $ \sigma_a $は
+$ G$の自己同型である．
+これを$G$の\textbf{内部自己同型}という．
+$G$の内部自己同型全体は，$G$の自己同型群の正規部分群となる．
+
+\証明
+(1) $ \sigma_a (x) \sigma_a (y) = axa^{-1} a y a^{-1} = a xy a^{-1} = \sigma_a (xy) $．
+また，$ \sigma_a (x) = z \Leftrightarrow x = a^{-1} z a$．
+ゆえに，$ \sigma_a$は準同型全単射すなわち$G$の自己同型である．
+
+
+(2) (1)により$ \sigma_a^{-1} (x) = a^{-1} x a = \sigma_a^{-1} (x)$．また
+$ \sigma_a \sigma_b (x) = \sigma_a (bxb^{-1}) = ab x b^{-1} a^{-1} = \sigma_{ab} (x)$．
+
+
+ゆえに、$ \sigma_a^{-1} (x) = a^{-1} x a = \sigma_{a^{-1}} (x)$また
+$ \sigma_a \sigma_b (x) = \sigma_a ( bxb^{-1} ) = ab x b^{-1}a^{-1} = \sigma_{ab} (x)$．
+ゆえに $ \sigma_a^{-1}$も $ \sigma_a \sigma_b$も内部自己同型である．すなわち内部自己同型
+全体は$G$の自己同型群の部分群を作る．
+
+
+(3) $\tau$を任意の自己同型とすれば，$ \tau \sigma_a \tau^{-1} (x) = \tau ( a \tau^{-1} (x) a^{-1} ) = \tau (a ) x \tau (a)^{-1} = \sigma_{\tau ( a ) } (x)$．
+ゆえに $ \tau \sigma_a \tau^{-1} $もまた内部自己同型である．ゆえに内部自己同型群は自己同型群の正規部分群である．
+
+\■
+
+\定理{3}
+$f : G \to G'$を準同型，$N$を$G$の正規部分群とする．$ \Ker f \supset N$ならぱ，
+準同型$ \overline{f} : G / N \to G'$が存在して，
+右の図式が可換になる．ただし$c$は標準的準同型を表わす．
+
+
+（図式　保留）
+
+
+\証明
+$ G / N \ni \xi $に対し，$ \xi = x \mod N$となる$x$を一つとり，
+$ \overline{f} ( \xi ) = f(x)$と定めれば，これは$x$の選び方に関係なく
+$ \xi $のみによって定まる．実際，$ x \equiv y \mod N \Rightarrow x y^{-1} \in N \Rightarrow xy^{-1} \in \Ker f
+\Rightarrow f(xy^{-1}) = e' \Rightarrow f(x) f(y)^{-1} = e' \Rightarrow f(x) = f(y)$．
+あきらかに$f = \overline{f} \circ c$．また，$\overline{f}$が準同型であることも容易にわかる．
+
+\■
+
+\定理{4}
+（第1同型定理）準同型 $f : G \to G'$の核を$N$とすれば，
+$ G / N \cong f(G) $．
+
+かつこの同型は，$x \mod N \leftrightarrow f(x)$によって与えられる．
+
+\問{7}
+定理4を証明せよ．
+
+\証明
+定理3の$\overline{f}$を作れば明らかに$\overline{f}$の像は$f(G)$である．
+また $ \overline{f} ( x \mod N ) = e'
+\Leftrightarrow f(x) = e' \Leftrightarrow x \in N \Leftrightarrow x \mod N$
+が$G/N$の単位元．ゆえに$\overline{f}$は同型写像である．
+
+\■
+
+\定理{5}
+（第2同型定理）
+$H$を$G$の部分群，$N$を$G$の正規部分群とすれば，
+\[
+	H / ( N \cap H) \cong N H / N.
+\]
+かつこの同型は，$ x \mod ( N \cap H) \to x \mod N ( x \in H )$によって与えられる．
+
+\証明
+\S 1.3 の 例題により両辺は意味をもつ．$x \mod ( N \cap H ) \rightarrow x \mod N \: ( x \in H) $によって，
+(1) 写像が $x$の選び方によらず定義され，(2) 準同型となり，(3) 全射となり，(4) 核が単位元となることは容易に検証される．
+
+\問{8} 定理5 証明の (1)～(4)を検証せよ．
+
+\証明
+$G$から$G/N$への準同型写像$p$によって，$G$の部分群$H$は$G/N$の部分群$HN/N$に写される．
+そこで$p$を$H$から$HN/N$の上への準同型写像と見なすと，$ \Ker p = H \cap N$より
+$ H / ( \Ker p) \cong H / (N [cap N) \cong \text{Im} p \cong HN/N$．
+
+\■
+
+\定理{6}
+（\textbf{第3同型定理}）$ N_1 , N_2$が$G$の正規部分群で，$N_1 \supset N_2$ならば，
+\[
+	(G / N_2) / ( N_1 / N_2) \cong G / N_1.
+\]
+かつこの同型は，$ ( x \mod N_2) \mod ( N_1 / N_2 ) \leftrightarrow x \mod N_1 \: ( x \in G)$によって与えられる．
+
+\問{9}
+定理6を証明せよ．（ 第1同型定理を用いよ．）
+
+\証明
+標準的準同型$f : G \to G / N_1$と$G$の正規部分群$ N_2$に対して定理3を適用すると，
+$ \Ker f = N_1 \supset N_2 $であるから，$ \overline{f} : G / N_2 \to G/ N_1 : x \mod N_2 \to x \mod N_1$が
+定義される．
+
+\問{10}
+巡回群は可換群で，演算を加法で表わすとき，$\Z$または単位群または\S 1.3 例2の形の群と同型である．――
+
+\証明
+$G$を元$a$で生成される巡回群とする．$\Z \ni n$に$a^n \in G$を対応させる写像は，加群$\Z$から$G$への準同型全射である．
+その核を$N$とすれば，第1同型定理により，$ G \cong \Z / N$．
+$ \Z $は可換群であるから，$G$も可換群である．また$N$は$\Z$の部分群であるから，\S 1.2の
+例2 によって$N =(m) \: ( m \in \Z )$と表わされる．$m = 0$ならば$ \Z / N \cong \Z$．その他の場合には
+$\Z / N$は \S 1.3 の例2の形の群である．
+
+\■
+
+群と準同型写像とから成る
+\[
+	G_0 \stackrel{f_1}{\longrightarrow} G_1 \stackrel{f_2}{\longrightarrow} G_2 \stackrel{f_3}{\longrightarrow} \cdots \stackrel{f_k}{\longrightarrow} G_k
+\]
+の形の図式を\textbf{系列}という．系列 (*) において
+\[
+	\text{Im } f_i = \Ker f_{i+1} \quad (i=1, 2 , \cdots , n-1)
+\]
+が成り立つとき，(*) を\textbf{完全系列}という．
+
+
+
+\問{11}単位元のみから成る群を$e$で表わし，
+$e \to G$，および$G' \to e$等は一意的に定まる準同型写像とするとき，
+次のおのおのを証明せよ．
+
+\begin{list}{}{}
+	\item (1) $ e \to G \stackrel{f}{\longrightarrow} G'$が完全 $\quad  \Leftrightarrow \quad f$が単射．	
+	\item (2) $ G \stackrel{f}{\longrightarrow } G' \to e$が完全 $\quad \Leftrightarrow \quad f$が全射． 
+	\item (3) $ e \to G \to e$が完全 $ \quad \Leftrightarrow \quad G \cong e$．
+	\item (4) $ e \to G \to G' \to e \quad $が完全 $ \quad \Leftrightarrow \quad G \cong G'$．.
+	\item (5) $ e \to G' \stackrel{f}{\longrightarrow} G \stackrel{g}{\longrightarrow} G''$が完全 $ \quad \Leftrightarrow \quad G' \cong \Ker g$．
+	\item (6) $ G' \stackrel{f}{\longrightarrow} G \stackrel{g}{\longrightarrow} G'' \to e$が完全 $ \quad \Leftrightarrow \quad f(G')$が$G$の正規部分群で$G'' \cong G / f(G')$.
+	\item (7) $ e \to G' \stackrel{f}{\longrightarrow } G \stackrel{g}{\longrightarrow} e$が完全 $\quad \Leftrightarrow \quad G$の正規部分群$N$で$G' \cong N, G'' \cong G/N$となるものが存在する．
+\end{list}
+
+\証明
+(1) $ e \stackrel{f_0}{\longrightarrow} G \stackrel{f}{\rightarrow } G'$が完全 $ \quad \Leftrightarrow \quad \text{Im } f_0 = \{ e \} = \Ker f \quad \Leftrightarrow f$は単射．
+
+(2) $ G \stackrel{f}{\longrightarrow} G' \stackrel{\varphi}{\longrightarrow} e $が完全 $ \quad \Leftrightarrow \quad \text{Im } f = f(G) = \Ker \varphi = G' \quad \Leftrightarrow \quad f$は全射．
+
+(3) $ e \stackrel{\varphi }{\longrightarrow} G \stackrel{\psi}{\longrightarrow}$が完全 $ \quad \Leftrightarrow \quad \text{Im } \varphi = e = \Ker \psi = G \quad \Leftrightarrow \quad e = G$
+
+(4) $ e \stackrel{f_0}{\longrightarrow} G \stackrel{f_1}{\longrightarrow} G' \stackrel{f_2}{ \longrightarrow } e$が完全 $\quad \stackrel{\text{i}}{\Leftrightarrow} \quad \text{Im } f_0 e = \Ker f_1$．よって$f_1$
+は単射 $ \quad \stackrel{\text{ii}}{ \Leftrightarrow} \quad \text{Im } f_1 = f_1(G) = \Ker f_2 = G'$．よって$f_1$は全射．(i)(ii) $ \quad \Leftrightarrow \quad G \cong G'$．
+
+(5) 問題の図式が完全　$ \quad \Leftrightarrow \quad f$が単射　$ \quad \Leftrightarrow \quad G' \cong \text{Im} f= \Ker g$．逆に$G' \cong \Ker g \quad \Rightarrow \exists f \quad G' \to \Ker g$が全単射，$ \quad \Rightarrow \text{im } = \Ker g \quad \Rightarrow $ 系列は完全．
+
+(6) 系列が完全 $ \quad \Leftrightarrow \quad \text{Im } f = \Ker g \quad \Leftrightarrow \quad \text{Im } f = f(G')$は$G$の正規部分群．(2)より$g$は全射．
+$ \quad \Rightarrow $第1同型定理より $ \quad G / \Ker g \cong \text{im } g \quad \Rightarrow \quad G / f(G') \cong G''$．
+
+逆に$f(G')$が$G$の正規部分具ならば$ h : G \to G / f(G')$を自然な準同型写像として
+$ \Ker h = f(G') = \text{Im } \quad G'' \cong G / f(G')$より，$g : G \to G''$において，$ \Ker g = \text{IM }$．
+
+(7) 
+
+
+（保留）
+
+
+
+\問{12}
+
+(1) 群と準同型から成る右のような可換な図式において，
+準同型 $ \alpha : A \to A'$が一意的に存在して，$\beta f = f' \alpha$となる．
+
+（図保留）
+
+(2) 群と準同型から成る右のような可換な図式において，準同型 $ \gamma : C \to C'$
+が一意的に存在して，$ \gamma g = g' \beta$となる．
+
+（図保留）
+
+\証明
+$ \beta f = f' \alpha$となるためには，$A$の各元$a$に対して，
+$a' = \alpha ( a )$が$f ' a' ) = \beta f(a) $を満たすことが必要十分である．
+$ g' \beta f(a) = \gamma g f(a) = \gamma (e_c) = e_{C'}$であるから．
+
+
+\■

@@ -1,0 +1,151 @@
+\section{$R$加群}
+
+\subsection{$R$加群の演算}
+
+本節を通じて，$R$は一つの環とする．加群$M$において，$R$の任意の元
+$ \alpha$と$M$の任意の元$x$との積$\alpha x$が$M$の元として定められており，
+次の LRM1 ～ 4 が成り立つとき，$M$を$R$上の左加群または左$R$加群という．
+また$R$の任意の元$\alpha$と$M$の任意の元$x$との積$x \alpha$が$M$の元として定められており，
+次の RRM1 ～ 4 が成り立つとき，$M$を$R$上の右加群または右$R$加群という．
+
+どちらの揚合にも，$M$の元を \textbf{vector}，$R$の元を \textbf{scalar}ということがある．
+\begin{list}{}{}
+	\item	LRM1: $ \alpha ( x + y ) = \alpha x + \alpha y$，
+	\item LRM2: $ ( \alpha + \beta) x = \alpha x + \beta x$，
+	\item LRM3: $ \alpha ( \beta x ) = ( \alpha \beta ) x $,
+	\item LRM4: $ 1 x = 1$｡
+\end{list}
+\begin{list}{}{}
+	\item	RRM1: $ (x+y)\alpha = x \alpha + y \alpha$,
+	\item RRM2: $ x ( \alpha + \beta ) = x \alpha + x \beta$,
+	\item RRM3: $ ( x \alpha ) \beta = x ( \alpha  \beta)$,
+	\item RRM4: $ x 1 = x$.
+\end{list}
+
+$R$が可換環のときは，左$R$加群と右$R$加群とは，記法のちがいだけで実質的には同じものであるから，
+区別せず，単に\textbf{$R$加群}といい，通常左加群の記法を用いる．$R$が体のときには，$R$加群を
+$R$上の \textbf{vector空間}ともいう．
+
+〔注意〕$R$が必ずしも単位元をもたない環のとき，LRM4 または RRM4 の条件を除いて，
+左$R$加群，右$R$加群を定義する．そして$R$が単位環のとき LRM4，RRM4 をつけ加えて定義されたものを，
+\textbf{unitary} 左 $R$ 加群，unitary 右$R$加群ということもある．
+しかし本書では，環はすべて単位環とし，$R$加群はすべて unitary とする．
+
+$ R , R'$をともに単位環とする．加群$M$が左$R$加群かつ右$R'$加群で，任意の
+$ x \in M , \alpha \in R , \alpha' \in R'$に対して
+\[
+	( \alpha x ) \alpha' =  \alpha ( x \alpha')
+\]
+が成り立つとき，$M$を\textbf{左$R$右$R'$双加群}という．
+
+左加群の理論も右加群の理論も平行に論ぜられるから，以後主として左加群について論ずることとする．
+
+
+環$A$が左$R$加群の構造をももち，任意の$ \alpha \in R, x,y \in A$に対して
+\[
+	( \alpha x) y = x ( \alpha y  ) = \alpha ( xy)
+\]
+が成り立つとき，$A$を$R$上の左多元環という．$A$がさらに体であれば，$R$上の左多元体という．
+
+\問{1}
+左$R$加群$M$において，$ \alpha 0 = 0$，$0x = 0$，$(-1)x = -x$ , $( -\alpha ) x = \alpha ( -x) = - ( \alpha x)$.
+
+\証明
+
+$ \alpha 0 = \alpha  ( 0 + 0) = \alpha 0 + \alpha 0$．両辺に$ - \alpha $を加えて，
+$ \alpha 0 = 0$を得る．$ 0 x = 0$も同様に証明される．また，$ x + (-1) x = 1 x + (-1) x = (1-1) x = 0x = 0$．
+ゆえに$ ( -1) x = -x$．従って，$ ( - \alpha ) x = (( -1) \alpha ) x = (-1) ( \alpha x) = - \alpha  x $，
+$ \alpha (-x) = \alpha ( -1) x = ( -\alpha ) x = - \alpha x$．
+
+\■
+
+
+\問{2}
+体$K$上の左加群において，$ \alpha x = 0 $ならば$ \alpha = 0$．または $x=O$．
+
+\証明
+$ \alpha \ne 0$ならば$ \alpha^{-1} \in K$．ゆえに，$ \alpha^{-1} \alpha x = 0$．従って$x = 0$
+\■
+
+〔注意〕任意の$R$加群においては，問2の命題は必ずしも成立しない．次の例2を参照．
+
+\例{1}
+
+任意の加群$M$の元$x$と整数$ \alpha $に対して，
+$ \alpha $が定義される．（P.10参照）．これによって任意の加群は$Z$加群となる．
+
+\例{2}
+
+$P$元体$F_p$めim法群を例1によって$\Z$加群と考えれば，$P1=O$．$( \Z \ni p \ne 0)$．
+
+
+\例{3}
+
+$ R^n = \{ (x_1 , \cdots , x_n) ; \: | \: x_1 , \cdots , x_n \in R \}$の元の間に，
+和と scalar 倍を
+\begin{align*}
+  &( x_1 , \cdots , x_n ) + ( y_1 , \cdots , y_n) = ( x_1 + y_1 , \cdots , x_n + y_n)	\\
+  &a ( x_1 , \cdots , x_n ) = ( a x_1 , \cdots , a x_n ) \quad ( a \in R)
+\end{align*}
+で定義することによって，$R^n$は左$R$加群となる．
+
+\例{4}
+環$R$から環$S$への準同型写像 $f:R \to S $ （ただし$ f(1) = 1)$があれば，
+$ R$の元 $ \alpha$と$ S $の元$x$に対して，$ \alpha x = f(\alpha ) x$と定義することによって$S$は左$R$加群となる．
+さらに $ x \beta = x f( \beta )$と定義すれば，$S$は$R$双加群となる．
+もし$S$が可換環ならば，さらに$S$は$R$上の多元環となる．
+
+とくに，$R$が可換環のとき，多項式環$ R [ X_l, \cdots ,X_n]$は$R$上の可換な多元環となる．
+$R$が可換環でなくても，$ R[ X_l, \cdots , ,X_n]$コの$r$次同次式全体の集合（$0$も含む）は$R$双加群となる．
+
+
+\例{5}
+可換環$R$上の4元数環（\S \ref{sec1x2x1}）は，$R$上の可換でない多元環である．
+とくに$R$が実数体Rの部分体ならば，これは多元体となる．
+
+
+\例{6}
+実数軸の開区間$(a,b)$で定義される実数値函数全体の集合，連続函数全体の集合，
+微分可能な函数全体の集合，$n$回連続微分可能な函数全体の集合，無限回微分可能な函数全体の集合，
+$ (a,b)$のすべての点で解析的な函数全体の集合は，
+\[
+	(f+g) (x) = f(x) + g(x) , \quad
+  (\alpha f) (x) = \alpha f(x), \quad
+  (fg) (x) = f(x) g(x)
+\]
+によって和$f+g$，scalar倍$ \alpha f$，積$fg$を定めれば，実数体$\R$上の可換な多元環となる．
+
+\例{7}
+有限群$G = \{ \: x_1 , \cdots , x_n \: \}$と単位可換環$R$に対して，形式的に
+\[
+	\alpha_1 x_1 + \alpha_2 x_2 + \cdots + \alpha_n x_n \quad ( \alpha_i \in R)
+\]
+と書いたもの全体の集合$R[G]$において，相等および演算を次のように定義すれば，
+これは$R$上の多元環となる．$R[G]$を$R$上のGの群環または群多元環という．
+\begin{align*}
+	&\alpha_1 x_1 + \cdots + \alpha_n x_n = \beta_1 x _1 + \cdots + \beta_n x_n \Leftrightarrow \alpha_1 = \beta_1 , \cdots , \alpha_n = \beta_n	\\
+	&( \alpha_1 x_1 + \cdots + \alpha_nx_n ) + ( \beta_1 x_1  + \cdots + \beta_n x_n) = ( \alpha_1 + \beta_1) x_1 + \cdots + ( \alpha_n + \beta_n) x_n \\
+  &\beta ( \alpha_1 x_1 + \cdots + \alpha_n x_n) = ( \beta \alpha_1 ) x_1 + \cdots + ( \beta \alpha_n) x_n \\
+  &(\alpha_1 x_1 + \cdots + \alpha_n x_n = \beta*1 x _1) (\beta_1 x _1 + \cdots + \beta_n x_n) 
+= \sum_{i=1}^{n} \sum_{j=1}^{n} ( \alpha_i \beta_j) ( x_i x_j).
+\end{align*}
+ただし最後の式の右辺の$x_i, x_j$は，$G$の演算で定めたものを表わし，$n^2$個の項のうち$n$個ずつは一つの項にまとめられる．
+
+
+〔注意〕$R[G]$は，厳密には，$G$から$R$への写像全体の集合と定義される．すなわち，集合として$R[G]=R^G$．
+
+\問{3}
+
+左$R$加群Mは，$R$を作用域としてもつ加群と考えられる．左$R$右$R'$双加群Mは，
+$R \times R'$を作用域としてもつ加群と考えられる．
+
+\証明
+$ x \mapsto \alpha x , x \mapsto \alpha x \alpha'$が$M$への加群としての準同型だからである．
+
+\■
+
+
+
+
+
+

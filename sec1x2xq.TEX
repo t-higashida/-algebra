@@ -1,20 +1,358 @@
 \subsection{問題}
 
+1.
+$ \N \ni a$が素数であるためには，$ (a-1)! \equiv -1 ( \mod a)$が必要十分である．
+（Wilson の定理）
 
-（中略）
+\証明
+$a$が素数でなければ，$ a = a_1 a_2 , \quad 1 < a_1 \leqq a_2 \leqq a-1$と書けるから，$ (a-1) ! \equiv 0 ( \mod a )$．
+$a$が素数なｒば，$ \Z / a \Z$は体だから任意の$r \: ( 1 \leqq r \leqq a-1)$に対して$r s =1 \: ( \mod a )$．
+$a$が素数ならば，$\Z / a \Z$は体だから，任意の$r \: ( 1 \leqq r \leqq a-1)$に対して　$ rs = 1 \: ( \mod a )$
+となる$s \: ( 1 \leqq s \leqq a-1)$がただ一つ定まるが，$r=s$となるのは，$r=1$または，$ r=a-1$のときだけである．
+従って$a$が奇素数ならば，適当に組み合わせることにより，
+$
+	(a-1)! = 1^{\frac{a-3}{2}}  \cdot 1 \cdot (a-1) \equiv -1 ( \mod a)
+$.$a = 2$の場合は明らかである．
+
+　
+
 
 2. 標準的準同型 $\Z \rightarrow \Z /m \Z$による元$a$の像を$\overline{a}$と書くことにする．
 次のおのおのに答えよ．
 
 (1) $\Z / m\Z$のidealをすべて求めよ．
 
-(2) $\Z \ni a_1, \cdots , a_n , b$に対し，$a_1 x_1 + \cdots + a_n x_N \equiv b \mod m$となる
+\解
+$\{ \Z / m \Z \text{のideal} \} \stackrel{\text{1-1}}{\leftrightarrow }
+ \{ \} = \{ n\Z \; n \text{は$m$の約数}
+$ 
+ゆえに，$m$の任意の約数に対して，$n \Z / m \Z$が$ \Z / m \Z$の ideal である．
+（従って$m$の素因数分解を$m =\prod_{i=1}^r p_i^{e_i}$とすれば，$ \prod_{i=1}^r ( e_i + 1) $個である．）
+
+
+
+(2) $\Z \ni a_1, \cdots , a_n , b$に対し，$a_1 x_1 + \cdots + a_n x_N \equiv b  \: ( \mod m )$となる
 $x_1 , \cdots , x_n \in \Z$が存在するためには，$a_1 , \cdots , a_n , m$のG.C.M. $d$が$b$の
 約数であることが必要かつ十分である．これを証明し，この条件が成り立つとき，$(\overline{x_1}, \cdots,
 \overline{x_n})$は何組定まるかを求めよ．
+
+\証明
+
+$ \Z a_1 + \cdots + \Z a_n + \Z m = \Z d$であるから，$ R = \Z / \Z m$とおけば，
+$ R \overline{a}_1 + \cdots + R \overline{a}_n \subset R \overline{d}$．前半はこれを言い換えたものである．
+$ \varphi : R^n \to R \overline{d} ( ( \overline{x}_1 , \cdots , \overline{x}_n ) \to \overline{a}_1 \overline{x}_1 + \cdots + \overline{a}_n \overline{x}_n)$
+は加群の準同型全射であるから，群の準同型定理により，$ K^n / \Ker \varphi \cong R \overline{d}$．$R$は$m$個の元から成るから，
+$ \Ker \varphi $の元の個数は$ m^n \div ( m / d) = m^{n01} d$．$ \sum \overline{a}_l , \overline{\alpha}_i = \overline{b}$となる．
+
+$ \overline{x}_1 , \cdots , \overline{x}_n)$全体は，$ \Ker \varphi $による一つの剰余類だるから，その元の個数もこれと等しく，
+$m^{m-1} d$である．
+
+
 
 (3) $m$が$2$でない素数のとき，$\overline{a} \ne 0$に対して$\overline{x}^2 = \overline{a}$となる
 $x \in \Z$が存在するためには，$\overline{a}^{(m-1)/2)} = 1$の成り立つことが必要十分であることを
 証明せよ．この条件をみたす$\overline{a}$を\textbf{平方剰余}といい，これをみたさない$\overline{a}$を
 \textbf{平方非剰余}という．
+
+
+\証明
+
+$ \overline{x}^2 = \overline{a}$となる$x$が存在すれば，$ \overline{a}^{\frac{m-1}{2}} = \overline{x}^{m-1} = 1 $（Fermat の定理）．
+$ \overline{x}^2 = \overline{a}$となる$x$が存在しなければ，$ 1 \leqq xc \leqq m-1$の任意の$x$に対して，$ \overline{x} \ne \overline{x}^{-1} \overline{a}$ （ $\Z / m \Z$は体）．
+従って積$ \prod_{x=1}^{m-1} \overline{x}$は，$ \overline{x} \cdot \overline{x}^{-1} \overline{a}$の形のもの
+$ \displaystyle \frac{m-1}{2}$個の積となり，$ \displaystyle \frac{m-1}{2}$個の積となり、
+$ \displaystyle \overline{a}^{\frac{m-1}{2}} = \overline{(m-1)!} = -1$．（Willson の定理）．
+
+\■
+
+(4) $m=2$のとき，任意の整数$a$に対して，$ \overline{a}^2 = \overline{a}$であることを証明せよ．
+
+\証明
+
+$ \overline{a} = 0$，また，$1$．従って$ \overline{a}^2 = \overline{a}$．
+
+\■
+
+(5) $ \alpha $を$3$以上の整数として，$m = 2^\alpha$のとき，奇数$a$に対して，$ \overline{x}^2 = \overline{a}$となる$x$が存在するためには，
+$a \equiv 1 ( \mod 8 ) $の成り立つことが必要十分である．この条件が成り立つとき，解$ \overline{x}$は何個存在するか．
+
+\証明
+$ x = 2p ;1$に対して，$x^2 = ( 4p^2 + 4p) + 1 \equiv 1 ( \mod 8 )$．必要性は明らかである．
+逆に，$a \equiv 1 ( \mod 8 )$とすると，$ \mod 2^3$では$x = 1$が一つの解となる．$ \mod 2^{d-1}$での解$u$があると仮定すれば，
+$u^2 - a = 2^{\alpha -1} b$となり，$b$が偶数ならば，$x = u$が，$b$が素数ならば，$x = u + 2^{\alpha -2}$が
+$ \mod 2^\alpha$での解となる．これで十分性がいえた．$ x \equiv x_0 ( \mod 2^\alpha )$を一つの解とすれば，任意の解は
+$x \equiv \pm x_0 , \pm x_0 + 2^{\alpha -1} \: ( \: \mod 2^\alpha)$の4組となる．
+
+3.
+
+単項 idea1 整域$R$の元 $ a_1 , \cdots , a_n , m_1 , \cdots , m_n$に対して，$ m_i $と$m_j$の G.C.M を
+$ d_{ij}$とし，$m_1 ,\cdots , m_n$の L.C.M を$l$とする．
+\[
+	x \equiv a_i \: ( \mod m_i ) \quad ( i=1 , \cdots , n)
+\]
+をみたす$x \in R$が存在するためには，
+\[
+	 \forall i , j , d_{ij} a_i - a_j
+\]
+の成り立つことが必要十分である．そのとき，解$x$の全体は，$x_0 + RI$の形の集合となる．
+（これを，解は$ \mod l$で一意的に定まるという．）
+
+\解
+
+$ \varphi : R \to \prod_{i=1}^n R / Rm_i \: ( x \to ( x \mod m_1 , \cdots , x \mod m_n))$は加群の準同型であるから，
+$ \varphi (x) = \varphi (y)$ならば，$x -y \in \Ker \varphi = \cap_{i=1}^n R m_i = Rl$．ゆえに解はもし存在すれば，
+$ \mod l$で一意的である．解が存在するための条件の必要性は明らかであるから，
+十分性を$n$についての帰納法で照明する．$n=2$の場合，$a_1 - a_2 \in R d_{12} = R m_1 + R m_2$．
+ゆえ，$a_1 -a_2 = m'_1 + m_2' \: ( m_i \in R m_i)$となり，$x = a_1 - m_1' =a_2 + m_2'$は所要の条件をみたす．
+$n - 1$の場合について正しいことを仮定すれば，$x \equiv a_i ( \mod m_i ) \: ( 1 \leqq i \leqq n01)$の解は
+$x_0 + Rl'$（$l'$は$m_1 , \cdots , m_{n-1}$の L.C.M.）え表わされる．$x \equiv x_0 ( \mod l')$，
+$x \equiv a_n \: ( \mod m_n)$は$n=2$の場合の結果によって解を持つ．これが所要の解である．
+
+
+\■
+
+4.
+$\Z$の中で次の方程式を解け．
+
+(1) $15x + 22y = 1$．
+
+\解
+$15$と$22$は互いに素であるから，解がある．$15x + 22y = 1 \Rightarrow 22y = 1 ( \mod 15) \: \Rightarrow 7y \equiv 1 ( \mod 15) \Rightarrow y \equiv -2 ( \: \mod 15) 
+\Rightarrow y = 15t-2 \Rightarrow 15x + 22(15t-2) = 1 \Rightarrow x = -22t +3$．
+
+解は，$x = -22t + 3 , y=15t -2$．
+
+(2) 
+$ 15x + 20y + 2+ z = 1$．
+
+\解
+$ 20y + 24z = q \: ( \: \mod 15) \Rightarrow$
+
+
+(3) $ x +2y -3z = 4 , 5x -6y + 7z = 8$．
+
+\解 $y$を消去すると，$8x - 2z = 20 \Rightarrow 4x - z = 10$．ゆえに$x=r$，$z = 4r -10$．これから，
+$2y = 4 -r + 12r -30 = 11r -26$．従って$r = 2t$．ゆえに，$x = 2t , y=11t-13, z = 8t-10$。
+
+(4) $x \equiv 1 \: ( \mod 6 ) , x \equiv 3 \: ( \mod 10) , x \equiv -2 \: ( \mod 15)$．
+
+(5) $x^2 \equiv 3 \: ( \mod 13)$．
+
+
+(6) $x^2 = 49 \: ( \: \mod 60)$．
+
+
+(7) $ x^2 =24 \: ( \: \mod 60)$．
+
+
+5. 関数$ \mu : \N \to \Z$（M\"{o}biusの函数）を次のように定義する．
+$ \mu (1) = 1$．$n$がある素数の2乗で割り切れれば$ \mu (n) = 0$．$n$が$k$個の異なる素数の積ならば
+$ \mu (n) = (-1)^k$，この関数について次の性質を証明せよ．
+
+(1) $ n > 1 $ならば，$ \sum_{d|n}^{} \mu(d) = 0$．
+
+(2) $ F: \N to \Z$に対して，$G(n) = \sum_{d|n} F(d)$によって$G:\N \to \Z$を定義すれば，
+\[
+	F(n) = \sum_{d|n} \mu \left( \frac{n}{d} \right) G(d) \quad (\text{反転公式})
+\]
+
+\証明
+
+(1) $n=p_1^{e_1} \cdots p_r^{e_r}$と素真数分解すると，$ \sum_{d|n} \mu (d) = \sum \mu ( p_1^{x_1 \cdots p_r^{x_r}})$．
+ここで$ \sum $は$ 0 \leqq x_1 \leqq e_1 , \cdots , 0 \leqq x_r \leqq e_r$となる。
+$x_1 , \cdots , x_r$のすべての組についての和である．この和の中で$0$でないものを書けば，
+$ \sum_{d|n} \mu ( d) = \mu (1) + \sum_{i=1}^r \mu ( p_i) + \sum_{1 \leqq i < j \leqq r} \mu (p_ip_j) + \cdots + \mu ( p_1 \cdots p_r) = 1 - r + C_2 - \cdots + (-1)^r = (1-1)^r = 0$．
+
+
+(2) $ \sum_{d|n} \mu \left( \frac{n}{d} \right) G(d) = \sum_{d|n} \sum_{\delta | d} \mu \left( \frac{n}{d} \right) F(\delta) = \sum_{\delta | n} \left( F(\delta ) \sum_{\delta | \frac{n}{\delta} } \right)$．
+
+6. $R$を Gauss 環とする．$R{X} \ni F(X) = a_0 + a_1 X + a_2 X^2 + \cdots + a_n X^n$に対して，一つの素元$p \in R$が存在して，
+\[
+	p | a_i \: ( i =1,2 , \cdots , n-1) , \quad p \not{|} a_n , \quad p^2 \not{|} a_n
+\]
+が成り立つならば，$F(X)$は既約である．（Eisenstein の定理）．
+
+\証明
+
+$F(X)$が既約でないとすれば，$F(X) = G(X) H(X) , G(X) = b_0 + b_1 X + \cdots + b_l X^l$，
+$H(X) = c_01 + c_1 X + C_m X^m ,  l , m \geqq 1 , b_l c_m \ne 0$．$ p | b_0 c_0 \Rightarrow p | b_0 $または$ p | c_0$．
+$ p| b_0 $とする．仮定から，$ p \not{|} c_0$，$ p | ( b_0 c_1 + b_1 c_0)$であるから，
+$p | b_1$，以下同様にして，$p | b_l$，ゆえに$ p | b_l c_m = a_n$．これは矛盾である．
+
+\■
+
+7.
+
+$\Z \ni p$が素数のとき，$F(X) = X^{p-1} + X^{p-2} + \cdots + X + 1$は$ \Z [X]$は既約である．
+
+\証明
+
+$F(X) = \frac{X^p - 1}{X-1} $であるから，$F(X+1) = \frac{(X+1)^p -1}{X} =  X^{p-1} + p X^{p-2} + p C_2 X^{p-3} + \cdots + p$．
+前門からこれは既約である．
+
+
+8.
+
+$K$が標数2でない体のとき，$ K [ X,Y ] \ni X^2 + Y^2 +1$は既約である．
+
+\証明
+
+$X^2 + Y^2 + 1$が既約でないとすると，$X^2 + Y^2 + 1 = ( X + aY + b) (X+ cY + d)$と因数分解できる．
+$ac = bd = 1$，$ a + c = b + d = ad + bc = 0$から，$a \ne 0, b \ne 0$
+$2ab = a(-d) + (-c)b = - (ad +bc) = 0$．従って$2 =0$．すなわち$K$が標数$2$でなければならい．
+
+
+9. $K$は無限体，$K[X_1 , \cdots , X_n] \ni F,G$で，$ G \ne 0$とする．
+\[
+	G (x_1 , \cdots , x_n ) \ne 0 , x_1 , \cdots , x_n \in K \Rightarrow F(x_1, \cdots , x_n) =0
+\]
+が成り立つならば，$F=0$．
+
+\証明
+$n$に関する数学的帰納法による．$n=1$のとき，$G(X_1) = 0$の根は有限個であり，$K$は無限体だから，仮定から$F(X_1) = 0$はｍ数の根を持つことになり，
+$F=0$である．$n-1$の場合を仮定する．$F(X_1 , \cdots , X_n) 
+= \sum_{i=0}^m a_i ( X_2, \cdots , X_n) X^i , 
+G(X_1 , \cdots , X_n) = \sum_{j=0}^l b_j(X_2 , \cdots , X_n) X_1^j$
+
+（$a_i ( X_2 , \cdots , X_n) , b_j ( X_2 , \cdots , X_n ) \in K [X_2 , \cdots , X_n])$と書くと，
+$G \ne 0$だから，$b_j$の中に$0$でないもの$b_s$がある（$ 0 \leqq s \leqq l$），$b_s ( x_2 , \cdots , x_n ) \ne 0$となる
+$ x_2 , \cdots, x_n \in K$を任意のとり，$ G( X_1 , x_2 , \cdots , x_n ) = G_1(X_1) , F(X_1 , x_2 , \cdots , x_n) = _1(X_1)$とおくと，
+$K [X_1] \ni G_1 , F_1$で$G_1 \ne 0$であり，$G_1(x_1) \ne 0$，$ x_1 \in K \Rightarrow F_1(x_1) = 0$が成り立つから，$F_1 = 0$．すなわち，
+$a_i ( x_2 , \cdots , x_n) = 0$（$ 0 \leqq i \leqq m)$である．帰納法の仮定を$ b_s ( X_2 , \cdots , X_n) $と$ a_i ( X_2 , \cdots , X_n)$に適用して，
+$a_i= 0 \: ( 0 \leqq i \leqq m)$，従って$F=0$．
+
+
+10.
+
+$ R$が整域ならば，$R [[ X_1 , \cdots , X_n ]]$も整域である．
+
+\証明
+$ R[[ X_1 , \cdots , X_n]] \ni F<G (F \ne 0 , G \ne 0)$とし，$F , G$を同次の項に分けて，
+$F= F_i + F_{i+1} + \cdots , G = G_j + G_{j+1} + \cdots \quad  (F_i \ne 0 , G_j \ne 0)$と書くと，
+$R$が整域だから，$R[X_1 , \cdots , X_n]$が整域で$F_i G_i \ne 0$．従って$FG \ne 0$．
+
+
+11.
+$K$を体とするとき，$R = K [[X]]$の ideal は，$X^i R ( i =0,1,2, \cdots , )$のみである．
+（したがって$R$は単項 ideal 環である．）
+
+\証明
+$ R \ni F = \sum_{i=0}^{\infty} a_i X^i$と書いたとき，$a_0 \ne 0$なら，$F$は可逆元である．
+$R $ の ideal $\mathfrak{a}$の任意の元$G = \sum_{i=n}^{\infty} a_i X^i \: ( a_n \ne 0)$をとると，
+$G = X^n \sum_{i=n}^\infty a_i X^{i-n}$とおくことにより，
+$\mathfrak{a} \ni X^n$であることがわかる．このような$n$の最小値$n_0$をとると，
+$ \mathfrak{a} = X^{n_0} R$である．
+
+\■
+
+12. $K$を体とする．
+$ \sum_{i= -\infty}^{+ \infty} a_i X^i \: ( a_ \in K)$の形の元で，ある$i_0 \in \Z$が存在して，
+$i < i_0 \Rightarrow a_i = 0$の成り立つもの全体の集合に加法・乗法を自然に定義すれば，
+$K((X))$と同型な体を得る．（上の形の元を$ \sum_{i >> -\infty} a_i X^i$と書き表す．）．
+
+
+\証明
+
+前問でのべたことから，$K((X))$の元は$ K [[ X ]] \ni F(X) = \sum_{i=0}^{\infty}	a_i X^i \cdot X^{n_0} \: ( n_0 \in \N)$
+により，$ \displaystyle \frac{F(X)}{X^{n_0}} = \frac{\sum_{i=0}^{\infty} a_i X^i}{X^{n_0}}$と書ける．
+
+$\displaystyle \frac{F(X)}{X^{n_0}} \to \sum_{i=0}^\infty a_i X^{i-n_0}$が$K((X))$と問題の体との同型対応を与える．
+
+\■
+
+13
+
+可換体$K$がまた順序集合であって，加法群は順序群であり、さらに公理
+\[
+	 x > y , z > 0 \Rightarrow xz > yz
+\]
+をみたすとき$K$を順序体という．
+
+(1) 順序体$K$の正の元全体の集合$P$は次の条件をみたす．
+\[
+	P \not{\ni} 0 \quad P + P \subset P , PP \subset P
+\]
+
+\証明
+
+$ P = \{ x \in K \: | \: x > 0 \}$だから，$ 0 \not{>} 0$より，$0 \not{in} P$．
+$ x, y\in P$とすると，$x > 0 , y > 0$．このとき順序群の公理より，
+\[
+	x + y > x + 0 = x > 0
+\]
+で，$K$は順序集合だから，推移律より$ x + y > 0$，よって$x + y \in P$．よって$P+P \subset P$．
+$xy > 0 y = 0.
+$よって$PP \subset P$．
+
+\■
+
+(2) 逆に，可換体$K$の部分集合$P$が(1)の3条件をみたせば，$P$を正の元全体とする$K$の順序体の構造が一意的に定まる．
+
+\証明
+
+$K \ni x ,y $に対し，$x - y \in P$のとき，$x > y$と定義すると，$K$は順序集合になる．
+$ x > y \Rightarrow x -y \in P \Rightarrow (x+z) - ( y+z) \in P$，$ x + z > y +z$．すなわち，加法群は順序群である．
+$ x > y , z > 0 \Rightarrow x-y , z \in P \Rightarrow xz - yz = (x-y)z \in P \Rightarrow xz > yz $．ゆえに$K$は順序体である．
+一意性は明らか．
+
+\■
+
+(3) 順序体$K$が前順序集合であるためには，
+\[
+	K = P \cap \{ 0 \} \cap ( -P)
+\]
+の成り立つことが必要十分である．
+\■
+
+\証明
+
+$K$が順序集合$ \Leftrightarrow $ $K$の任意の2元$x,y$に対し，$x > y , x = y , x < y$のどれか一つのみが必ず成り立つ．
+$ \Leftrightarrow x -y \in P , x-y = 0 , x - y \in -P$のどれか一つのいが必ず成り立つ．$ \Leftrightarrow K = P \cap \{ 0 \} \cap (-P)$．
+
+(4) 順序体の標数は$0$である．
+
+\証明
+
+標数$ p \ne 0$とすると，$x>0 \Rightarrow \overbrace{x + x + \cdots + x}^{\text{$p$個}} > 0 \Rightarrow  -0 > 0$となり矛盾．
+
+\■
+
+14.
+
+順序体$K$が前順序集合であれば，$\Q$と同型名順序体を含む．
+
+\証明
+$ K = P \cap \{ 0 \} \cap ( -P) $．もし，$1 \in -P$なら，$-1 \in P \Rightarrow 1 =(-1)(-1) \in P$となり矛盾であるから，
+$1 \in P$．$n \in \N$に対し，$n! = 1 + 1 + \cdots + 1 \in P$．また容易にわかるように，
+$(n1)^{-1} \in P$．従って中への同型写像$ \varphi : \Q \to K \: ( n \in \N , m \in \Z$に対して，
+$ \varphi ( m | n ) = m 1 / n 1)$において，$x \in \Q$が正 $ \Leftrightarrow \varphi (x) > 0$が成り立つ．
+ゆえに，$ \varphi $は中への順序同型である．
+
+\■
+
+15. 
+
+順序体$K$が前順序集合であって，$K \supset \Q \supset \Z$と考えたとき，
+任意の$ x \in K$に対して，$x < n$となる$ n \in \Z$が存在するならば，$K$を Archimedes 順序体という．
+Archimedes 順序体 $K$は$ \Q \subset K \subset \R$と見なされる．
+
+\証明
+
+$K \ni a ,b , a < b$ならば，$a  r < b$となる$r \in \Q$があることを示す．
+$ m < a < b < n$となる$ m , n \in \Z$と$ ( b- a)^{-1} < l$となる$l \in \N$をとって，集合
+$ \{ m + kl^{-1} \: | \: k=0 , 1 , \cdots , l (n-1), m + kl^{-1} \leqq a \: \}$の最大元を
+$ m + k_0 l^{-1}$とすると，$m + (k_0 + 1) l^{-1} = r$は求めるものである．
+$ K \ni x$に対し，$ x -1 < r_1 < x < s_1 < x+1$となる$ r_1 < s_1 \in \Q$をとる．
+$r_1 , \cdots , r_n, s_1 , \cdots , s_n$が定められたとき，
+$ \max (r_n , x - \frac{1}{n+1} ) < r_{n+1} < x < s_{n+1} < mn ( s_n , x + \frac{1}{n+1} )$となる
+$r_1 < s_1 \in \Q$をとる．$r_1 , \cdots , r_n , s_1 , \cdots , s_n$が定められたとき，
+$\max ( r_n , x- \frac{1}{n+1} ) < r_{n+1} < x < s_{n+1} < \min ( s_n, x+ \frac{1}{n+1} )$となる
+$ r_{n+1} , s_{n+1} \in \Q$をとる．こにより単調増加有界数列
+$ (r_n)_{n \in \N}$，単調減少有界数列 $( s_n )_{n \in \N }$が定義され，
+$s_n - r_n < \frac{2}{n}$であるから，$ \displaystyle \lim_{1\rightarrow\infty} r_n = \lim_{n\rightarrow\infty} s_n = y \in r$が定まる．
+$y$は有界数列の選び方には無関係に$x$によって定まり，$K \ni x \to y \in \R$は$K$から$R$の中への順序を変えない同型写像である．
+ゆえに，$ K \subset \R$とみなせる．
+
+\■
+
 

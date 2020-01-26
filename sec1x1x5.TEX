@@ -1,0 +1,292 @@
+\subsection{直積}
+
+集合族 $ ( G_\lambda)_{\lambda \in \varLambda} $の各元$G_\lambda$が群であるとき，
+直積集合 $ G = \prod_{\lambda \in \varLambda} G_\lambda$の元の間に，
+$ ( \cdots , x_\lambda , \cdots )( \cdots , y_\lambda , \cdots ) = \cdots , x_\lambda y_\lambda, \cdots)$によって演算を定義すれば，
+$G$がまた群となる．$G$を$ ( G_\lambda )_{\lambda \in \varLambda}$の群としての\textbf{直積}という．各$G_\lambda$が可換群ならば，$G$も
+またあきらかに可換群となる．$G$から$G_\lambda$への射影を，p.3のように$p_\lambda$で表わす．
+すなわち，$x = ( \cdots , x_\lambda , \cdots )$ならば，$p_\lambda (x) = x_\lambda$．
+
+
+$G_\lambda$の単位元を$e_\lambda$としよう．$G$の元$x$で，$ p_\lambda (x) \ne e_\lambda$であるような$\lambda$が
+たかだか有限個しかないものの全体の集合$G'$は，$G$の部分群を作る．
+
+\証明
+$ x_{\lambda_1} \ne e_{\lambda_1} , \cdots , x_{\lambda_n} \ne e_{\lambda_n}, y_{\mu_1} \ne e_{\mu_1}, 
+\cdots , y_{\mu_m} \ne e_{\mu_m}$とすると
+$ x_{\lambda_1}y_{\lambda_1}^{-1}, \cdots , x_{\lambda_n}y_{\lambda_n}^{-1} , x_{\mu_1}y_{\mu_1}^{-1} , \cdots , 
+x_{\mu_m}y_{\mu_m}^{-1}$の中で$ G_{\lambda_i}, G_{\mu_j}$の単位元となっていないものは高々$m + n$個（最低だと$0$）．
+よって$ ( \cdots x \cdots x \cdots y \cdots ) \in G'$
+\■
+
+
+$G'$を$ (G_\lambda )_{\lambda \in \varLambda}$の
+\textbf{制限直積}といい，$ \prod_{\lambda \in \varLambda}' G_\lambda$で表わす．各$G_\lambda$が加群の場合には，$G'$を
+\textbf{直和}といい， $\oplus_{ \lambda \in \varLambda } G_\lambda$で表わす．
+
+
+\問{1}
+$G$が群となること，$G'$がその部分群となることをたしかめよ．
+
+\証明
+
+$G$が群となることは明らか。単位元は$e=( \cdots , e_\lambda , \cdots ) , x = ( \cdots, x_\lambda , \cdots )$の逆元は
+$x^{-1} =( \cdots , x_\lambda^{-1} , \cdots$．
+
+$G'$が部分群となることを示す．$x_{\lambda_i} \ne e_{\lambda_1} , \cdots , x_{\lambda_1}, \cdots , x_{\lambda_n} \ne e_{\lambda_n}, 
+y_{\mu_1} \ne e_{\mu_1} , \cdots , y_{\mu_m} \ne e_{\mu_m}$とすると，
+$ \cdots , x_{\lambda_1} y_{\lambda_1}^{-1}, \cdots , x_{\lambda_n} y_{\lambda_n}^{-1} , \cdots , x_{\mu_1} y_{\mu_1}^{-1} , \cdots , x_{\mu_m} y_{\mu_m}^{-1}, \cdots$
+の中で$G_{\lambda_i} , G_{\mu_j}$の単位元となっていないものは高々$m+n$個（裁定だと$0$個）．このとき，
+$m=n$で$x_{\lambda_1} = y_{\mu_1} , \cdots , x_{\lambda_n} = y_{\mu_m}$）．
+
+\■
+
+上で，$\varLambda$の一つの元$\alpha$をとり，
+$ G_\alpha$の元$w$に，$G$の元で$ \alpha$成分は$w$，他の成分はそれぞれの因子群の単位元であるもの$w' =( \cdots , e_\mu , \cdots , w , \cdots ) \: ( \mu \ne \alpha )$を対応させれば，
+この対応は，$G_\alpha$から$G'$の中への同型写像となる．したがって，うめこみによって，$G \supset G' \supset G_\alpha$
+と考えることができる．
+
+\問{2}
+このようにして，各$ G_\lambda$を$G'$の中にうめこんだとき，次のおのおのが
+成り立つ．
+
+\begin{list}{}{}
+	\item	(1) $G_\lambda$は$G$の（したがってまた$G'$の）正規部分群である．
+一般に，$\varLambda$の任意の空でない部分集合$M$に対して，$ \prod_{\lambda \in M} G_\varLambda$は（うめこまれて）$G$の正規部分群である．
+	\item (2) $ \lambda, \mu$を$\varLambda$の異なる2元とすれば，$ G_\lambda \cap G_\mu = \{ e \}$（$ G_\lambda , G_\mu \subset G$うめこみ）．
+（$e$は$G$の単位元）．一般に，$M,N$を$\varLambda$の交わらない二つの部分集合とすれば，$ \prod_{\mu \in M} G_\mu \cap \prod_{ \nu \in N} G_\nu = \{ e\}$．
+さらに，$ \prod_{\mu \in M} G_\mu $の任意の元と$ \prod_{\nu \in N} G_\nu$の任意の元とは可換である．
+\end{list}
+
+
+\証明
+(1) $x \in G_\lambda , g \in G$とすると，$g$の$\mu$成分について，$\mu \ne \lambda$のとき，
+$g_\mu e_\mu g_\mu^{-1} = g_\mu g_\mu^{-1} = e_\mu$．$ \mu = \lambda$のとき，
+$g$の$\mu$成分として，$g_\lambda x_\lambda g_\lambda^{-1} \in G_\lambda$．したがって
+$G_\lambda$は$G$の（したがってまた$G'$の）正規部分群である．一般に，
+$x \in \prod_{\lambda \in M} G_\lambda , g\in G$とすると，
+$\lambda \not\in M$のとき$g x g^{-1}$の$\lambda$成分は$g_\lambda e_\lambda g_\lambda^{-1} = e_\lambda$．$\lambda \in M$のとき，
+$g x g^{-1}$の$\lambda$成分は，$g_\lambda x_\lambda g_\lambda^{-1} \in G_\lambda$．ゆえに$ \prod_{\lambda \in M} G_\lambda$は
+$G$の正規部分群である．
+
+(2) 一般の場合を示せば，前半は$ N = \{ \lambda \} , M = \{ \mu \} $の場合である．一般ンお場合を示す．
+$ \prod_{\mu \in M} G_\mu \cap \prod_{\nu \in N} G_\nu \ni x = ( \cdots , x_\lambda , \cdots )$とする．
+$\varLambda$の任意の元$\lambda$は$ \not\in M$または$\not\in N$が成り立つ．もし，$ \lambda \not\in M$ならば
+$x \in \prod_{\mu \in M} G_\mu$より$x_\mu = e_\lambda$．$\lambda \not\in N$ならば
+$x \in \prod_{\nu \in N} G_\nu$より$x_\lambda = e_\lambda$ゆえすべての$\lambda$に対して$x_\lambda = e_\lambda$．従って$x=e$．
+
+次に$ \prod_{\mu \in M} G_\mu \ni x = ( \cdots , x_\lambda , \cdots ) , \prod_{\nu \in N} G_\nu \ni y = ( \cdots , y_\lambda , \cdots )$に対して，
+$\lambda \not\in M$ならば$x_\lambda =e_\lambda$，$\lambda \not\in N$ならば$ y_\lambda = e_\lambda$，いずれにしても，
+$x_\lambda = e_\lambda$．いずれにしても$x_\lambda y_\lambda = y_\lambda x_\lambda$．ゆえに$xy=yx$．
+
+\■
+
+\証明
+(1) $ H = \prod_{\lambda \in M} G_\lambda$とおけば，
+$G$の元$( \cdots , x_\lambda , \cdots )$が$H$に属するためには，‘ $\lambda \not\in M \Rightarrow x_\lambda = e_\lambda$’の成り立つことが
+必要十分である．ゆえに，$H \ni x = ( \cdots , x_\lambda , \cdots ) , G \ni a =( \cdots , a_\lambda , \cdots )$に対して
+$ axa^{-1} = ( \cdots , a_\lambda x_\lambda a_{\lambda}^{-1} , \cdots )$で
+$ \lambda \in M \Rightarrow a_\lambda x_\lambda a_\lambda^{-1} = a_\lambda x_\lambda a_\lambda^{-1} = e_\lambda$だから，
+$a x a^{-1} \in H$．ゆえに$H$は$G$の正規部分群である．
+
+(2)
+$ \prod_{\mu \in M } G_\mu \cap \prod_{\nu \in N} G_\nu \ni x = (\cdots , x_\lambda , \cdots )$をとる．
+$ \varLambda$の任意の元$\lambda$は$ \not\in M$または$ \not\in N$．もし$\lambda \not\in M$ならば
+$x \in \prod_{\mu \in M} G_\mu$より$x_\lambda = e_\lambda$．$ \lambda \not\in N$ならば$ x \in \prod_{\mu \in N} G_\nu$より
+$x_\lambda = e_\lambda$．ゆえにすべての$\lambda$に対して$ x_\lambda = e_\lambda$．したがって
+$x = e$．次に，$\prod_{\mu \in M} G_\mu \ni x = ( \cdots, x_\lambda , \cdots )$．
+$ \prod_{\nu \in N} G_\nu \ni y = ( \cdots , y_\lambda, \cdots )$に対して，
+$ \lambda \not\in M$ならば$x_\lambda = e_\lambda$，$ \lambda \not\in N$ならば$ y_\lambda = e_\lambda$．
+いずれにしても$ x_\lambda y_\lambda = y_\lambda x_\lambda$．ゆえに$xy=yx$.
+\■
+
+以下ことわりなければ，直積因子は常に上の方法で直積の中にうめこんであるものとする．
+また，各$G_\lambda$の任意の部分集合$H_\lambda$に対して，$ \prod_{\lambda \in \varLambda} H_\lambda$の元
+$ ( \cdots , x_\lambda ,  \cdots , ) \quad ( x_\lambda \in H_\lambda )$はこれを
+$ \prod_{\lambda \in \varLambda} G_\lambda$の元とみなすことによって，
+$ \prod_{\lambda \in \varLambda} H_\lambda \subset G$と考えられる．
+同様に，$ \prod_{\lambda \in \varLambda} ' H_\lambda$は$G_\lambda'$の部分群と考えられる．
+
+
+\問{3}
+群$F$から各群$ G_\lambda \: ( \lambda \in \varLambda )$への準同型$f_\lambda$が与えられているならば，
+$F$から$G = \prod_{\lambda \in \varLambda} G_\lambda$への準同型$f$が一意的に存在し，
+どの$ \lambda \in \varLambda$に対しても右の図式が可換となる．
+
+図保留
+
+\証明
+
+このような$f$が存在するとすれば，$F \ni x$に対して，$f(x) = (  \cdots , f_\lambda (x) , \cdots )$
+でなければならない．ところでこのように$f$を定義すると，$f$は準同型となる。
+
+\■
+
+\問{4}
+$ G= \prod_{\lambda \in \varLambda} G_\lambda$，$H_\lambda$は$G_\lambda$の部分群とする．
+$ H = \prod_{\lambda \in \varLambda} H_\lambda$を上のようにして
+$G$の中に埋め込んでおけば
+\begin{list}{}{}
+	\item	(1) $H_\lambda = H \cap G_\lambda$．
+	\item (2) $H$が$G$の正規部分群であるためには，どの$\lambda$に対しても$H_\lambda$が$G_\lambda$の正規部分群であることが必要かつ十分である．かつそのとき，
+\[
+	G / H \cong \prod_{\lambda \in \varLambda} G_\lambda / H_\lambda.
+\]
+制限直積$G' = \prod_{\lambda \in \varLambda}' G_\lambda $についても同様の二つの命題が成り立つ．それを述べ，かつ証明せよ．
+\end{list}
+
+\証明
+
+(1) $H_\lambda \subset H$より $H_\lambda \cap G_\lambda = H_\lambda \subset H \cap G_\lambda$．
+$x \in H \cap G_\lambda$とすると，$ \mu \not\in \varLambda \Rightarrow x_\mu = e_\mu$．
+$ \lambda \ne \mu$より$H_\lambda \ni x =( e_\mu, \cdots , x_\lambda , \cdots )$．$ H \cap G_\lambda \subset H_\lambda$
+
+(2) $H$が$G$の正規部分群 $\Leftrightarrow$ $\forall a \in G , \forall x \in H , axa^{-1} \in H \Leftrightarrow \forall \lambda , \forall a_\lambda \in G_\lambda,
+\forall x_\lambda \in H_\lambda$．$ a_\lambda x_\lambda a_\lambda^{-1} \in H_\lambda \Leftrightarrow \forall \lambda, H_\lambda$が$G_\lambda$の正規部分群かつこのとき，
+$ G \ni ( \cdots , x_\lambda , \cdots ) \to ( \cdots , x_\lambda \mod H_\lambda , \cdots ) \in \prod_{\lambda \in \varLambda} G_\lambda / H_\lambda$は
+準同型全射で核は$H$である．ゆえに第1同型定理により，$ G/H \cong \prod_{\lambda \in \varLambda} G_\lambda / H_\lambda$．
+
+
+$G' = \prod_{\lambda \in \varLambda}' G_\lambda , H_\lambda \subset G_\lambda$．$H' = \{ ( \cdots , x_\lambda , \cdots ) \in G' ; \forall \lambda \in \varLambda , x_\lambda \in H_\lambda \}$に対して，
+\begin{list}{}{}
+	\item	(1) $H_\lambda = H' \cap G_\lambda$．
+	\item (2) $H'$が$G'$の正規部分群 $ \Leftrightarrow $ $\forall \lambda , H_\lambda$が$G_\lambda$の正規部分群 $ \Rightarrow G' / H' \cong \prod_{\lambda \in \varLambda}' G_\lambda / H_\lambda$．
+\end{list}
+が得られる．証明は上と同様で直積集合であることに注意すればよい．
+
+\証明
+
+(1) $H_\lambda \subset H'$より$ H_\lambda cap G_\lambda = H_\lambda \subset H' \cap G_\lambda$．$ x \in H' \cap G_\lambda$とすると，
+$ \mu \not\in \varLambda \Rightarrow x_\mu = e_\mu$，$ \lambda \ne \mu$より$H_\lambda \ni (e_\mu , \cdots , x_\lambda, \cdots )$．
+$H \cap G_\lambda \subset H_\lambda$．
+
+(2) $H'$が$G'$の正規部分群$ \Leftrightarrow \forall a \in G', \forall x \in H'$，$axa^{-1} \in H' \Leftrightarrow \forall \lambda , \forall a_\lambda \in G_\lambda, \forall x_\lambda \in H_\lambda,
+a_\lambda x_\lambda a_\lambda^{-1} \in H_\lambda \Leftrightarrow \forall \lambda , H_\lambda$が$G_\lambda$の正規部分具かつこのとき，
+$ G' \ni ( \cdots , x_\lambda , \cdots ) \to ( \cdots , x_\lambda \mod H_\lambda , \cdots ) \in \prod_{\lambda \in \varLambda}' G_\lambda / H_\lambda$は準同型全射で核は，
+$H'$である．ゆえに第1同型定理により，$G / H \cong \prod_{\lambda \in \varLambda} G_\lambda / H_\lambda$．
+
+\■
+
+\問{5}
+各群$G_\lambda$から$F$への準同型$f_\lambda$が与えられていて，
+$ \lambda \ne \mu$ならば$f_\lambda (G_\lambda)$の元と$f_\mu (G_\mu)$の元が可換とする．
+そうすれば，$(G_\lambda)_{\lambda \in \varLambda}$の制限直積$G'$から$F$への準同型＄ｆ＄が一意的
+に存在してどの $ \lambda \in \varLambda$に対しても右の図式が可換になる．
+ただし$j_\lambda$はうめこみの同型写像とする．
+
+\証明
+
+このような$f$が定義されるならば，$G' \ni x = ( \cdots , x_\lambda , \cdots )$に対して
+$ f(x)= \prod_{\lambda \in \varLambda} f_\lambda (x_\lambda)$でなければならない．
+ただし，この$\prod$は$F$における乗法の意味で，有限個を除く$\lambda$に対して
+$f_\lambda (x_\lambda )$が$F$の単位元であり，掛ける順序に無関係であるから意味をもつ．
+
+逆にこのように$f$を定義すれば，$f(x)f(y) = \left( \prod_{\lambda \in \varLambda} f_\lambda (x_\lambda) \right)\left( \prod_{\lambda \in \varLambda} f_\lambda (y_\lambda) \right)
+= \left( \prod_{\lambda \in \varLambda} f_\lambda (x_\lambda) f_\lambda (x_\lambda) \right) = f(xy)$となって，$f$は準同型となる．
+
+\■
+
+$G$を任意の群とし，$G_\lambda \: ( \lambda \in \varLambda)$を群$G$の部分群とする．
+$ \prod_{\lambda \in \varLambda} G_\lambda$から$G$の中への同型写像$ \varphi$で，
+どの$\lambda$に対しても$ \varphi | G_\lambda = 1_{G_\lambda}$となる
+ものが存在するとき，この同型写像で対応する元を同一視して，
+$ \text{Im} \varphi $を$ \prod_{\lambda \in \varLambda} G_\lambda$と書く．
+このとき，各$G_\lambda$は
+$ \text{Im} \varphi$の正規部分群であり，
+また異なる$ \mu$とレに対して$G_\mu$の任意の元と$G_\nu$の任意の元とは可換である．
+なぜならば，
+$ x = x_{\lambda_1} \cdots x_{\lambda_n} \in \text{Im} \varphi \quad y_\lambda = e_{\lambda_1} \cdots y_\lambda \cdots e_{\lambda_n} \in G_\lambda$とすると，
+\begin{align*}
+ x^{-1} &= ( x_{\lambda_1} \cdots x_{\lambda_n})^{-1} = \varphi^{-1} (x_{\lambda_1} , \cdots , x_{\lambda_n} ) = \varphi^{-1} (( x_{\lambda_1} , \cdots , e_{\lambda_n})
+            \cdots ( e_{\lambda_1} , \cdots , x_{\lambda_n}))	\\
+        &= \varphi^{-1}(x_{\lambda_1} \cdots \varphi^{-1}(x_{\lambda_n} = \varphi(x_{\lambda_1}^{-1} \cdots \varphi(x_{\lambda_n}^{-1} = \varphi(x_{\lambda_1}^{-1}  \cdots x_{\lambda_1}^{-1}) \\
+        &= x_{\lambda_1}^{-1} \cdots x_{\lambda_n}^{-1}
+\end{align*}
+よって
+\begin{align*}
+  xyx^{-1} &= x_{\lambda_1} \cdots x_{\lambda_n} e_{\lambda_1} \cdots y_\lambda \cdots e_{\lambda_n} x_{\lambda_1}^{-1} \cdots x_{\lambda_n}^{-1} \\
+           &= x_{\lambda_1} e_{\lambda_1} x_{\lambda_1}^{-1} \cdots x_{\lambda}y_\lambda x_\lambda^{-1} \cdots x_{\lambda_n}e_{\lambda_n} x_{\lambda_n}^{-1} \\
+           &= x_\lambda y_\lambda x_\lambda^{-1} \in G_\lambda
+\end{align*}
+であるからである．
+
+そして $ \prod_{\lambda \in \varLambda} ' G_\lambda \ni \xi = ( \cdots , x_\lambda , \cdots )$に対して，
+$ x= \prod_{\lambda \in \varLambda} x_\lambda$が$G$の元として定まり，$ \varphi ( \xi ) = x$となる．
+
+すなわち，$ \varphi$はー意的に定まる．
+
+とくに$ \varLambda$が有限集合 $ \{1,2, \cdots ,n \}$の揚合には，
+$ \prod_{\lambda \in \varLambda}' G_\lambda = \prod_{i=1}^n Z G_i , \text{Im} \varphi = G_1 \cdots G_n$．
+
+この場合について次の定理が成り立つ．
+
+\定理{7}
+群$G$の有限個の部分群$G_1, \cdots ,G_n$に対して，$G' = G_1 \cdots G_n$が直積
+$G_1 \times \cdots \times G_n$となるためには，
+次の各条件が必要かつ十分である．
+\begin{list}{}{}
+	\item	(1) $ i \ne j$ならば $_i$の元と$G_j$の元とは可換であり，$G'$の任意の元は $ \prod_{i=1}^n x_j ( x_i \quad \in G_i)$の形に一意的に表わされる．
+	\item (2) $ i \ne j$ならば $G_i$の元と$G_j$の元とは可換であり，$e = \prod_{i=1}^n x_i \: (x_i \in G_i) \Rightarrow x_i = \cdots = x_n = e$が成り立つ．
+	\item (3) 各$G_i$は$G'$の正規部分群で，$G_IG_2 \cdots G_i \cap G_{i+1} = \{ e \} \: (i=1,2, \cdots , n-1)$が成り立つ．
+\end{list}
+
+\証明
+
+$G' = G_1 \times \cdots \times G_n$ならば，$ \varphi^{-1} : G' \to G_1 \times \cdots \times Gn$によって移して考えれば，
+上の考察により$G_i$は$G'$の正規部分群で$G_1G_2 \cdots G_i \cap G_{i+1} = \{ e \}$である．
+(3)が成り立つ．
+
+次に(3)を仮定すれば，$G_i \ni x , G_j \ni y$に対して$xyx^{-1}y^{-1} \in G_i \cap G_j$．
+一方，$i \ne j$ならば$G_i \cap G_j = \{e\} $であるから，
+$ xyx^{-1}y^{-1} = e$．従って$xy=yx$．ゆえに$G_i$の元と$G_j$の元とは可換である．
+さらに，$ e = \prod_{i=1}^n x_i \: ( x_i \in G_i)$とすれば，
+\[
+	x_n^{-1} = \prod_{i=1}^{n-1} \in G_1 \cdots G_{n-1} \cap G_n.
+\]
+故に $ x_n = \prod_{i=1}^{n-1} x_i = e$．同様にして
+$ x_{n-1} = \cdots = x_1 = e$が得られる．
+故に(3) $ \Rightarrow $(2)が示された．
+
+次に(2)を仮定する．$ \prod_{i=1}^n x_i = \prod_{i=1}^n y_i \: ( ( x_i , y_i \in G_i)$ならば，
+$G_i$と$G_j$の元と可換なことから，
+$ \prod_{i=1}^n (x_i y_i^{-1})  = e$．
+従って$ x_i y_i^{-1} = e$．ゆえに$ x_i = y_i$従って(1)が導かれる．
+
+次に(1)を仮定すれば，$ \varphi : G_1 \times \cdots \times G_n \to G'$を
+$ \varphi x_1 , \cdots , x_n) = \prod_{i=1}^n x_i$によって定義すれば，
+$ \varphi $は同型写像となる．
+ゆえに $G' = G_1 \times \cdots \times G_n$．
+
+\注意{}
+
+無限個の部分群$G_\lambda (\lambda \in \varLambda )$に対しても，
+それらの有限個の元の積全体の集合が
+$ \prod_{\lambda \in \varLambda} G_\lambda$となるための必要十分条件として，
+(1) または (2) と同様の命題が得られる．
+
+\問{6}
+$ G = G 1 \times G_2$ならば $G / G_1 \cong G_2$．
+
+\証明
+
+$p_2 (G) =G_2		,	\text{Ker }p_2 = G_1$．ゆえ，第1同型定理による．
+
+\■
+
+
+\問{7}
+$G$の正規部分群$N$が$0$の直積因子であるためには，$G$から$N$の上への準同型$f$で
+$f / N = 1_N$となるものが存在することが必要十分である．
+
+\証明
+
+$G = N times K$ならば，$G$から$N$への射影$f$は問題の条件を満たす．
+逆に$f : G \to N$が問題の条件を満たせば，$K = \Ker f$とおくと，
+$N,K$は$G$の正規部分群であり，$G \ni x \Rightarrow f(x) \in N \Rightarrow ff(x) = f(x) 
+\Rightarrow f(x f(x)^{-1}) = f(x) f(x)^{-1} = f(x) f(x)^{-1} =e \Rightarrow x f(x)^{-1} \in K
+\Rightarrow N x f^{-1}(x) = x N f^{-1} (x) \in N K$．
+だから$G =NK$．かつ$N \cap K \ni x \Rightarrow x = f(x) =e$だから
+$N \cap K = \{ e \}$．ゆえに定理7(3)により
+$G \cong N \times K$．
+
+\■

@@ -1,2 +1,313 @@
 \subsection{剰余環，環の同型定理}
 
+
+$ \mathfrak{a}$を環$R$の両側 ideal とすれば，$ x \sim y \Leftrightarrow x - y \in \mathfrak{a}$で定義された
+関係は同値関係となる．
+これで類別して得られる商集合$R/ \mathfrak{a}$において，元$x$を含む類を
+$x\mod \mathfrak{a}$で表わす．
+
+また，$( x \mod \mathfrak{a} ) = ( y \mod \mathfrak{a} ) $を$ x \equiv y ( \mod \mathfrak{a})$で表わす.
+
+$\mathfrak{a}$ が両側 ideal であることから，
+\begin{align*}
+	&( x \mod \mathfrak{a} ) + ( y \mod \mathfrak{a} )  = (  x + y)  \mod \mathfrak{a}  \\
+  & ( x \mod \mathfrak{a} )( y \mod \mathfrak{a} ) = ( xy  \mod \mathfrak{a} )
+\end{align*}
+によって，$R / \mathfrak{a}$に和および積が定義され，$ R / \mathfrak{a}$はかならずしも単位元をもたない
+環となる．これを$R$の$\mathfrak{a}$による\textbf{剰余環}という．
+$ \mathfrak{a} \ne R$ならば，$R / \mathfrak{a}$は単位元$1 \mod \mathfrak{a}$をもつ．
+
+\問{1}
+$ R / \mathfrak{a}$に，和および積が矛盾なく定義されることを示せ．
+
+\証明
+\begin{align*}
+ x \equiv x' , y \equiv y' \: ( \mod \mathfrak{a} ) \Rightarrow x - x' , y - y \in \mathfrak{a} \\
+\Rightarrow ( x+ y ) - (x' + y') = ( x-x') + ( y 0 y') \in \mathfrak{a}. \\
+xy-x'y' = x(y-y') + ( x-x')y' \in R \mathfrak{a} + \mathfrak{a} R [subset \mathfrak{a} \\
+\Rightarrow x + y = x' + y', , xy \equiv x'y'.
+\end{align*}
+\■
+
+\例{1}
+$R / R = \{O\}, R / \{ 0 \} = R$．
+
+
+\例{2} $n$を$1$でない自然数とするとき，
+\[
+	\Z / n \Z = \{ \overline{0} , \overline{1} , \cdots , \overline{n01} \} \quad ( \overline{x} x \mod n\Z)
+\]
+これは，単位元をもち，$n$個の元から成る可換環である．その演算は，
+$ \overline{x} + \overline{y} = \overline{x+y\text{を$n$で割った余り}}$ ，
+$ \overline{x} \overline{y} = \overline{xy\text{を$n$で割った余り}}$
+で与えられる．とくに，単位元$1$を$n$個加えた和は零元$\overline{0}$となる．
+
+$ \Z/ n \Z$の可逆元を$\Z \mod n$の既約剰余類という．
+その個数を$ \varphi(n)$で表わし，$ \varphi$を
+\textbf{Eulerの函数}という．
+今$x$を$n$と互に素な整数とすれば，
+\begin{align*}
+	\overline{x}\overline{y} = \overline{x}\overline{z}
+\Rightarrow xy-xz \text{が$n$で割り切れる．} \\
+\Rightarrow y-z \text{が$n$で割り切れる} \Rightarrow \overline{y} \equiv \overline{z}
+\end{align*}
+となるから，$\overline{x}$を掛けることは$ \Z / n \Z$から$ Z / n \Z$への単射となり，
+従って全射ともなる．ゆえに，$\overline{x}\overline{y} = \overline{1}$となる．
+$\overline{y} \in \Z / n \Z$が存在する．
+すなわち$ \overline{x}$は可逆元となる．次に，$x$を
+$n$と互に素でない整数とし，$x$と$n$の$\pm $でない公約数を$d$，$n=dm$とすれば，
+$m$mは$n$の倍数でないから$ \overline{m} \ne 0$また$xm$は$dm=n$の倍数となるから
+$ \overline{x}\overline{m}=0$．ゆえに，$\overline{x}$は零因子となり，従ってもちろん可逆元ではない．
+ゆえに
+\[
+	\text{$\overline{x}$が可逆元} \Leftrightarrow \text{$x$が$n$と互いに素}
+\]
+となり，$ \varphi (n) $は，$n$より小さくて$n$と互に素な自然数の個数ともいえる，
+
+
+$ \Z / n \Z$の可逆元全体は，位数 $\varphi ( n )$の群を作るから，p.14 問4により，
+任意の可逆元$ \overline{x}$に対して$ \overline{x}^{\varphi(n)} = \overline{1}$が成り立つ．
+すなわち,`‘$x$が$n$と互に素な整数ならば，‘$x^{\varphi(n)} \equiv 1 \mod n )$‘が成り立つ．
+これは Fermat の（小）定理といわれる．とくに，$n$が素数$P$ならば，あきらかに
+$ \varphi(P)=P-1$であるから，$x$が$P$の倍数でなければ，$x^{p'1} \equiv 1 ( \mod P)$，
+従って$x^P \equiv x ( \mod P )$となる．$x$が$P$の倍数であれば，この最後の式はもちろん成り立つから，
+‘任意の整数$x$に対して$x^p \equiv x  ( \mod P)$’が成り立つ．
+
+$ \varpi (p) = p-1$によって，$\Z / p \Z$の$\overline{0}$でない元はすべて可逆元であることがわかる．
+従って$ \Z / P \Z$は可換体となる．この体を$Fp$で表わす.また，$n$が素数でなければ，$n=ab ( 0<a<n,0ｸb<2z)$
+と分解され，$\overline{a} \ne 0 , \overline{b} \ne 0, \overline{a} \overline{b} = \overline{n}  \overline{0}$となる．
+ゆえに，$ \Z / n \Z$は零因子を含み，従ってもちろん体でない．
+
+環$R$から環$R'$への写像$f:R \to R'$が，$R$任意の2元$x,y$に対して
+\[
+	f(x+y) = f(x) + f(y), \quad
+	f(xy) = f(x)f(y)
+\]
+をみたすとき$f$は環の演算を保存するあるいは準同型（写像）であるという．
+$R,R($の零元をそれぞれ$0,0'$としよう．$ f^{-1} (0')$を$f$の核といい，
+$\Ker f$で表わす．
+
+\問{2}準同型写像$f:R \to R$について次のおのおのが成り立つ．
+\begin{list}{}{}
+	\item	(1) $f(0)=0'$.
+	\item (2) $ \text{Im} f = f(R)$は$R'$の部分環である．
+	\item (3) $ \Ker f$は$R$の両側 idealである．
+	\item (4) $R,R'$が単位元$1,1'$をもち，$f(1)=1'$であれば，$R$の可逆元の像は$R'$の可逆元で，$f(x^{-1})= ( f(X) )^{-1}$が成り立つ．
+\end{list}
+
+￥証明
+
+(1) $f(0) + f(0) = f(0+0) = f(0)$．両辺から$f(0)$を引くと，$f(0) = 0'$．
+
+(2) $f(x) , f(y) \in f(R)$とすると，
+\[
+	f(x) - f(y) = f(x-y)  \in f(R), \quad f(x) f(y) = f(xy) \in R.
+\]
+
+(3) $x,y \in f^{-1} (0')$とすると，$f(x+y) = f(x) + f(y) = 0' + 0' = 0'$．よって$x+y \in f^{-1}(0)$
+
+$ a\in R$とすると，
+\begin{align*}
+	f(ax) = f(a) f(x) = f(a) 0' = 0' \\
+	f(xa) = f(x) f(a) =  0'f(a) = 0' \\
+\end{align*}
+したがって$ax, xa \in f^={-1} (0')$，よって$\Ker f$は$R$の両側 ideal である．
+
+(4) $R$の元について$xx^{-1} = 1 , x^{-1} x = 1$ならば，$f(x)f(x^{-1}) = f(xx^{-1}) f(xx^{-1} =f(1) = 1'$，
+同様に$f(x^{-1}) f(x) = 1'$，ゆえに$f(x^{-1} = f(x)^{-1}$．
+
+\■
+
+$f(1)=1'$をみたす準同型を，\textbf{単位元を単位元に写す準同型}という．
+$R$から$R'$への準同型全射があるとき，$R'$は$R$に\textbf{準同型}であるという.
+準同型単射を中への\textbf{同型写像}という．
+$f:R \to R'$が中への同型写像ならば，$ x \in R$と$f(x) \in R'$とを同一視して，
+$R$が$R$の中へうめこまれるという．とくに$R$から，$R$自身の中への準同型写像，
+同型全射をそれぞれRの\textbf{自己準同型}，\textbf{自己同型}という．
+
+\問{3}準同型写像
+$f:R \to R'$が中への同型写像であるためには，$\Ker f= \{0\}$
+の成り立つことが必要かつ十分である．
+
+\証明
+$ \Ker f = \{ 0 \}$とする．$f(x) = f(y) \Rightarrow f(x-y) = 0 \Rightarrow x -y \in \Ker f \Rightarrow x-y = 0 \Rightarrow x = y$
+したがって，$f$は単射．
+
+$f$が単射と仮定する．$0 \in \Ker f$は明らか．$ x \in \Ker f$とすると，$f(x) = 0' = f(0)$．よって$x=0$，つまり，
+$x \in \{ 0 \}$，異状より，$\Ker f = \{ 0 \}$．
+
+\例{3}
+恒等写像 $ 1_R ] R \to \R$は$R$の自己同型，零写像 $0: R \to R' \: (\forall x \in R, 0(x) = 0'$）は準同型写像である．
+
+\例{4}
+$R$は環$R_0$の部分環，$ x_ 1 , \cdots , x_n$は$R_0$の元とする．多項式環$R [ X_1, \cdots , X_n ]$の
+元 $F( X_l, \cdots ,X_n)$の変数に$ x_1 , \cdots , x_n$を代入することは，$R[ X_1, \cdots , X_n ]$から$R [  x_1 , \cdots , x_n ]$,
+の上への準同型である．
+
+
+\問{4}体から環への準同型写像は零写像かまたは中への同型写像である．
+
+\証明
+
+環の準同型$f : R \to R'$で，$\Ker f$は$R$の両側 ideal であるから，$R$が体ならば，$\Ker f = R$または$ \{ 0 \}$．
+したがって$f$は$0$または中への同型写像である．
+
+\■
+
+\問{5}
+標準的準同型 $f: R \to R / \mathfrak{a}$によって，
+$ \mathfrak{a}$を含む$R$の左 idea1 （ 右 idea 1，両側 ideal ) の全体と，
+$ R / \mathfrak{a}$の左 ideal （ 右 ideal， 両側 ideal ）の全体とが1対1に対応する．
+
+\証明
+$U$が$ R / \mathfrak{a}$が左 ideal （右，両側）ならば，$f^{-1} (U)$は$\mathfrak{a}$を含む
+$R$の 左 ideal （右，両側）である．実際，$f^{-1} ( U ) \ni x , y \Rightarrow f(x) , f(y) \in U \Rightarrow f(x+y) = f(x) + f(y) \in U
+\Rightarrow x + y \in f^{-1} (U)$．一方，$a\in R , x \in f^{-1}(U) \Rightarrow f(a) \in R / \mathfrak{a}. f(x) \in U \Rightarrow f(ax) f(a) f(x) \in U
+f^{-1} (U)$．また，$f(\mathfrak{a} ) = \{ 0 \} \subset U$．ゆえに$ \mathfrak{a} \subset f^{-1}(U)$．
+
+そこで$ff^{-1}(U)=U$であることを示す．これは$f$が全射であるから成り立つ（序，定理2(2)）．
+$A$が$\mathfrak{a}$を含む$R$の左 ideal （右，両側）ならば，$A = f^{-1} f(A)$を示す．
+$x \in f^{-1}f(A)$ならば，$f(x) \in f(A)$．よって，$f(x) = f(a)$となる$a \in A$が存在する．
+ゆえに，$f(x - a) = 0$から$x-a \in \mathfrak{a}$．$ \mathfrak{a} \subset A$であるから，
+$x \in A$．これは$f^{-1}f(A) \subset A$を示す．さらに序，定理2(1)により，
+$f^{-1} f(A) \supset A$，したがって，$A = f^{-1} f(A)$．
+
+（環論 - 久野昇司　約，内田老鶴圃）
+\■
+
+
+\問{6}
+両側 ideal $\mathfrak{a}$が極大であることと，$R / \mathfrak{a}$が体であることは同値である．
+
+\証明
+
+$ \mathfrak{a}$が極大 $ \Leftrightarrow$ (問5）$R / \mathfrak{a} $おｎ両側 ideal が $R / \mathfrak{a}$と
+$ \{ 0 \}$のみ $ \Leftrightarrow $ （\S 2.2 問5，問8）$ R / \mathfrak{a}$が体．
+
+\■
+
+
+\定理{9}
+
+$ f:R \to R'$を環の準同型全射，$ \mathfrak{a}$を$ \Ker f$に含まれる $R$の両側 idealとすれば，準同型全射 $ \overline{f} : R / \mathfrak{a} \to R'$が
+存在して，右の図式が可換となる．
+
+（図保留）
+
+ただし$c$は標準的準同型を表わす．
+
+\証明
+
+$ R / \mathfrak{a} \ni \xi$に対し，$ \xi = x \mod \mathfrak{a}$となる$x$を一つとり，
+$ \overline{f} ( \xi ) = f(x) $と定めれば，これは$x$の選び方に関係なく$\xi$のみによって定まる．
+
+実際，$ x \equiv y \mod \mathfrak{a} \Rightarrow x-y \in \mathfrak{a} \Rightarrow x - y \in \Ker f 
+\Rightarrow f(x-y) = 0 \Rightarrow f(x) = f(y) $．あきらかに，$ f = \overline{f} \circ c$．
+また，$\overline{f}$が準同型であることも容易にわかる．
+
+\■
+
+
+ 
+\定理{10}（第1同型定理）環の準同型 $f : R \to R'$の核を$\mathfrak{a}$とすれば，
+対応$ x \mod \mathfrak{a} \to f(x)$により $ R/ \mathfrak{a} \cong f(R)$となる．
+
+\証明
+
+定理9の$\overline{f}$を作ると，$\overline{f}$の像は$f(R)$である．また
+$ \overline{f} \: ( x \mod \mathfrak{a} ) = 0 \: \Leftrightarrow f(x) = 0 \Leftrightarrow x \in \mathfrak{a}
+x \mod \mathfrak{a}$が$ R / \mathfrak{a}$の零元．ゆえに$ [overline{f}$は同型写像である．
+
+
+
+
+
+
+\定理{11}（第2同型定理）$S$を環$R$の部分環，$ \mathfrak{a}$を$R$の両側 idea1 とすれば，
+$ S + \mathfrak{a}$は
+は$R$の部分環，$ S \cap \mathfrak{a}$は$S$の両側 ideal で，対応 $x \mod \mathfrak{a} \to x \mod ( S \cap \mathfrak{a} \: ( x \in S)$により，
+\[
+	( S + \mathfrak{a} ) / \mathfrak{a} \cong S / ( S \cap \mathfrak{a}.
+\]
+
+\証明
+
+$ x, y \in S + \mathfrak{a} \Rightarrow x = x_S + x_{\mathfrak{a}}, y = y_S + y_{\mathfrak{a}} \Rightarrow x_S - y_S \in S$．
+
+また$ -y_\mathfrak{a} \in \mathfrak{a}$より，$x_\mathfrak{a} - y_\mathfrak{a} \in \mathfrak{a}$．したがって$ x-y \in S + \mathfrak{a}$．
+\begin{align*}
+	( x_\mathfrak{a} + x_\mathfrak{a} )( y_S + y_\mathfrak{a})
+&= x_S y_S + x_S y_\mathfrak{a} + x_\mathfrak{a} y_S + x_\mathfrak{a} y_\mathfrak{a} \\
+&\in SS + Sa + \mathfrak{a}S + \mathfrak{a} \\
+&\subset S + R \mathfrak{a} + \mathfrak{a}R + \mathfrak{a} \\
+&\subset S + \mathfrak{a} + \mathfrak{a} + \mathfrak{a} \\
+&\subset S + \mathfrak{a}
+\end{align*}
+したがって$S + \mathfrak{a}$は部分環である．
+
+$rS \in S(S \cap \mathfrak{a})$とすると$r \in S, s \in \mathfrak{a}$によって$r S \in S \mathfrak{a} \subset \mathfrak{a}$．
+$s \in S$より$SS \subset S$．したがって，$rs \in S \cap \mathfrak{a}$．よって$S \cap \mathfrak{a}$は$S$の両側 ideal
+$ \mathfrak{a}$は$R$の両側 ideal であるから，$R$から$R / \mathfrak{a}$への写像$f$を
+\[
+	f(x) = x + \mathfrak{a}
+\]
+で定義すると，この$f$は標準的準同型である．（例5）．$S$は$R$の部分環だから，
+$f$を$S$二制限した$f | S ) = S \cap \Ker f = S \cap \mathfrak{a}$
+\[
+	\Ker (f|S) = S \cap \Ker f = S \cap \mathfrak{a}
+\]
+である．したがって，$f | S (S)  f(S)$であることと第一同型定理とから，
+$ S / ( S \cap \mathfrak{a} )$は$S + \mathfrak{a}$から$ R/ \mathfrak{a}$への準同型写像であり，
+\[
+	\Ker ( f | ( S+\mathfrak{a} )) = ( S + \mathfrak{a} ) \cap \Ker f =  ( S + \mathfrak{a} ) \cap \mathfrak{a} = \mathfrak{a}
+\]
+である．したがって，$f ( S + \mathfrak{a} ) = f (S) + f(\mathfrak{a}) = f(S)$と第1同型定理によって
+$ ( S + \mathfrak{a} ) / \mathfrak{a}$と$ f(S)$とな同型である．したがって
+\[
+	(S + \mathfrak{a} ) / \mathfrak{a} \cong S / ( S \cap \mathfrak{a}).
+\]
+\■
+
+
+\定理{12}
+（第3同型定理）$\mathfrak{a}.\mathfrak{b}$はは環$R$の両側 ideal で，
+$ \mathfrak{a} \supset \mathfrak{b}$ならば，対応$ (x \mod \mathfrak{b} ) \mod \mathfrak{a} / \mathfrak{b} \to x \mod \mathfrak{a}$により
+\[
+	( R / \mathfrak{b} )( \mathfrak{a} / \mathfrak{b}) \cong R / \mathfrak{a}
+\]
+
+\証明
+
+$f : R \to R / \mathfrak{a}$を，標準的準同型とすると，$f(\mathfrak{b}) = \{ \: f(x) ; x \in x \in \mathfrak{b} \} = \{ x + \mathfrak{a} ; x \in \mathfrak{b} \: \}
+= ( \mathfrak{b} + \mathfrak{a} / \mathfrak{a} = \mathfrak{b} / \mathfrak{a}$である．
+
+さて，$\mathfrak{b}$が$R$の両側 ideal であるから，$ \mathfrak{b} / \mathfrak{a} $は$ R / \mathfrak{a}$の両側 ideal である．
+任意の元$ a + \mathfrak{a} \in R / \mathfrak{a}$に対して，$ ( a + \mathfrak{a} ) b / \mathfrak{a} = ( a + \mathfrak{a} \{ x + \mathfrak{a} , x \in x \in \mathfrak{b} \}
+= \{ (a+\mathfrak{a} ( x + \mathfrak{a} ; x \in \mathfrak{b} \} = \{ a x + \mathfrak{a} ; x \in \mathfrak{b} \}$， $ ax \in \mathfrak{b} $より$ b / \mathfrak{a}$，
+また$ x + \mathfrak{a} , y + \mathfrak{a} \in \mathfrak{b} / \mathfrak{a}$に対して$ x + y \in \mathfrak{b}$より
+\[
+	( x + \mathfrak{a} ) + ( y + \mathfrak{a} \in \mathfrak{b} / \mathfrak{a}.
+\]
+$ g : R / \mathfrak{a} \to ( R / \mathfrak{a}) / ( \mathfrak{b} / \mathfrak{a} ) $を自然な準同型とすると，$ g \circ f : R \to R / \mathfrak{a} \bigg/ \mathfrak{b} / \mathfrak{a}$
+は上への準同型である．任意の元$ ( a + \mathfrak{a} ) + ( \mathfrak{b} / \mathfrak{a} )$に対して$f(a) = a + \mathfrak{a}$，$a \in R$があるから，$ g \circ f (a) = ( a + \mathfrak{a} ) + ( \mathfrak{b} / \mathfrak{a} )$．
+任意の元$a,b$に対して，
+\begin{align*}
+	(g \cdot f) (ab) 
+&= g ( f(ab)) = g(f(a) f(b)) = g((a+\mathfrak{a}) ( b + \mathfrak{a}) ) \\
+&= (( a + \mathfrak{a} ) + ( b / \mathfrak{a})) ( ( b + \mathfrak{a}) + ( b / \mathfrak{a} )) = gf(a) gf(b)
+	(g \cdot f) (a + b) 
+&= g( f(a+b)) = g( f( a) + f(b)) = g( ( a+ \mathfrak{a} ) + ( b + \mathfrak{a} )
+& (( a + \mathfrak{a} ) + ( \mathfrak{b} / \mathfrak{a} ) ) +  ( ( b + \mathfrak{a} ) + ( b / \mathfrak{a})).
+\end{align*}
+第一同型定理により，$L = \{ x \in R ; ( g \cdot f)(x) = ( e + \mathfrak{a} ) + ( \mathfrak{b} / \mathfrak{a} ) \} $
+とおくと，$ R / L \cong ( R / \mathfrak{a} ) / ( b / \mathfrak{a} ) $．
+
+さて$ L = \{ x \in R ; g ( x + \mathfrak{a} ) = ( e + \mathfrak{a} + ( b / \mathfrak{b} / \mathfrak{a} ) \} 
+= \{ x \in R ; x + \mathfrak{a} \in \mathfrak{b} / \mathfrak{a} \}
+= \{ x \in R ; f(x) \in \mathfrak{b} / \mathfrak{a} \} = \{ x \in R ; x \in f^{-1} ( \mathfrak{b} / \mathfrak{a} ) \}$，
+$ f^{-1} ( \mathfrak{b} / \mathfrak{a} ) = \mathfrak{b} + \mathfrak{a} = \mathfrak{b}$だから、$L = \mathfrak{b}$で
+$ R / \mathfrak{b} \cong ( R / \mathfrak{a} ) \bigg/ ( \mathfrak{b} / \mathfrak{a} ) $を得る．
+\■
+
+
+

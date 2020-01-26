@@ -1,0 +1,301 @@
+\subsection{1次写像}
+
+左$R$加群$ M $から左$R$加群$ M'$への演算を保存する写像を\textbf{準同型写像}
+または\textbf{1次写像}という．すなわち，$ f : M \to M'$が1次写像であるとは，任意の$x,y \in M,
+\alpha \in R$対して
+\[
+	f(x+y) = f(x) + f(y) , \quad f( \alpha x ) = \alpha f(x)
+\]
+が成り立つことをいう．左$R$加群を$R$を作用域にもつ加群と考えれば，
+1次写像は作用準同型にほかならない．$ f^{-1} ( 0) $を$f$の\textbf{核}といい，$\Ker f$で表わす．
+
+
+$M'/ \text{1m } f$を$f$の\textbf{余核}（cokernel）といい，$ \text{Coker} f$で表わす．
+
+$R$上の多元環の間の準同型写像とは，1次写像で，同時に環としての準同型写像でもあるものをいう．
+
+\問{1}
+$f: M \to M$が1次写像であるためには，任意の$x,y \in M , \alpha ,\beta \in R$に対して
+$ f(\alpha x + \beta y) = \alpha f(x) + \beta f(y) $が成り立つことが必要かつ十分である．
+
+\証明
+$f$が1次写像ならば，$f( \alpha x + \beta y) = f(\alpha x)  + f( \beta y) = \alpha f(x) + \beta f(y)$．
+逆に本問の条件が成りたてば，とくに$ \alpha - \beta = 1$として，$ f(x + y ) = f(x) + f(y)$を得て，
+とくに，$y=0$として，$f ( \alpha x) = \alpha f(x)$を得る．
+
+\■
+
+
+\例{1}
+$N$ を$M$の左$R$部分加群とすれば，標準的単射
+$N \to M (x \mapsto x)$は1次写像である．
+また，$M$から$ M $から $ M / N$への標準的全射$ ( x \mapsto x mod N)$も1次写像である．
+
+
+\例{2}
+実数軸上の区間$(a,b)$で微分可能な実数値函数全体の作る$\R$上の vector 空間を
+$V_1$，$(a,b)$上の実数値函数全体の作る$\R$上の vector 空間を$V_2$とする．
+$ V_1 \ni f$にその導関数$f' \in V_2$を対応させる写像は，$\R$上の1次写像である．
+
+
+\例{3}
+実数軸上の区間$(a,b)$で定義される有界な実数値連続函数全体の作る$\R$上の
+vector 空間を$ V$とする．$ V \in f$に$ \displaystyle \int_a^b f(x) dx$を対応させる写像は，
+$V$から$\R$への$\R$上の1次写像である．
+\■
+
+
+左$R$加群Mから左$R$加群$ M'$への準同型全射があるとき，$M'$は$M$に準同型であるという．
+準同型単射を中への同型写像という．$f: M \to M'$が中への同型写像ならば，
+$ x \in M$と$f(X) \in M'$とを同一視して，$M$は$M'$の中へうめこまれる，
+$M$から$M'$への同型全射があるとき,$M$と$M'$とは同型であるといい，
+$M \cong M'$と書く．とくに$M$から$M$自身の中への1次写像を自己準同型または1次変換，
+同型全射を自己同型または正則な1次変換という．多元環についても，
+準同型・同型が同様に定義される．
+
+
+\問{2}
+1次写像 $ f: M \to M'$について，次のおのおのを証明せよ．
+
+\begin{list}{}{}
+	\item	(1) $ \text{IM } f = f(M)$は$M'$の$R$部分加群である．
+	\item (2) $ \Ker f$は$M$の$R$部分加群である．
+\end{list}
+\証明
+(1) $ \alpha f(x) + \beta f(y) = f(\alpha x + \beta y)$．
+$ \alpha x + \beta y \in M$だから，$f ( \alpha x + \beta y) \in \text{Im } f$．
+
+(2) $x,y \in \Ker f$，$\alpha , \beta \in R$とすると，$ f( \alpha x + \beta y) = \alpha f(x) + \beta f(y) = \alpha \cdot 0 + \beta \cdot 0 = 0$．
+よって $ \alpha x + \beta y \in \Ker f$．$ R \Ker f + R \Ker f \subset \Ker f$．
+
+
+
+\問{3}
+$\R$上の多元環の準同型写像
+$ f: A \to A'$について，次の命題を証明せよ．
+\begin{list}{}{}
+	\item	(1) $ \text{Im }$ は$A'$の部分多元環である．
+	\item (2) $ \Ker f$は$A$の両側idea1である．
+\end{list}
+
+\証明
+(1) 　加法については 問2．乗法について示す．$ \alpha \in R$，$ f(x) \in \text{Im} f$について
+$\alpha f(x) = f (\alpha x ) \in \text{Im } f$．よって$R \text{Im } f \subset \text{Im } f$．
+
+(2) 環の場合と同様．
+
+\■
+
+\定理{17}
+$ f:M \to M'$を左$R$加群（$R$上の多元環）の準同型写像，
+$N$を$M$の部分$R$加群（両側ideal）とする．$ \Ker f \supset N$ならば，
+準同型 $f: M / N \to M'$が存在して右の図式が可換となる．
+
+（図保留）
+
+ただしCは標準的準同型を表わす．
+
+
+\定理{18}
+
+$ f:M \to M'$を左$R$加群（$R$上の多元環）の準同型写像とすれば，
+\[
+	\text{Im } f \cong M / \Ker f \quad ( x \in M \text{に対し，} f(x) \leftrightarrow x \mod \Ker f).
+\]
+
+
+
+\定理{19}
+$ N_1 , N_2$を左$R$加群（$R$上の多元環$M$）の二つの$R$部分加群（両側ideal）とすれば，
+\[
+	N_1 / ( N_1 \cap N_2) \cong ( N_1 + N_2) / N_2
+  \quad ( x \in N_1\text{に対し，} x \mod ( N_1 \cap N_2) \leftrightarrow x \mod N_2).
+\]
+
+
+
+\定理{20}
+$ N_1 , N_2$を左$R$加群$M$（$R$上の多元環$M$）の二つの$R$部分加群（両側 idea1 ) とし，
+$ N_1 \supset N_2$とすれば
+\[
+	M / N_1 \cong ( M / N_2) / ( N_1 / N_2)
+  \quad
+  ( x \mod N_1 \leftrightarrow ( x \mod N_2 \mod N_1 / N_2)
+\]
+
+\問{4}
+定理17～20を証明せよ．
+
+\textbf{定理17の証明}
+定理3.4.5.6または，定理9.10.11.12により，加群または環としての準同型または同型が得られている．
+この対応で，$ \xi \to xi' \Rightarrow \alpha \xi \to \alpha \xi' \: ( \alpha \in R)$となることを示せばよい．
+たとえば，定理17では，$ f( \alpha ( x \mod N) ) = \overline{f} ( \alpha x \mod N) = f ( \alpha x) = \alpha f(x) = \alpha \overline{f} ( x \mod N)$．
+定理18,19,20でも同様である．
+
+\■
+
+左$R$加群$M_1$から左$R$加群$M_2$への1次写像全体の集合を$ \text{Hom}_R ( M_1 ,M_2)$または$\text{Hom} (R_1 , R_2)$で表わす．
+とくに$ \text{Hom} ( M,M )$を$\varepsilon (M)$で表わす．
+
+
+
+\問{5}
+$\text{Hom}( M_1,M_2) \ni f$，$ \text{Hom} (M_2,M_3) \ni g \Rightarrow g \circ f \in \text{Hom} (M_1 , M_3)$
+
+\証明
+
+$ (g \circ f) ( \alpha x + \beta y) = g(\alpha f(x) + \beta f(y) ) = \alpha g \circ f(x) + \beta g \circ f(y)$．
+\■
+
+
+
+\問{6}
+$ \text{Hom} (M_1,M_2) \ni f_1, f_2$に対して，
+\[
+	( f_1 + f_2 (x) = f_1(x) + f_2(x) \quad ( x\in M_1 )
+\]
+$ \text{Hom} (M_1 , M_2)$の元となり，これによって$ \text{Hom} ( M_1 , M_2)$は加群となる．
+また，$R$が可換ならば，
+\[
+	( \alpha f) (x) = \alpha f(x) \quad ( \alpha \in R , x \in M_1)
+\]
+によって$ \alpha f$を定義すれば，$ \text{Hom}(M_1,M_2)$は$R$加群となる．
+
+\証明
+$ (f_1 +f_2) ( \alpha x + \beta x) = f_1 ( \alpha x + \beta y) + f_2( \alpha x + \beta y) = \alpha ( f_1 (x) + f_2 (x) + \beta ( f_1(y) + f_2(y)) 
+= \alpha (f_1 +f_2) (x) + \beta ( f_1 + f_2) (y)$．ゆえに，$f_1 + f_2 \in \text{Hom} (M_1 , M_2) $．
+$+$が好感法則・結合法則をみたすことは定義から明らかである（$M_2$が果敢群であることから）．
+また，零社増 $0 : M_1 \to M_2$を$ \forall x \in M_1$，$ 0(x) = 0$と定義すれば，$0$を単位元として，$ \text{Hom} (M_1, M_2)$が
+加群となることが容易にわかる．さらに，$R$が可換環であれば，$ \alpha f( \beta x + \gamma y) = \alpha ( \beta f(x) + \gamma f(y)) 
+= \alpha \beta f(x) + \alpha \gamma f(y) = \beta \alpha f(x) + \gamma \alpha f(y) = \beta ( \alpha f) ( x ) + \gamma ( \alpha f) ( y) $．
+ゆえに$ \alpha f \in \text{Home }(M_1 , M_2)$．scalar倍が，LRM 1-4をみたすことは明らかである．
+
+
+
+\問{7}
+$ \text{Hom} ((M_1 , M_2) \ni f, f_1 , f_2$，$ \text{Hom} (M_2 , M_3) \ni g,g_1 ,g_2$ならば，
+\[
+	g \circ ( f_1 + f_2 ) = g \circ f_1 + g \circ f_2 \quad ( g_1 + g_2 ) \circ f = g_1 \circ f + g_2 \circ f
+\]
+すなわち，
+\begin{align*}
+ &\text{Hom} ( M_1 , M_2) \stackrel{g \circ }{ \rightarrow } \text{Hom} (M_1 , M_3), \\
+ &\text{Hom} ( M_2 , M_3) \stackrel{\circ f }{ \rightarrow } \text{Hom} (M_1 , M_3)
+\end{align*}
+は加群の間の準同型写像である．また，$R$が可換ならば，
+\[
+	g \circ ( \alpha f) = ( \alpha g) \circ f = \alpha ( g \circ f ).
+\]
+すなわち，上の二つの写像は，$R$上の1次写像となる．
+
+
+\問{8}
+$ \varepsilon (M)$は，演算$ +, \circ $によって環となる．
+また，$R$が可換ならば，これと scalar 倍とによって$R$上の多元環となる．
+
+\証明
+
+略
+
+
+
+$ \varepsilon (M)$の可逆元全体の作る群(p.27参照)を$M$の一般線型変換群（general lineargroup）といい，
+$ \text{GL}(M)$で表わす．
+
+$R$が可換環ならば，$ \varepsilon (M) \ni ff, \alpha_0 , \alpha_1 , \alpha_2 \cdots , \alpha_n \in R$に対して
+$ \theta = \alpha_0 1 + \alpha_1 f + \alpha_2 f^2 + \cdots + \alpha_n f^n \in \varepsilon(M)$．
+
+ただし$1$は，$M$の恒等写像を表わす．$ R [ X ] \ni P(X) = \alpha_0 + \alpha_1 X + \alpha_2 X^2 + \cdots + \alpha_n X^n$とするとき，
+$ \theta $を$P(f)$で表わす．$ \varepsilon (M)$の元$\alpha 1$を単に$ \alpha$とも書く．
+
+
+\問{9}
+$R$を可換環とするとき，$R[X] \ni P(X)$に$6(M)$の元$P(f)$を対応させる写像は，
+$R[X]$から$\varepsilon(M)$の中への多元環としての準同型写像である．
+
+$ \varepsilon (M)$の乗法（写像の結合）は交換法則をみたすとは限らないが，
+$ \varepsilon (M) \ni f , R [X] \ni P_1(X) , P_2(X)$に対して，$P_1 (f) P_2(f) = P_2 (f) P_1 (f) $が成り立つ．
+（$ \circ $を省略した.）
+
+
+\証明
+前半は容易｡公判は$P(X) = P_1(X) P_2(X) = P_2(X) P_1(X)$とおけば，$P_1(f) P_2(f) = P(f) = P_2 (f) P_1(f)$による．
+
+\■
+
+左$R$加群とその間の1次写像から成る
+\[
+	M_0 \stackrel{f_1}{\to} M_1 \stackrel{f_2}{\to } M_2 \to \cdots \stackrel{f_n}{\to} M_n
+\]
+の形の図形を\textbf{系列}といい，
+\[
+	\text{Im } f_i = \Ker f_{i+1} \quad ( i =1 , 2 , \cdots , n-1 )
+\]
+が成り立つとき，この系列は完全であるという．
+
+完全系列について，P19～20 問11,12と同様の命題が成り立つ．とくに，
+
+
+\問{10}
+$ 0 $のみから成る左$R$加群を$0$で表わす．
+\begin{list}{}{}
+	\item	(1) $ 0 \to M' \stackrel{f}{ \to } M \stackrel{g}{\to} M''$が完全 $ \Leftrightarrow M' \cong \Ker g$．
+	\item (2) $M' \stackrel{f}{\to} M \stackrel{g}{\to} M'' \to 0$が完全 $ M'' \cong \text{Coker } f$．
+\end{list}
+
+\証明
+
+略
+
+
+\問{11}
+\[
+ \text{(1) }\quad 0 \to M' \stackrel{f}{ \to } M \stackrel{g}{\to} M''
+\]
+が完全ならば，任意の左R加群$N$に対して
+\[
+	\text{(2)} \quad 0 \to \text{Hom}(N,M') \stackrel{ \circ }{\to} \text{Hom}(N,M) \stackrel{g \circ }{ \to} \text{Hom} (N,M'')
+\]
+も完全である．
+
+逆に，任意の左R加群$N$に対して，(2)が完全ならば，(1)は完全である．
+
+
+\証明
+
+まず(1)が完全であるとする．$ u: N \to M'$に対して$ f \circ u = 0 \Rightarrow \forall x \in N$，$ f(u(x)) = 0 \Rightarrow \text{（$f$は単射だから）}
+ \forall x \in N , u(x) = 0 \Rightarrow u=0$ゆえに$ f \circ $は単射である．$ v : N \to M$に対して，
+$ v = f \circ u$ならば$ g \circ v = g \circ f \circ u = 0 \circ u =0$．逆に，$ f \circ v = 0$ならば，
+$ \forall x \in N, v (x) \in \Ker g = \text{Im } f$だから，$v(x) = f(y) \: ( y \in M')$と表わされる．$f$は単射だから，
+$y$は$x$によって一意的に定まる．$ u(x) = y$と定義すれば，$ u : N \to M'$は1次写像で，$v = f \circ u$となる．
+以上から$ \text{Im } ( f \circ ) = \Ker (g \circ )$ゆえに(2)は完全となる．
+
+次に，任意の$N$に対して，(2)が完全であるとする．$x \in M'$について，$f(x) = 0 \Rightarrow x = 0$を証明しよう．
+$j' : Rx \to M'$をうめこみの写像とすると，$N = R x$として，(2)が完全であることを用いれば，
+$f \circ j' = 0$であるから$j' = 0$．従って$x = 0$．次に任意の$ x \in M'$に対して，
+やはり，$ N= Rx$として(2) が完全であることを用いると，$g \circ f \circ j' = 0$｡．すなわち，
+$ ( g \circ f) (x ) = 0$が示される．従って$ \text{Im } f \subset \Ker g$．次に，$ y \in M$について，
+$ g(y) = 0$ならば，$ j : R y \to M$を埋め込みの写像とすると，$N = Ry$として，(2)が完全であることを用いれば，
+$ g \circ j = 0$であるから，$h \in \text{Hom } ( Ry , M')$が存在して，$j = f \circ h$となる．従って
+$y = f(h(y))$ゆえに$ \Ker g \subset \text{Im } f$．以上より(1)は完全である．
+\■
+
+\問{12}
+\[
+	\text{(3)} M' \stackrel{f}{\to} M \stackrel{g}{\to} M'' \to 0
+\]
+が完全ならば，任意の左$R$加群$N$に対して，
+\[
+	\text{(4)} 0 \to \text{Hom} (M'' , N) \stackrel{\circ g}{ \to} \text{Hom} (M,N) \stackrel{ \circ f}{\to } \text{Hom } (M' , N)
+\]
+も完全である．
+
+逆に，任意の左$R$加群$N$に対して，(4)が完全ならば，(3)は完全である．
+
+\証明
+まず(3)が完全であるとする．まず$ \circ g$が単射であることを示す．$ u \in \text{Hom} (M'', N)$に対して，
+$ u \circ g = 0$とすると，$ M \stackrel{g}{\to} M'' \stackrel{u}{\to} 0$．ここで，(3)は完全だから､
+$ \text{Im } g = M'' = \Ker u$．よって $\forall x \in M''$について$ u(x) = 0$．よって$u = 0$．よって
+$ \circ g$は単射である．次に$ \text{Im } \circ g = \Ker \circ f$を示す．まず，$u \in \Ker \circ f \subset \text{Hom } ( M,n)$とすると，
+$ u \circ f = 0$つまり，$M' \stackrel{f}{ \to} M \stackrel{u}{\to} 0$．
+

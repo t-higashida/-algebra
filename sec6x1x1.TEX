@@ -2,4 +2,144 @@
 \section{群論}
 \subsection{共役}
 
-（保留）
+群$G$の内部自己同型群を$I(G)$で表わし，その各元を$ \sigma_a \: ( \sigma_a (x) = a x a^{-1} )$等と表わす．
+$G$の元$x,y$に対して，$ \sigma_a ( x) = y $となるような内部自己同型$ \sigma_a$が存在するとき，$x $と$y$は共役であるという．
+さらに一般に，$G$の二つの部分集合$M,N$は，適当な内部自己同型$ g\sigma_a$によって$ \sigma_a (M) = N$となっているとき，
+共役であるという．共役関係は同値関係である．$G$の元を共役関係で類別して得られる各類を\textbf{共役類}とよぶ．
+
+\例{1}
+$G$が可換群ならば$ I(G) = \{ 1_G \}$．従って$G$の元一つずつで一つの共役類をつくる．
+
+\例{2}
+対称群$ \mathfrak{S}_n$の元$ \sigma$の共通文字のない巡回置換の積に分けたものを
+\[
+	\sigma = ( \: \lambda_1 \: \lambda_2 \: \cdots \: \lambda_p \: ) 
+           ( \: \mu_1     \: \mu_2     \: \cdots \: \mu_q     \: ) 
+           ( \: nmu_1     \: \nu_2     \: \cdots \: \nu_r     \: )  \cdots
+\]
+とする．このとき長さ$i$の巡回置換が$m_i$個あるならば，数の列$ ( \: m_1 , m_2 , \cdots , m_n \: )$を
+$ \sigma$の\textbf{型}という．今
+\[
+	\tau
+	=
+	\begin{pmatrix}
+		\lambda_1 	& \lambda_2 	\cdots \lambda_p 		& \mu_1 	& \mu_2 	\cdots \mu_q		\& \nu_1 		& \nu_2 		\cdots  \nu_r 	\cdots \\
+		\lambda_1'	& \lambda_2' 	\cdots \lambda_p'		& \mu_1'	& \mu_2' 	\cdots \mu_q'		\& \nu_1'		& \nu_2'	 	\cdots  \nu_r'	\cdots
+	\end{pmatrix}
+\]
+ならば，p11.問11により，
+\[
+	\tau \sigma \tau^{-1}
+  =
+  ( \lambda_1' \: \lambda_2 ' \: \cdots \: \lambda_p' )
+  ( \mu_1' 		 \: \mu_2 '     \: \cdots \: \mu_q' )
+  ( \nu_1' 		 \: \nu_2 '     \: \cdots \: \nu_r' ) \cdots
+\]
+となる．従って二つの置換$ \sigma$と$\sigma'$が共役であるためには，それらが同じ型であることが必要かつ十分である．
+たとえば$ \mathfrak{S}_3$は
+\[
+	\{ e \} , \{ (1 \: 2) , (1 \: 3) , (2 \: 3) \: \} , \{ ( 1 \: 2 \: 3) , (1 \: 3 \: 2) \}
+\]
+の三つの共役類をもつ．
+
+
+\例{3}
+交代群$ \mathfrak{A}_n$の二つの元$ \sigma , \sigma'$が共役ならば，それらは$ \mathfrak{S}_n$の元としても共役であうから，
+同じ型でなければならない．しかし逆に同じ型であっても，それらが$ \mathfrak{A}_n$の元としては共役とは限らない．
+今 $\sigma$と$\sigma'$が同じ型であるとし，
+\begin{align*}
+	\sigma = ( \: \lambda_1  \: \cdots \: \lambda_p 	) ( \mu_1 	\: \cdots \: \mu_q 	)( \: \nu_1 	\cdots \: \nu_r		) \cdots , \\
+	\sigma = ( \: \lambda_1' \: \cdots \: \lambda_p' 	) ( \mu_1' 	\: \cdots \: \mu_q' )( \: \nu_1' 	\cdots \: \nu_r'	) \cdots ,
+\end{align*}
+とする．もし
+\[
+	\tau=
+	\begin{pmatrix}
+		\lambda_1 	\: \cdots \: \lambda_p 	\: \mu_1 	\: \cdots \: \mu_q 	\: \nu_1 	\: \cdots \: \nu_1 	\: \cdots \\
+		\lambda_1' 	\: \cdots \: \lambda_p' \: \mu_1' \: \cdots \: \mu_q' \: \nu_1' \: \cdots \: \nu_1' \: \cdots
+	\end{pmatrix}
+\]
+が偶置換なら$\sigma$と$\sigma'$は共役である．またもし$\tau$が奇置換で$p$が偶数ならば
+$ ( \lambda_1 ' \: \cdots \: \lambda'_p)$は奇置換で$p$が偶数ならば$ ( \lambda_1 ' \: \cdots \: \lambda'_p)$
+は奇置換であるから，
+\[
+	\tau_1 =
+	\begin{pmatrix}
+		\: \lambda_1 \: \cdots \lambda_{p-1} 	\: \lambda_p 	\: \mu_1 	\: \cdots \: \mu_q 	\: \nu_1 	\: \cdots \nu_r 	\cdots \: \\
+		\: \lambda_2 \: \cdots \lambda_p 			\: \lambda_1' \: \mu_1' \: \cdots \: \mu_q' \: \nu_1' \: \cdots \nu_r' 	\cdots \:
+	\end{pmatrix}
+\]
+は偶置換でしかも$ \tau_1 \sigma \tau_1^{-1} = \sigma'$であるからやはり$\sigma$と$\sigma'$は共役である．
+またもし$\tau$が奇置換で$p, q , r, \cdots$がすべて奇数で，$p=q$ならば，
+\[
+	\tau_2
+= \begin{pmatrix}
+		\lambda_1 \: \cdots \: \lambda_p 	\: \mu_1 \: 	\cdots \: \mu_p 			\: 	\nu_1 	\cdots \: \nu_r 	\cdots \\
+		\nu_1' 		\: \cdots \: \nu_p' 		\: \lambda_1' \cdots \: \lambda_p'	\:	\nu_1' 	\cdots \: \nu_1'	\cdots
+	\end{pmatrix}
+\]
+は偶置換で，$\tau_2 \sigma \tau_2^{-1} = \sigma'$となるからやはり$ \sigma$と$\sigma'$は共役である．またもし
+$\tau$が奇置換，$ p , q , r$がすべて互いに異なる奇数ならば，$ \tau_3 \sigma \tau_3^{-1} = \sigma'$となる$ \tau_3$は必ず
+奇置換となることが同様の考察でわかる．このとき，$ \sigma$と同じ型で$\mathfrak{A}_n$の中で$ \sigma$と
+共役でない置換どうしは互いに共役であることもすぐわかる．
+
+従って，$ \mathfrak{A}_n$に含まれる$ \mathfrak{S}_n$の共役類の元の型が､が互いに異なる奇数の長さをもつ巡回置換の積であるとき，
+この共役類は$\mathfrak{A}_n$の中では二つの共役類に分かれ，他の共役類はそのままま$ \mathfrak{A}_n$の中でも一つの共役類となる．
+
+
+\問{1}
+
+$ \mathfrak{S}_n \: ( 2 \leqq n \leqq 5 ) \: , \: \mathfrak{A}_n \: ( 2 \leqq n \leqq 5)$，4減数群を共役類に分けよ．
+
+
+\解
+
+$ \mathfrak{S}_n , \mathfrak{A}_n$については例2，例3を参照，4減数群は，
+$ \{ 1 \} , \{ -1 \} , \{ i , -i \} , \{ j , -j \} , \{ k , -k \}$の５個の共役類に分れる．
+
+
+\■
+
+群$G$の任意の部分集合$M$に対して，
+\begin{align*}
+	N(M) &= \{ a \in G ; aM = Ma \} \\
+  Z(M) &= \{ a \in G ; \forall x \in M , ax = xa \}
+\end{align*}
+はいずれも$G$Aの部分群となる．これらのそれぞれ$M$の\textbf{正規化群},  \textbf{中心化群}という．
+とくに$Z (G)$は$G$の正規可換部分群であって，$G$の\textbf{中心}と呼ばれる．
+
+\問{2}
+\begin{list}{}{}
+	\item	(1) $H$が$G$の部分群ならば，$N(H)$は，$H$を正規部分群として含む$G$の最大の部分群である．
+	\item (2) $H$が$G$の可換部分群ならば，$Z(H)$は，$H$を中心の中に含むような$G$の最大の部分群である．
+  \item (3) $M$に共役な集合の個数は$ [ G : N(M) \: ]$に等しい。とくに，有限群の各共役類に含まれる元の個数は，いずれも$G$の位数の約数である。
+  \item (4) $I(G) \cong G / Z(G)$．
+\end{list}
+
+\証明
+
+(1)(2)定義より明らか．
+
+(3) $x M x^{-1}x = y = My^{-1} \Leftrightarrow y^{-1} x M = M y^{-1} x \Leftrightarrow y^{-1}x \in N(M)$による．
+
+(4) $ G \to I (G) ( a \to \sigma_a)$は準同型全射で，核は$Z(G)$である．
+
+\■
+
+群$G$の元を共役類に分けたとき，中心の元はおのおの一つずつで一つの共役類をつくる．いま$G$を位数
+$n$の有限群とし，中心の位数を$z$，二つ以上の元を含む協約類を$C_1 , C_2 , \cdots , C_\nu$,それらの元の数を
+$ l_1 , l_2 , \cdots , l_\nu$とすれば，
+\[
+	n= z + l_1 + l_2 + \cdots + l_\nu
+\]
+となる．これを類方程式とよぶ．$z$および$l_i \: ( i=1 , \cdots , \nu )$は$n$の約数である．
+
+\問{3}
+
+$ \mathfrak{S}_n \: ( 2 \leqq n \leqq 5 ) , \mathfrak{A}_n ( 2 \leqq n \leqq 5)$，4減数群について類方程式を作れ．
+
+\解
+
+略
+
+\■

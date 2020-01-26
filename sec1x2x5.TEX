@@ -1,2 +1,171 @@
 \subsection{直積と直和}
 
+
+$R_\lambda \: ( \lambda \varLambda)$を環とするとき，その直積集合
+$ R = \prod_{\lambda \in \varLambda} R_\lambda$の元の間に，
+$ ( \cdots , x_\lambda , \cdots ) + ( \cdots , y_\lambda , \cdots )=
+( \cdots , x_\lambda + y_\lambda , \cdots ) , ( \cdots , x_\lambda , \cdots )( \cdots , y_\lambda , \cdots ) = ( \cdots , x_\lambda y_\lambda , \cdots )$
+によっ和と積を定めれば，$R$がまた環となる．$R$を$( R_\lambda )_{\lambda \in \varLambda}$の\textbf{直積}という．
+
+$R$の元$(\cdots , x_\lambda , \cdots )$で$x \lambda \ne 0$である$ \lambda$がたかだた有限個であるもの全体
+$ R'$は$R$のかならずしも単位元をもたない部分環を作る．これを$ ( R_\lambda )_{\lambda \in \varLambda}$の直和といい，
+$ \oplus_{\lambda \in \varLambda} R_\lambda$で表わす．各$R_\lambda$は，$R_\lambda \ni x \to ( \cdots , x_\mu , \cdots )
+\: ( x_\lambda = x, \mu \ne \lambda \Rightarrow x_\mu = 0)$によって$R'$の中に埋め込まれる．
+
+
+
+\問{1} $R_\lambda , R'$は$R= \prod R_\lambda$の両側 idealである．
+
+\証明
+$x,y \in R_\lambda$とすると，$x + y \in R_\lambda$，$z = ( \cdots , z_\lambda , \cdots ) \in R$に対して
+$z x = ( 0 , \cdots , z_\lambda x , \cdots ) \in R_\lambda, xz = ( 0 , \cdots , xz_\lambda , \cdots ) \in R_\lambda$
+よって$R_\lambda$は$R$の両側 ideal である．
+
+$x,y \in R' \Rightarrow x + y = ( \cdots , x_\lambda , \cdots , x_\mu + y_\mu , \cdots , y_\mu , \cdots ) \in R'$（$\because$有限個の添字を除いて$0$）
+$xz = ( 0 Z_{\mu_\lambda} , \cdots , x_\mu z_\mu , \cdots , 0 z_{\mu_\nu} ) = ( 0 , \cdots , x_\mu z_\mu , \cdots , 0) \in R'$（$\because$有限個の添字を除いて$0$）．
+
+同様に$zx \in R'$．よって$R'$は$R$の両側ideal である．
+
+\■
+
+\問{2}
+$R = \prod R_\lambda$の元$x = ( \cdots , x_\lambda , \cdots , )$が左可逆元（右可逆元）であるためには，
+すべての$ x_\lambda$が$R_\lambda$の左可逆元（右可逆元）であることが必要十分である．
+$R,R_\lambda$の可逆元全体の作る乗法群をそれぞれ$R^*,R^*_\lambda$で表わせば，群の同型$R^* \cong \prod R_\lambda^*$が成り立つ．
+
+また，$x$が左零因子（右零因子）であるためには，ある$x_\lambda$が左零因子（右零因子）であることが必要十分である．
+
+\証明
+
+（保留）
+
+\問{3}
+環$P$から各環 $ R_\lambda ( \lambda \in \varLambda)$への準同型f2が与えられているならば，
+$P$から$R = \prod_{\lambda \in \varLambda} R_\lambda$への準同型$f$が一意的に存在して，
+どの$ \lambda \in \varLambda$に対しても右の図式が可換になる．
+ただし$ p_\lambda $は射影 $ ( \cdots , x_\lambda , \cdots ) \to x_\lambda$を表わす．
+
+（図保留）
+
+\証明
+このような$f$が存在すれば，$P \ni x$に対して$f(x) = ( \cdots , f_\lambda(x) , \cdots )$でなければならない．
+ところでこのように$f$を定義すれば$f$は準同型となる．
+
+\■
+
+
+
+
+
+\問{4}
+$R = \prod_{\lambda \in \varLambda} , S_\lambda$は$R_\lambda$の部分加群とする．
+$S = \{ ( \cdots , x_\lambda , \cdots ) ; \forall \lambda \in \varLambda , x_\lambda \in S_\lambda \}$とおけば，
+\begin{list}{}{}
+	\item	(1) $S_\lambda = S \cap R_\lambda$
+	\item (2) $S$が$R$の部分環（左 ideal，右 ideal ） $ \Leftrightarrow $ どの$ \lambda $に対しても $S_\lambda$が$R_\lambda$の部分環
+（左idea1,右idea　）．
+	\item (3) $S$がRの両側idealならば，
+\[
+	S_\lambda = R_\lambda S = S R_\lambda , \quad R/S \cong \prod_{\lambda \in \varLambda} R_\lambda / S_\lambda
+\]
+\end{list}
+直和$R' = \oplus_{\lambda \in \varLambda } R_\lambda$についても同様の三つの命題が成り立つ．――
+
+\証明
+
+（保留）
+
+$R_\lambda \: ( \lambda \in \varLambda)$を環$R$の部分環とする．
+上への同型写像$ \varphi : \oplus_{\lambda \in \varLambda} R_\lambda \to R$でどの
+$ \lambda$に対しても $ \varphi | R_\lambda = 1_{R_\lambda}$となるものが存在するとき，
+$ \oplus R_\lambda $の元とその像とを同一視して，
+$ \text{Im } \varphi$をも$ \oplus R_\lambda$と書く．
+このとき$ \varphi$は，$ \varphi( \cdots , x_\lambda , \cdots ) = \sum_{\lambda \in \varLambda}^{}
+x_\lambda$によって一意的に定まる．
+
+\問{5}
+$ R= \oplus_{\lambda \in \varLambda} R_\lambda$が単位元$1$をもつならば，
+$ 1 =\sum_\lambda e_\lambda e_\lambda , e_\lambda \in R_lambda$，有限個の$ \lambda$を
+除いて $ e_\lambda = 0$となる．このとき
+\begin{list}{}{}
+	\item	(1) $ \forall x_\lambda \in R , x_\lambda e_\lambda = e_\lambda x_\lambda = x_\lambda$．
+	\item (2) $ R_\lambda = R e_\lambda = e_\lambda R$．
+	\item (3) 有限個の$ \lambda$を除いて$ R_i$はは零元のみから成る．従って$R$は実質的に有限個の環の直和となる．
+また，$ R_\lambda \ne \{ 0 \} $の$R_\lambda$に対しては，$ e_\lambda$がその単位元となる．――
+\end{list}
+
+\証明
+(1) $ x_\lambda = 1 x_\lambda = ( \cdots , e_\lambda , \cdots )( \cdots , 0 , \cdots , x_\lambda , \cdots , 0 , \cdots ) = ( \cdots , 0 , \cdots , e_\lambda x_\lambda , \cdots , 0 , \cdots ) = e_\lambda x_\lambda$，
+同様に$ x_\lambda e_\lambda$．
+
+(2) $R e_\lambda = R_\lambda e_\lambda = R_\lambda$．同様に$ e_\lambda R = R_\lambda$．
+
+(3) (1)(2)より明らか．
+
+\■
+
+以下ふたたび，環はすべて単位元$1$をもつものとする．
+
+
+\定理{14} 環 $R$がその部分環$R_1, \cdots , R_n$の直和となるためには，次の各条件が必要十分である．
+
+\begin{list}{}{}
+	\item	(1) $R=R_1 + \cdots + R_n$かつ $ i \ne j$ならば，$R_i R_j = \{ 0 \}$．
+	\item (2) $ R = R_i + \cdots + Rn$かつ各$R_i$は$ R $の両側 ideal で，$( R_1 + \cdots + R_i) \cap R_{i+1} = \{ 0 \} : ( i =1 , \cdots , n-1)$が成り立つ．
+\end{list}
+
+\証明
+
+$R = R_1 \oplus \cdots \oplus R_n \Rightarrow $ (2)は明らかである．
+次に、(2)を仮定すれば，$R_i, R_j$が両側 ideal であることから，$R_i R_j \subset R_i \cap R_j = \{ 0 \}$，
+従って(1)が得られる．
+
+次に(1)を仮定すれば，$ \varphi : R_1 \oplus \cdots \oplus R_n \to R \: ( \varphi (x_1 , \cdots , x_n) = \sum_{i=1}^{n} x_i )$が
+準同型全射である．さらに$ \sum x_i = 0$ならば，$R_i$の単位元$e_i$を両辺に掛けて$x_i = 0$．ゆえに$\varphi$は単射でもあり，
+$ R = R_1 \oplus \cdots \oplus R_n$を得る．
+
+
+\問{6} 環$R$が
+\[
+	1 = e_1 + \cdots + e_n \quad i \ne j \Rightarrow e_i e_j = 0, \quad Re_i = e_iR
+\]
+をみたす元$ e_1 \cdots , \cdots , e_n$をもてば，$e_i^2 = e_i$で，
+\[
+	R = R_1 \oplus \cdots \oplus R_n, \quad R_i = Re_i = e_i R
+\]
+と分解される．
+
+\解
+
+$ e_i = e_i 1 = e_i ( e_1 + \cdots + e_n) = e_i^2$．$R_i = R e_i = e_i R$とおけば$R \ni x = x e_1 + \cdots + xe_n \in R_1 + \cdots + R_n$．
+ゆえに$R = R_1 + \cdots + R_n$．また$R_iR_j = Re_ie_j R = 0$．ゆえに$R = R_1 \oplus \cdots \oplus R_n$．
+
+\■
+
+\問{7}
+$ R = R_1 \oplus \cdots \oplus R_n$ならば、$R$の任意の両側 ideal $\mathfrak{a}$は
+\[
+	\mathfrak{a} = \mathfrak{a}_1 \oplus \cdots \oplus \mathfrak{a}_n , \mathfrak{a}_i \text{は} R_i \text{の両側 ideal}
+\]
+と分解される．
+
+\証明
+
+$ \mathfrak{a}_i = R_i \cap \mathfrak{a}$とおけば，これは$R_i$の両側 ideal で，$ \mathfrak{a} \ni a = a_1 + \cdots + a_n$，$a_i \in R_i$とすれば，
+$a e_i = a_i e_i = a_i$．ゆえに$a_i \in \mathfrak{a}$．したがって$a_i \in \mathfrak{a}_i$．すなわち$ \mathfrak{a} = \mathfrak{a}_1 + \cdots + \mathfrak{a}_n$となる．
+$\mathfrak{a}_i \subset R_i$ゆえ，$\mathfrak{a} = \mathfrak{a}_1 \oplus \cdots \oplus \mathfrak{a}_n$．
+
+\■
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,113 @@
+\subsection{剰余加群}
+
+$N$を，$R$加群 $M$の一つの$R$部分加群とする．
+$M$の元$x,y$について$ x- y \in N$であるとき$ x \equiv y ( \mod N)$と書く．
+
+\問{1}
+$ \equiv ( \mod N)$は同値関係えある．さらに
+\begin{align*}
+	&x \equiv x' , y \equiv y' ( \mod N ) \Rightarrow x + y \equiv x' + y' ( \mod N)	\\
+	&\alpha \in R', x  \equiv x' ( \mod N ) \Rightarrow  \alpha x \equiv \alpha x' ( \mod N)
+\end{align*}
+が成り立つ．――
+
+$M$の元を $ \equiv ( \mod N )$で類別して得られる商集合において，
+$ x $を含む類を$ x \mod N$で表す．問1により，
+\begin{align*}
+	 &( x \mod N ) + ( y \mod N ) = ( x+y) \mod N,	\\
+		&\alpha ( x \mod N ) = ( \alpha x ) \mod N
+\end{align*}
+と定義することによって，類の加法および scalar倍が，代表元のとり方に無関係に定まる．
+容易にわかるように，これらの演算に関してこの商集合は$R$加群となる．
+これを$M$の $ \mod N$の\textbf{剰余加群}といい，$M / N $で表わす．
+これは，作用域をもつ加群としての剰余加群にほかならない．$R$が体のときは，
+$M / N$を vector空間 $M$の\textbf{商空間}ともいう．
+
+\問{2}
+$M / N$が$R$加群となることをたしかめよ．
+
+
+\問{3}
+$A$が$R$上の多元環で$ \mathfrak{a}$がその両側 ideal ならば，
+上の定義と,P.34の定義とによって$ A / \mathfrak{a}$がまた$R$上の多元環となる．
+これを証明せよ.
+
+\問{4}
+左$R$加群$M$の$R$部分加群$ N_1 , \cdots , N_n$と$M$の元$ x_1 , \cdots , x_n$に対して，
+$ x \equiv x_i ( \mod N_i) \: ( i =1 , \cdots , n)$をみたす
+$ x \in M$が存在すれば，任意の$(i,j)$に対して，$ x_i \equiv x_j ( \mod N_i + N_j)$が成り立つ．――
+
+\証明
+$ x_i -x \in N_i$より，$x_i - x_j = ( x_i - x) - ( x_j - x) \in N_i + N_j$
+
+\■
+
+問4の逆の命題を中国の剰余定理（Chinese remainder theorem）という．
+
+\問{5}
+$ n=2$ならば，中国の剰余定理が成り立つ．
+
+\証明
+$x_1 - x_2 \in N_1 + N_2$ならば，$x_1 - x_2 \equiv y_1 + y_2$．$y_i \in N_i$と表わされる．
+$ x_1 - y_1 = x_2 + y_2$おけばよい．
+
+\■
+
+\例題{}
+左$R$加群$M$の任意の三つの$R$部分加群$M_0,M_1,M_2$に対して法則
+\begin{list}{}{}
+	\item (D1) $	M_0 + (<_1 \cap M_2) = ( M_0 + M_1 ) \cap ( M_0 + M_2) $
+\end{list}
+が成り立つならば，中国の剰余定理が成り立つ．
+
+逆に，$n=3$の揚合に$M$の任意の$R$部分加群に対して中国の剰余定理が成り立つならば，
+(D1)が成り立つ，
+
+\証明
+前半を$n$についての帰納法で証明する．$n=2$の場合は成り立っている．
+$n-1$の揚合に成り立てば，$ y \equiv x_i ( \mod N_i) \: ( i=1, \cdots , n-1)$となる$y$が存在する．
+そうすると，
+$ y - x_n = ( y-x_i) - ( x_n - x_i) \in N_i + ( N_i + N_n) = N_i + N_n$．従って
+(D1)により，
+$ y-x_n \in \bigcap_{i=1}^{n-1} ( N_i + N_n) = N_i + N_n $．従って
+(D1)により，$y-x_n \in \bigcap_{i=1}^{n-1} ( N_i + N_n) = ( \bigcap_{i=1}^{n-1} ) + N_n$．
+ゆえに，問5により，$ x \equiv y ( \mod \bigcap_{i=1}^{n-1} N_i)$，
+$ x \equiv x_n ( \mod N_n) $となる$x$が存在する．
+あきらかにこれが求める解となる．
+
+後半，$M_0 + ( M_1 \cap M_2) \subset ( M_0 + M_1) \cap ( M_0 + M_2) $は一般に成り立つから，
+逆向きの包含関係を証明する．
+$ ( M_0 + M_1 ) \cap ( M_0 + M_2) \ni x$に対して中国の剰余定理の$n=3$の場合により，
+\[
+	z \equiv 0 ( \mod M_0) , \quad
+  z \equiv x ( \mod M_1) , \quad 
+	z \equiv x ( \mod M_2)
+\]
+となる$z$が存在する．そうすれば，$ x = z  + ( x - z ) \in M_0 + ( M_1 \cap M_2)$．
+\■
+
+
+\問{6}
+左$R$加群$M$の$R$部分加群$N_1 , \cdots, N_n$について，
+$  N_1 + N_2 = ( N_1 \cap N_2) + N_3 = ( N_1 \cap N_2 \cap N_3) + N_4 = \cdots = \bigcap_{i=1}^{n-1} N_i + N_2 = M$が
+成り立つならば，これらの$ N_1 , \cdots , N_n$に対して中国の剰余定理が成り立つ．
+
+
+\証明
+例題1の証明からわかる．
+
+
+\問{7}
+$R$の両側 ideal $ \mathfrak{a}_1 , \cdots , \mathfrak{a}_n$に対して，
+$ i \ne j \Rightarrow \mathfrak{a}_i + \mathfrak{a}_j = R$が成り立つなら
+ば，これらの$ \mathfrak{a}_1 , \cdots , \mathfrak{a}_n$に対して中国の剰余定理が成り立つ．
+
+\証明
+任意の番号$k$に対して，$ \mathfrak{a}_i + \mathfrak{k} = R \ni 1$であるから，
+$ a_i \equiv 1 ( \mod \mathfrak{a}_k)$となる元$ a_i \in \mathfrak{a}_i$が存在する．
+$a = a_1 \cdots a_{k-1} \in \bigcap_{i=1}^{k-1} \mathfrak{a}_i$で
+$ a \equiv 1 ( \mod \mathfrak{a}_k )$．ゆえに
+$ \bigcap_{i=1}^{k-1} \mathfrak{a}_i + \mathfrak{a}_k = R$．各$k$について，これが成り立つから，
+問6の条件がみたされる．
+
+\■

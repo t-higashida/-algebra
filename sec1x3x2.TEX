@@ -1,0 +1,140 @@
+\subsection{部分加群}
+
+$M$を環$R$上の左加群とする．$M$の元$x_0$と部分集合$S, S_1 ,S_2$，及び，$R$の元$\alpha$と部分集合$\varLambda$に
+対して，次の記法を用いる．
+\begin{align*}
+  &x_0 + S = \{ x_0 + x \: | x \in S \} \\
+  &S_1 + S_2 = \{ x_1 + x_2 \: | \: x_1 \in S_1 , x_2 \in S_2 \} \\
+  &\alpha S = \{ \alpha x ; x \in S \} , \varLambda x_0 ; \lambda \in \varLambda \} \\
+  & \varLambda x_0 =| \: \lambda x_0 ; \lambda \in \varLambda \} , \\
+  &\varLambda S = \{ \lambda x , \lambda \in \varLambda  , x \in S \}
+\end{align*}
+$M$の空でない部分集合$N$が，$M$で定められた演算について左$R$加群となるならば，
+$N$を$M$の\textbf{$R$部分加群}という．すなわち$R$を作用域と考えたときの
+認容部分群を$R$部分加群というのである．とくに$R$が体，従って$M$が$R$上の
+vector 空間のときは，$N$を$M$の\textbf{部分空間}ともいう．
+
+
+\問{1}
+$M$の空でない部分集合$N$が$R$部部分加群となることは，次の各々と同値である．
+\begin{list}{}{}
+	\item	(1) $ N + N \subset N, RN \subset N$．
+	\item (2) $ RN + R \subset N$．
+\end{list}
+
+\証明
+
+$R \ni -1$であるから，$ - N \R N$．ゆえに，左$R$加群を作用域にもつ$R$をもつ加群と考えれると，
+(1) または (2) から$N$が部分加群であることが導かれる．さらに，$RN \subset N$から$N$が$R$部分加群
+であることが導かれる．
+
+\■
+
+\問{2}
+
+$N$ｇ$M$の$R$部分加群ならば，$N$の任意の有限個の元$x_1 , \cdots , x_k$の
+任意の\textbf{1次結合} $ \alpha_1 x_1 + \cdots + \alpha_k x_k ( \alpha_i \in r)$も$N$に属する．――
+
+
+\証明
+
+$ \displaystyle \alpha_i x_i \in RN + \cdots + RN \subset N$．
+
+\■
+
+
+\問{3}
+
+$A$の空でない部分集合$B$が，部分多元環になるためには，
+\[
+	B + B \subset B,  \quad RB \subset B , \quad BB \subset B
+\]
+が必要十分である．
+
+\証明
+1版目と2番目は問1の条件(1)から，3番目は部分間の定義より．
+
+\■
+
+\例{1}
+$M$および$ \{ 0 \}$は$M$の$R$部分加群である．
+
+
+\例{2}
+$ \Z$加群の任意の部分群$H$は$\Z$部分加群となる．$ n \in \Z , \alpha \in H$に対して，
+$n \alpha = x + \cdots + H$．$(-n) x = ( -x) + \cdots + (-x) \in H$となるからである．
+
+\■
+
+\例{3}
+
+$R$を左$R$加群（右$R$加群，$R$双加群）と考えるとき，その部分加群とは，
+$R$の左 ideal（右 ideal ，両側 ideal ）のことに他ならないが。とくに体$K$を
+$K$上の vectore 空間と考えれば，その部分空間は，$K$と$\{ 0 \}$以外にはない．
+
+
+
+
+
+\例{4}
+
+3-1 例6で後のものは前のものの部分空間になっている．
+
+\問{4}
+
+$N_\lambda \: ( \lambda \in \varLambda)$がいずれも左$R$加群$M$の$R$部分加群ならば，
+$ \bigcap_{\lambda \in \varLambda} N_\lambda$も$M$の$R$部分加群である．
+$ A_\lambda \: ( \lambda \in \varLambda)$がいずれも$R$上の左多元環$A$の部分多元環ならば，
+$ \bigcap_{ \lambda \in \varLambda} A_\lambda$も$A$の部分多元環である．
+
+\■
+
+
+\証明
+
+$ \bigcap_{\lambda \in \varLambda} N_\lambda$が群として，部分群であることは証明済み．
+
+$ rn \in R \bigcap_{\lambda \in \varLambda}$とすると，
+$ \forall \lambda \in \varLambda$について$ n \in N_\lambda$。$N_\lambda$は部分加群だから，
+$rn \in N_\lambda$．このとき$rn \in \bigcap_{\lambda\ in \varLambda} N_\lambda$．
+よって$ R \bigcap_{\lambda \in \varLambda} N_\lambda \subset \bigcap_{\lambda \in \varLambda} N_\lambda$．
+
+$ a + b \in \bigcap_{\lambda \in \varLambda} A_\lambda + \bigcap_{\lambda \in \varLambda} A_\lambda \Rightarrow \forall \lambda \in \varLambda$について
+$ a + b \in A_\lambda + A_\lambda \subset A_\lambda$．よって$ a + b \in \bigcap_{\lambda \in \varLambda} A_\lambda$．
+よって $ \bigcap_{\lambda \in \varLambda} A_\lambda + \bigcap_{\lambda \in \varLambda} A_\lambda \subset \bigcap_{\lambda \in \varLambda} A_\lambda$．
+
+
+$ab \in \bigcap_{\lambda \in \varLambda} A_\lambda  \bigcap_{\lambda \in \varLambda} A_\lambda \Rightarrow ab \in A_\lambda A_\lambda
+( \forall \lambda \in \varLambda ) \subset A_\lambda$（$A_\lambda$は部分多元環だから）．
+したがって $ab \in \bigcap_{\lambda \in \varLambda} A_\lambda$，よって$ \bigcap_{\lambda \in \varLambda} A_\lambda \bigcap_{\lambda \in \varLambda} A_\lambda \subset \bigcap_{\lambda \in \varLambda} A_\lambda$．
+
+
+$ ra \in R \bigcap_{\lambda \in \varLambda} A_\lambda \Rightarrow r \in R$，$ a \in \bigcap_{\lambda \in \varLambda} A_\lambda \Rightarrow a \in A_\lambda
+\Rightarrow ra \in A_\lambda ( \forall \lambda \in \varLambda) \Rightarrow ra \in \bigcap_{\lambda \in \varLambda} A_\lambda 
+\Rightarrow R \bigcap_{\lambda \in \varLambda} A_\lambda \subset \bigcap_{\lambda \in \varLambda} A_\lambda$．
+
+
+$M$の任意の部分集合$S$に対して$S$を含む$M$の$R$部分加群全体の共通部分は，$S$を含む最小の$R$部分加群となる．
+これを，$S$で生成される$R$部分加群とよび，$R \cdot S$で表す．同様にして，$R$上の多元環$A$の任意の部分集合に対して，
+それを含む最小の部分多元環の存在することが知られている．これを$S$で生成される部分多元環といい，
+$R [S]$で表す．
+
+\問{5}
+$M$の有限個の元$x_1 , x_2 , \cdots , x_n$で生成される$R$の部分加群は$R x_1 + \cdots + Rx_k$に等しい．
+$M$の有限個の$R$部分加群$N_1 , \cdots , N_k$の和集合で生成されｒ$R$部分加群は，$N_1 + \cdots + N_k$に等しい．
+一般に$R \cdot S$は，$S$の任意有限個の任意の1次結合の集合に等しい．
+
+\問{6}
+
+$R$が可換環で，$R$上の多元環$A$の有限個の元$x_1 ,\cdots , x_k$がどの二つとも互いに可換ならば，
+$ \{ x_1 , \cdots , x_k \: \}$で生成される部分多元環は $ \{ \: F(x_1 , \cdots , x_k) ;  F( X_1 , \cdots , X_k) \in R [ X_1 , \cdots , X_k] \}$となる ――
+
+問6の部分多元環を$ R [ x_1, \cdots , x_k]$で表わす．
+
+
+
+
+
+
+
+

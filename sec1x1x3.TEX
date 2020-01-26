@@ -1,0 +1,286 @@
+\subsection{剰余群}
+
+群$G$の一つの部分群をHとする．$G$の元$x,y$に対して，
+$ x \sim y \Leftrightarrow x H = y H$によって同値関係$ \sim $を定義するとき，
+商集合$ G / \sim$を$ G / H$で表わし，この集合の元を$H$による\textbf{右剰余類}という．
+
+また，$x \approx y \Leftrightarrow Hx = Hy$によって定謝れた同値関係$ \approx $による商集合を
+$H \backslash G$で表わし，その元を$H$による\textbf{左剰余類}という．
+
+\問{1}
+\begin{list}{}{}
+	\item	$x,y$が同じ右剰余類に属する．$ \Leftrightarrow x^{-1}y \in H$．
+	\item $x,y$が同じ左剰余類に属する．$ \Leftrightarrow xy^{-1} \in H$．
+\end{list}
+
+\証明
+$ xH = yH \Rightarrow ye \in xH \Rightarrow x^{-1}y \in H$．
+逆に$ x^{-1} y \in H \Rightarrow y \in x H \Rightarrow y H \subset x HH = xH$．
+また，$x^{-1} y \in H \Rightarrow y^{-1}x = ( x^{-1} y)^{-1} \in H \Rightarrow x \in yH\Rightarrow x H 
+\subset \subset yHH =yH$．ゆえに，$x^{-1} y \in H \Rightarrow xH = yH$が成り立つ．
+$Hx = Hy \Leftrightarrow xy^{-1} \in H$も同様に証明される．
+\■
+
+\問{2}
+$ p(H \backslash G) = p ( G / H)$．（集合の濃度．P.3参照．）――
+
+\証明
+右剰余類$x H $と肥大ｒ剰余類$H x^{-1}$とを対応させると，$x H = y H \Leftrightarrow x^{-1} y \in H 
+\Leftrightarrow x^{-1} (y^{-1})^{-1} \in H \Leftrightarrow H x^{-1} = H y^{-1}$によって
+A$G / H$と$H \backslash$との間の全単射が定義される．
+\■
+
+
+問2の濃度が有限ならば，これを$G$における$H$の\textbf{指数}といい，
+$[G : H]$で表わす．$G$の単位元を$e$とすれば，$ [ G : e ]$は$G$の位数にほかならない．
+
+
+$H$の元$x$に$ax \in aH$を対応させることにより，$H$と$aH$との間の1対1対応が得られる．
+したがって，
+
+\定理{2}
+$G$が有限群，$H$が$G$の部分群ならば，
+\[
+	[G : e ] = [ G : H ] [ H :  e ],
+\]
+従って，$H$の指数および位数は，$G$の位数の約数である，
+
+\問{3}
+定理2において，$K$がさらに$H$の部分群ならば，
+\[
+	[ G : K ] = [ G : H ] [ H : K ].
+\]
+\証明
+$ \ G : K ] [ K : e ] = [ G : e ] = [ G : H][ H :e ] = [ G : H ][ H : K][ K : e ]$．
+この両辺を$ [ K : e ]$で割ればよい．
+
+\■
+
+\問{4}
+位数$n$の群$G$の任意の元xに対して，$x^n = e$．
+
+\証明
+$ x $で生成される部分群$H$の位数を$m$，指数を$r$とすれば，
+$x^m = e$．したがって，$x^n = x^{mr} = e$．
+\■
+
+\問{5}
+$G/H$の二つの元$ \xi , \eta$からそれぞれ代表$x,y$を任意に選んだとき，
+積の$xy$が代表の選び方によらないある一定の右剰余類$ \zeta$に属するならば，
+$ \zeta = \xi \eta$と定めることによって，$ \xi$と$\eta$の結合が定義される．
+
+$G/H$の任意の二つの元に対して，このようにして結合が定義されるためには，
+次の(1),(2),(3)のおのおのが必要かつ十分である．
+そしてこの条件が成り立つとき，この結合によって$G/H$は群となる．
+\begin{list}{}{}
+	\item	(1) $G$の任意の元$a$に対して，$ aHa^{-1} = H$が成り立つ．
+	\item (2) $G$の任意の元$a$に対して，$ aHa^{-1} \subset H$が成り立つ．
+	\item (3) $G$の任意の元$a$に対して，$ a H = H a $が成り立つ．
+\end{list}
+
+これらはまた，$H  \backslash G$に結合が定義されるための条件ともなり，
+これらの条件が成り立つとき，$G / H = H \backslash G$（集合も結合も同じ）となる．――
+
+\証明
+$G/H$で結合が定義されているという命題を$(0)$とする．$(0)$が成り立てば，とくに$a H a^{-1} H \subset H$．
+ゆえに，$a H a^{-1} = aHa^{-1} e \subset  a H a^{-1} H \subset H$．ゆえに (0) $\Rightarrow $(2)が証明された．
+
+次に，(2)が成り立てば，任意の元$a$に対して$a H a^{-1} \subset H, a^{-1} H ( a^{-1} )^{-1} \subset H$が成り立ち，
+この第2の関係は$ a H a^{-1} \supset H$と変形されるから，$a H a^{-1} = H$．すなわち，(2) $ \Rightarrow $ (1)が証明された．
+(1) $ \Rightarrow $  (3) は明らか．
+
+最後に，(3)が成り立てば，$xH = x'H$．$ y H = y' H \Rightarrow xy H = xy' H = x H y' = x ' H y ' = x Y' y ' H$．
+ゆえに (3) $ \Rightarrow $ (0) も成り立つ．従って(0) , (1) , (2) , (3) は同値．
+
+\■
+
+問5の条件をみたす部分群$H$は，$G$の\textbf{正規部分群}とよばれる．そのとき
+$ G / H = H \backslash G$を$G$の$H$による\textbf{剰余群}という．
+さらに，このとき$a$と$b$が同じ剰余類に属することを
+\[
+	a \equiv b  \quad ( \mod H)
+\]
+と書き，また$G$の元$a$を含む剰余類を$a \mod H$で表わす．
+
+\例{1}
+$G$が可換群ならば，あきらかに任意の部分群$H$は正規部分群で，$G / H$も可換群である．
+
+\例{2}
+整数の加法群$\Z$の部分群$ (a )$（p.13 例2）に対して，$\Z / (a) = \{
+	\overline{0}, \overline{1}, \overline{2} , \cdots , \overline{a-1}
+\}$，
+ここで $ \overline{x}$は $x \mod (a)$を表わす．
+
+$ \overline{x} + \overline{y} = \overline{z}$を求めるには，$x+y$を$a$で割った余りを$z$とし，
+$ \overline{x} + \overline{y} = \overline{z}$とすればよい．また，$ - \overline{x} = \overline{a-x} \: , \: \Z / ( a )$の各元を
+$ \Z \mod a$の\textbf{剰余類}という．また，$\Z$の2元 $x,y$について，$ x \equiv y  ( \mod  (a)) $を
+\[
+	x \equiv y ( \mod a )
+\]
+とも書く．
+
+\例{3}
+$ [ G : H ] = 2 $であるような部分群$H$に対しては，
+$ G = H \cup H a = H \cup aH$（いずれも直和）であるから，
+当然$Ha=aH$となる．したがって$H$は正規部分群である．
+
+\例{4}
+$\mathfrak{S}_3$の部分群 $ H = \{ e, ( 1 \: 2 ) \}$は正規部分群ではない．
+実際
+$ ( 1 \: 3 ) ( 1 \: 2 ) ( 1 \: 3 )^{-1} = ( 1 \: 3)( 1 \: 2 )( 1 \: 3 ) = ( 2 \: 3) \not\in H$．
+$ \mathfrak{S}_3$の部分群 $ \{ e, ( 1 \: 2 \: 3 ) , ( 1 \: 3 \: 2 ) \}$は指数$2$であるから，
+正規部分群である．
+
+\例{5} $ \sigma$を$ \mathfrak{S}_n$の元とすると，
+$n$変数の多項式
+\begin{align*}
+	\varDelta_\sigma ( X_1 , \cdots , X_n )
+&= 			( X_{\sigma (1)} - X_{\sigma (2)})
+  			( X_{\sigma (1)} - X_{\sigma (3)})
+  				( X_{\sigma (1)} - X_{\sigma (4)})
+					\cdots
+  			( X_{\sigma (1)} - X_{\sigma (n)})	\\
+&\times	( X_{\sigma (2)} - X_{\sigma (3)})
+ 				( X_{\sigma (2)} - X_{\sigma (4)})
+				\cdots
+ 				( X_{\sigma (2)} - X_{\sigma (n)})	\\
+&\times	( X_{\sigma (3)} - X_{\sigma (4)})
+				\cdots
+ 				( X_{\sigma (2)} - X_{\sigma (n)})	\\
+&\times	\cdots	\\
+&\times	( X_{\sigma (n-1)} - X_{\sigma (n)})
+\end{align*}
+は，
+\begin{align*}
+	\varDelta_\sigma ( X_1 , \cdots , X_n )
+&= 			( X_1 - X_2)
+  			( X_1 - X_3)
+  			( X_1 - X_4)
+					\cdots
+  			( X_1 - X_n)	\\
+&\times	( X_2 - X_3)
+  			( X_2 - X_4)
+					\cdots
+  			( X_2 - X_n)	\\
+&\times	( X_3 - X_4)
+					\cdots
+  			( X_2 - X_n)	\\
+&	\times \cdots \\
+&	\times (X_{n-1} - X_n)
+\end{align*}
+に等しいかまたは $ - \varDelta (X_1 , \cdots , X_n)$に等しい．
+$ \varDelta_\sigma = \varDelta$となるような$ \sigma$を\textbf{偶置換}，
+$ \varDelta_\sigma = - \varDelta$となる$\sigma$を\textbf{奇置換}という．
+あきらかに，恒等置換は偶置換であり，互換は奇置換である．
+
+定理１系（p.12)によって$\sigma$は互換の積でわされるが，偶数個の互換の積で表わさ
+れる$ \sigma$は偶置換で，奇数個の互換の積で表わされる$ \sigma $は奇置換である．
+（従って，$\sigma$を互換の積で表わす方法は一意的ではないけれども，
+因子の個数が偶数であるか奇数であるかは，$\sigma$によって一意的に定まる．）
+
+
+偶置換全体の集合$ \mathfrak{A}_n$はあきらかに $ \mathfrak{S}_n$の部分群を作る．
+$ (1 \: 2 ) \mathfrak{A}_n$は置換全体の集合となるから，
+$ [ \mathfrak{S}_n : \mathfrak{A}_n ] = 2$．ゆえに$\mathfrak{A}_n$は
+$ \mathfrak{S}_n$の正規部分群である．$\mathfrak{A}_n$を$n$次の\textbf{交代群}
+という．
+
+\例{6}
+8個の元から成る集合$ G = \{ \: \pm 1, \pm i , \pm j , \pm k \: \}$に，
+$ ( \pm 1 ) x = x (\pm 1) = \pm x$（ただし$-(-x) = x), i^2 = j^2 = k^2 = -1, ij = k , jk = i , ki = j , ji = -k , kj = -i , ik = -j$によって
+演算（乗法）を定義すれば，$G$は$1$を単位元として可換でない群となる．
+$ N= \{ \pm 1 \}$は明らかに$G$の部分群で，しかも$G$の任意の元$x$に対して
+$ x(\pm 1) x^{-1} = ( \pm 1 ) xx^{-1} = \pm 1 \in N$となるから，$N$は$G$の正規部分群である，
+$ [G : N ] = 4$で，$G / N = \{ \overline{1}, \overline{i} , \overline{j} , \overline{k} \: \}$，
+ここに　$ \overline{x} = x \mod N$．
+$ \overline{1}   \overline{x} = \overline{x},
+  \overline{i}^2 = \overline{j}^2 = \overline{k}^2 = \overline{1},
+  \overline{i}\overline{j} = \overline{j}\overline{i} = \overline{k},
+  \overline{j}\overline{k} = \overline{k}\overline{j} = \overline{i},
+  \overline{k}\overline{i} = \overline{i}\overline{k} = \overline{j}
+$
+従って，$ G / N$は位数$4$は可換群である．
+はじめの$G$は\textbf{4元数群}とよばれ，$G/N$は\textbf{4元群}とよばれる．
+
+\問{6}
+$N_\lambda \: ( \lambda \in \varLambda )$が群$G$の正規部分群ならば，
+$ \bigcap_{\lambda \in \varLambda } N_\lambda$も正規部分群である．
+
+\証明
+$ N = \bigcap H_\lambda$は部分群である。また$ N \ni x \Rightarrow x \in \forall N_\lambda \Rightarrow a x a^{-1} \in \forall N_\lambda \Rightarrow a x a^{-1} \in N$．
+
+
+\問{7}
+群$G$の任意の部分集合$M$に対して，それを含む最小の正規部分群が存在する．
+（これを，$M$で\textbf{生成}される正規部分群という．）
+
+\証明
+$M$を含むすべての正規部分群全体の共通部分は問6によって正規部分群で，明らかに，最小の正規部分群である。
+
+\■
+
+\例題{}
+$N$が$G$の正規部分群，$H$が$G$の部分群ならば，$NH = HN $で，
+これは$G$の部分群となる．また，$N \cap H$は，$H$の正規部分群となる．
+
+\証明
+$N$の任意の元$n$，$H$の任意の元$h$に対して，問5により，$ nh \in Nh = hN \subset HN$．	
+ゆえに$ NH \subset HN$．同様に $HN \subset NH$．
+従って$ NH=HN$．ゆえに，p12問3により
+$NH =HN$は$G$の部分群である．
+
+また，$H$の任意の元$h$に対して$ h (N \cap H) h^{-1} \subset h N h^{-1} \cap h H h^{-1} = N \cap H$．
+ゆえに$ N \cap H$は$H$の正規部分群である．
+
+\■
+
+\問{8}
+上の例題で，さらに$H$も$G$の正規部分群ならば，$NH=HN,N \cap H$はともに$G$の正規部分群である．
+
+\証明
+$ G \ni a$に対して，$aNH = NaH = NHa$．$a ( N \cap H ) a^|-1* \subset a N a^{-1} = N \cap H$．
+
+\■
+
+
+\問{9}
+$ \mathfrak{S}_n$の元$ \displaystyle 
+\sigma = 	\begin{pmatrix}
+						1			&	2			&	\cdots	&	n			\\
+						\nu_1	&	\nu_2	&	\cdots	&	\nu_n
+					\end{pmatrix}
+$が偶置換であるためには，順列$P= ( \nu_1 , \nu_2, \cdots , \nu_n)$の\textbf{転倒}
+の数が偶数であることが必要かつ十分である．
+$\sigma$が奇置換であるためには，
+$P$の転倒の数が奇数であることが必要かつ十分である．ただし$P$の転倒とは，
+$ i < j , \nu_i > \nu_j$をみたす番号の組$ ( i,j)$をいう．
+
+\証明
+$P_0 = (1 , 2 , \cdots , n)$とおくと$P = \sigma (P_0)$．
+\S 1.1 \問{14}の条件をみたす$ \sigma$の分解を$ \sigma = \sigma_k \sigma_{k-1} \cdots \sigma_2 \sigma_1$とすると，
+$ \sigma_j \sigma_{j-1} \cdots \sigma_2 \sigma (P_0)$と$ \sigma_{j-1} \cdots \sigma_2 \sigma_1 ( P_0)$とは転倒の数は
+ちょうど一つずつ異なる．$P_0$の転倒の数は$0$であるから，$P=\sigma (P_0)$の転倒の数は，
+$k$が偶数なら偶数，$k$が奇数なら奇数となる。
+
+\■
+
+\問{10}
+2次，3次，4次の偶置換をすべて書け．
+
+\解
+\begin{align*}
+	\mathfrak{A}_2 &= \{ e \} ,\quad
+  \mathfrak{A}_3  = \{ e , ( \: 1 \: 2 \: 3 \: ), (\: 1 \: 3 \: 2 \:) \}, \\
+  \mathfrak{A}_4 &= \{ e , ( \: 1 \: 2 \: 3 \: ), 
+                          ( \: 1 \: 2 \: 4 \: ), 
+                          ( \: 1 \: 3 \: 2 \: ),
+                          ( \: 1 \: 3 \: 4 \: ),
+                          ( \: 1 \: 4 \: 2 \: ),
+                          ( \: 1 \: 4 \: 3 \: ),
+                          ( \: 2 \: 3 \: 4 \: ),
+                          ( \: 2 \: 4 \: 3 \: ),
+                          ( \: 1 \: 2 \:)( \: 3 \: 4 \:),
+                          ( \: 1 \: 3 \:)( \: 2 \: 4 \:),
+                          ( \: 1 \: 4 \:)( \: 2 \: 3 \:) \: \}.
+\end{align*}
+\■
